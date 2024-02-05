@@ -58,79 +58,79 @@
         <form class="programm-wrapper" action="https://echo.htmlacademy.ru/" method="get">
 
           <!-- Параметры питомца -->
-          <fieldset class="programm-group introduction-data">
+          <fieldset class="programm-group programm-group--introduction">
             <legend class="visually-hidden">Параметры питомца</legend>
-            <label class="programm-group__title" for="name">
+            <label class="programm-group__title">
               <span class="programm-group__heading">Имя:*</span>
-              <input class="programm-group__input" type="text" minlength="1" maxlength="100" name="name" id="name" placeholder="Барсик">
+              <input class="programm-group__input" type="text" minlength="1" maxlength="100" name="name" placeholder="Барсик">
             </label>
-            <label class="programm-group__title" for="weight">
+            <label class="programm-group__title">
               <span class="programm-group__heading">Вес (КГ):*</span>
-              <input class="programm-group__input" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
+              <input class="programm-group__input" type="number" min="1" max="50" name="weight" placeholder="5">
             </label>
-            <label class="programm-group__title" for="year">
+            <label class="programm-group__title">
               <span class="programm-group__heading">Возраст (Лет):</span>
-              <input class="programm-group__input" type="number" min="1" max="20" name="year" id="year" placeholder="5">
+              <input class="programm-group__input" type="number" min="1" max="20" name="year" placeholder="5">
             </label>
           </fieldset>
 
           <!-- Тип программы -->
-          <fieldset class="programm-group programm-type">
+          <fieldset class="programm-group programm-group--type">
             <legend class="visually-hidden">Тип программы</legend>
-            <label class="programm-group__title" for="slim">
-              <input class="programm-group__input programm-group__input--slim" type="radio" name="slim" id="slim" checked>
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--slim" type="radio" name="slim" checked>
               <span class="programm-group__heading">Похудение</span>
             </label>
-            <label class="programm-group__title" for="fat">
-              <input class="programm-group__input programm-group__input--fat" type="radio" name="fat" id="fat">
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--fat" type="radio" name="fat">
               <span class="programm-group__heading">Набор массы</span>
             </label>
-            <label class="programm-group__title" for="ask">
-              <input class="programm-group__input programm-group__input--ask" type="radio" name="ask" id="ask">
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--ask" type="radio" name="ask">
               <span class="programm-group__heading">Не знаю (Нужен ваш совет)</span>
             </label>
           </fieldset>
 
           <!-- Контактная информация -->
-          <fieldset class="programm-group contact-data">
+          <fieldset class="programm-group programm-group--contact">
             <legend class="contact-data__title">Контактные данные <br/> (владельца кота)</legend>
-            <label class="programm-group__title" for="email">
+            <label class="programm-group__title">
               <span class="programm-group__heading">E-mail:*</span>
-              <input class="programm-group__input programm-group__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+              <input class="programm-group__input programm-group__input--email" type="email" name="email" placeholder="kuklachev@gmail.com">
               <svg class="programm-group__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 18 14"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M.5 5.5v8h17.004v-8M.5.5h17.004v2l-8.502 6L.5 2.5v-2Z"/></svg>
             </label>
-            <label class="programm-group__title" for="phone">
+            <label class="programm-group__title">
               <span class="programm-group__heading">Телефон:*</span>
-              <input class="programm-group__input programm-group__input--email" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+              <input class="programm-group__input programm-group__input--email" type="tel" name="phone" placeholder="8 (960) 900-60-90">
               <svg class="programm-group__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M7.002 8h8.502m0 0-2.5-2.5m2.5 2.5-2.5 2.5M5.502.5v5h-3v5h3v5h-2.5C1.5 15.5.5 14.5.5 13V3C.5 1.5 1.5.5 3 .5h2.5Z"/></svg>
             </label>
           </fieldset>
 
           <!-- Комментарии -->
-          <fieldset class="programm-group comment">
+          <fieldset class="programm-group programm-group--comment">
             <legend class="comment__title">Комментарий</legend>
-            <label class="programm-group__title" for="comment">
-              <textarea class="programm-group__input programm-group__input--comment" name="comment" id="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
+            <label class="programm-group__title">
+              <textarea class="programm-group__input programm-group__input--comment" name="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
             </label>
           </fieldset>
 
           <!-- Дополнительная информация -->
-          <fieldset class="programm-group addition-data">
+          <fieldset class="programm-group programm-group--additional">
             <legend class="addition-data__title">Дополнительно</legend>
-            <label class="programm-group__title" for="sweetener">
-              <input class="programm-group__input programm-group__input--sweetener" type="checkbox" name="sweetener" id="sweetener" checked>
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--sweetener" type="checkbox" name="sweetener" checked>
               <span class="programm-group__heading">сахарозаменитель</span>
             </label>
-            <label class="programm-group__title" for="water">
-              <input class="programm-group__input programm-group__input--water" type="checkbox" name="water" id="water">
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--water" type="checkbox" name="water">
               <span class="programm-group__heading">питьевая вода</span>
             </label>
-            <label class="programm-group__title" for="milk">
-              <input class="programm-group__input programm-group__input--milk" type="checkbox" name="milk" id="milk">
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--milk" type="checkbox" name="milk">
               <span class="programm-group__heading">молоко</span>
             </label>
-            <label class="programm-group__title" for="vitamins">
-              <input class="programm-group__input programm-group__input--vitamins" type="checkbox" name="vitamins" id="vitamins">
+            <label class="programm-group__title">
+              <input class="programm-group__input programm-group__input--vitamins" type="checkbox" name="vitamins">
               <span class="programm-group__heading">витамины</span>
             </label>
           </fieldset>
