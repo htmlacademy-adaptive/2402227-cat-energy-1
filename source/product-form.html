@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -20,7 +21,7 @@
         </a>
       </div>
       <!-- Кнопка меню -->
-      <div class="menu-button">
+      <div class="page-header__button menu-button">
         <h2 class="visually-hidden">Кнопки меню</h2>
         <button class="menu-button menu-button--open" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -32,7 +33,7 @@
         </button>
       </div>
       <!-- Блок навигация -->
-      <nav class="navigation">
+      <nav class="page-header__navigation navigation">
         <section class="navigation-wrapper">
           <h2 class="visually-hidden">Навигация сайта</h2>
           <ul class="navigation-list">
@@ -40,7 +41,7 @@
               <a class="navigation-list__link" href="index.html">Главная</a>
             </li>
             <li class="navigation-list__item">
-              <a class="navigation-list__link" href="catalog.html">Каталог продукции</a>
+              <a class="navigation-list__link" href="product-catalog.html">Каталог продукции</a>
             </li>
             <li class="navigation-list__item">
               <a class="navigation-list__link navigation-list__link--current navigation-list__link--summary" href="#">Подбор программы</a>
@@ -50,9 +51,9 @@
       </nav>
     </header>
 
-    <main class="page__main">
+    <main class="page-main">
       <!-- Блок Подбор программы -->
-      <div class="programm-match">
+      <div class="page-main__programm programm-match">
         <h1 class="programm-match__title">Подбор программы</h1>
         <p class="programm-match__text">Заполните анкету, и мы подберем <br /> программу питания для вашего кота</p>
         <form class="programm-wrapper" action="https://echo.htmlacademy.ru/" method="get">
@@ -93,7 +94,7 @@
 
           <!-- Контактная информация -->
           <fieldset class="programm-group programm-group--contact">
-            <legend class="contact-data__title">Контактные данные <br/> (владельца кота)</legend>
+            <legend class="programm-group__legend">Контактные данные <br/> (владельца кота)</legend>
             <label class="programm-group__title">
               <span class="programm-group__heading">E-mail:*</span>
               <input class="programm-group__input programm-group__input--email" type="email" name="email" placeholder="kuklachev@gmail.com">
@@ -108,7 +109,7 @@
 
           <!-- Комментарии -->
           <fieldset class="programm-group programm-group--comment">
-            <legend class="comment__title">Комментарий</legend>
+            <legend class="programm-group__legend">Комментарий</legend>
             <label class="programm-group__title">
               <textarea class="programm-group__input programm-group__input--comment" name="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
             </label>
@@ -116,7 +117,7 @@
 
           <!-- Дополнительная информация -->
           <fieldset class="programm-group programm-group--additional">
-            <legend class="addition-data__title">Дополнительно</legend>
+            <legend class="programm-group__legend">Дополнительно</legend>
             <label class="programm-group__title">
               <input class="programm-group__input programm-group__input--sweetener" type="checkbox" name="sweetener" checked>
               <span class="programm-group__heading">сахарозаменитель</span>
@@ -140,7 +141,7 @@
       </div>
 
       <!-- Блок Приглашаем к сотрудничеству -->
-      <section class="invitation">
+      <section class="page-main__invitation invitation">
         <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
         <p class="invitation__text">Приглашаем<br/> к сотрудничеству<br/> дилеров!</p>
         <p class="invitation__text">ул. Большая<br/> Конюшенная, д. 19/8</p>
@@ -148,7 +149,7 @@
       </section>
 
       <!-- Блок Карта -->
-      <section class="map">
+      <section class="page-main__map map">
         <h2 class="visually-hidden">Геолокация с картой</h2>
         <img class="map__logo" src="./img/pictures/logo_pin.png" alt="Логотип магазина Cat Energy">
         <img class="map__spb" src="./img/pictures/map_spb.jpg" alt="Карта Санкт-Перебурга с пометкой адреса магазина Cat Energy">
@@ -164,7 +165,7 @@
         </a>
       </div>
       <!-- Блок Социяальные сети -->
-      <section class="social">
+      <section class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li class="social-list__item">
@@ -188,7 +189,7 @@
         </ul>
       </section>
       <!-- Блок Логотип академии -->
-      <section class="academy">
+      <section class="page-footer__academy academy">
         <h2 class="visually-hidden">Логотипы академии</h2>
         <ul class="academy-list">
           <li class="academy-list__item">
