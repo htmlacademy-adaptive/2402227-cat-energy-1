@@ -1,38 +1,48 @@
-// Задание 1 В форке проекта создайте ветку module3-task1. В файле source/less/style.less и добавьте CSS-код: body { background: red; }
-body {
-  background: green;
-}
-
-// Задание 2 Создайте структуру препроцессорных файлов
+// Общая стилизация
+@import "./block/page/page";
 
 // Базовая стилизация
-@import "./base/fonts.less";
-@import "./base/base.less";
-@import "./base/mixins.less";
-@import "./base/variables.less";
-
-// Миксины и переменные
-
+@import "./base/visually-hidden";
+@import "./base/clear-list";
+@import "./base/fonts";
+@import "./base/mixins";
+@import "./base/variables";
 
 // Блоки общие
-@import "./block/header/page-header.less";
-@import "./block/main/page-main.less";
-@import "./block/footer/page-footer.less";
+@import "./block/header/page-header";
+@import "./block/main/page-main";
+@import "./block/footer/page-footer";
 
 // Логотип
-@import "./block/logo/logo.less";
+@import "./block/logo/logo";
 
 // Кнопка
-@import "./block/button/menu-button.less";
+@import "./block/button/menu-button";
 
-// Партнеры
-@import "./block/partner/academy.less";
-@import "./block/partner/academy-list.less";
-@import "./block/partner/academy-link.less";
+// Главная - Промо
+@import "./block/promo/promo";
+@import "./block/promo/promo-item";
 
+// Главная - Программа
+@import "./block/programme/programme";
+@import "./block/programme/programme-list";
+@import "./block/programme/programme-item";
 
-// Подбор программы
-@import "./block/programm-form/";
+// Главная - Как это работает
+@import "./block/description/description";
+@import "./block/description/description-list";
+@import "./block/description/description-item";
 
-// Каталог
-@import "./block/product-catalog/";
+// Главная - Пример
+@import "./block/example/example";
+@import "./block/example/example-list";
+@import "./block/example/example-item";
+@import "./block/example/example-slider";
+
+// Главная - Приглавшение (Контакты)
+@import "./block/invitation/invitation";
+
+// Социальные сети
+@import "./block/social/social";
+@import "./block/social/social-list";
+@import "./block/social/social-link";
