@@ -1,6 +1,6 @@
 .example-list {
   display: grid;
-  grid-template-columns: 120px 120px;
+  grid-template-columns: repeat(2, auto);
   column-gap: 32px;
 }
 
@@ -9,7 +9,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
+  align-items: left;
   width: 124px;
   min-height: 70px;
+  margin: 0;
+  padding: 5px;
 }

@@ -4,7 +4,7 @@
   grid-template-columns: 140px 140px;
   box-sizing: border-box;
   min-height: 659px;
-  row-gap: 20px;
+  row-gap: 10px;
   margin: 0;
   padding: 20px;
 }
@@ -15,6 +15,7 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+  text-align: left;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -22,17 +23,23 @@
 
 .example__text {
   grid-column: 1 / -1;
-  font-family: "Oswald", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  color: #000000;
+  text-align: left;
+  color: #444444;
   margin: 0;
   padding: 0;
 }
 
 .example__expenses {
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .example__expenses--text {
@@ -41,6 +48,7 @@
   font-weight: 400;
   line-height: 20px;
   color: #000000;
+  text-align: center;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
