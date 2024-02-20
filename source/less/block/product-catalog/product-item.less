@@ -1,7 +1,7 @@
 .product-item {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(3, auto);
   width: 320px;
   height: 209px;
   padding: 20px;
@@ -10,7 +10,7 @@
 
 .product-item__icon {
   grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-row: 1 / 2;
 }
 
 .product-item__title {
@@ -18,12 +18,11 @@
   grid-row: 1 / 2;
 }
 
-.product-item__label {
+.product-item__table {
   grid-column: 2 / -1;
-  grid-row: 2 / 4;
+  grid-row: 2 / 3;
 }
 
 .product-item__button {
   grid-column: 1 / -1;
-  grid-row: 4 / -1;
 }
