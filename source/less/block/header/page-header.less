@@ -1,25 +1,58 @@
 .page-header {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  min-height: 38px;
-  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
   background-color: #ffffff;
 }
 
-.page-header__logo {
+.page-header__body {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.page-header__icon--text {
-  background-position: center;
-  width: 101px;
-  height: 18px;
+/* Бургер меню */
+/* .page-header__burger {
+    display: none;
+} */
+
+.page-header__burger {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
 }
 
-// .page-header__button {
-//   display: none;
-// }
+.page-header__burger::before,
+.page-header__burger::after {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  width: 24px;
+  height: 2px;
+  top: 3px;
+  left: 0;
+}
+
+.page-header__burger::before {
+  top: 18px;
+}
+
+.page-header__burger::after {
+  bottom: 0;
+}
+
+.page-header__burger span {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  width: 24px;
+  height: 2px;
+  top: 10px;
+  left: 0;
+}

@@ -1,19 +1,27 @@
 .present {
-  display: flex;
   width: 280px;
-  height: 290px;
+  min-height: 290px;
+  padding: 20px;
   background-color: rgba(104, 183, 56, 0.85);
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  box-sizing: border-box;
   position: relative;
 }
 
 .present__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   background-image: url("../img/icons/icon_present.svg");
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: cover;
   width: 78px;
   height: 80px;
   text-decoration: none;
@@ -23,6 +31,10 @@
 .present__background {
   content: "";
   position: absolute;
+  width: 280px;
+  min-height: 290px;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -33,4 +45,5 @@
   font-style: normal;
   line-height: 20px;
   text-align: center;
+  color: #ffffff;
 }

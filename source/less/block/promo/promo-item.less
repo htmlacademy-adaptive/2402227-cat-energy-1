@@ -25,22 +25,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   box-sizing: border-box;
   width: 280px;
   min-height: 40px;
-  padding: 5px 10px;
-  margin: 0;
-  color: #ffffff;
-  background-color: #68b738;
+  padding: 10px 26px 10px 26px;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: @default-primary-background;
+}
+
+.promo-item__link:hover {
+  color: @hover-all-color-light;
+  background-color: @hover-primary-background;
+}
+
+.promo-item__link:focus {
+  color: @focus-all-color-light;
+  background-color: @focus-primary-background;
+}
+
+.promo-item__link:active {
+  color: @active-all-color-light;
+  background-color: @active-primary-background;
 }
 
 .promo-item__link--text {
+  text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 16px;
+  font-size: 20;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  color: #ffffff;
 }

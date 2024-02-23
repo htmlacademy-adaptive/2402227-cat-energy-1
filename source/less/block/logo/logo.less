@@ -1,13 +1,44 @@
-.logo__link--image {
-  background-image: url("../img/icons/header-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.logo__item {
+  display: block;
+  border: none;
+  outline: none;
+}
+
+.logo__icon--img {
   width: 33px;
   height: 38px;
 }
 
-.logo__link--text {
-  background-position: center;
+.page-header__logo .logo__icon--txt {
   width: 101px;
   height: 18px;
+}
+
+.page-footer__logo .logo__icon--txt {
+  width: 128px;
+  height: 24px;
+}
+
+.logo__icon--img:hover,
+.logo__icon--txt:hover {
+  opacity: @logo-hover-opacity;
+}
+
+.logo__icon--img:focus,
+.logo__icon--txt:focus {
+  opacity: @logo-focus-opacity;
+}
+
+.logo__icon--img:active,
+.logo__icon--txt:active {
+  opacity: @logo-active-opacity;
 }

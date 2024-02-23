@@ -1,79 +1,98 @@
-// Общая стилизация
-@import "./block/page/page";
+// Base
 
-// Базовая стилизация
+// Page
+@import "./base/page/page";
+
+// General
 @import "./base/visually-hidden";
 @import "./base/clear-list";
 @import "./base/fonts";
+@import "./base/base";
 @import "./base/mixins";
 @import "./base/variables";
 
-// Шапка сайта
+// Button
+@import "./base/button/primary-btn";
+@import "./base/button/secondary-btn";
+@import "./base/button/third-btn";
+
+// Input
+@import "./base/input/label-field";
+@import "./base/input/input-field";
+
+// Heading
+@import "./base/heading/heading";
+@import "./base/heading/title";
+@import "./base/heading/subtitle";
+
+// Table
+@import "./base/table/table";
+
+// Blocks
+
+// Header (буду еще править)
 @import "./block/header/page-header";
-@import "./block/header/header-wrapper";
+@import "./block/header/header";
 
-// Главная
-@import "./block/main/page-main";
-
-// Футер
-@import "./block/footer/page-footer";
-
-// Логотип
+// Main/Catalog/Form -> Logo
 @import "./block/logo/logo";
 
-// Кнопка
-@import "./block/button/menu-button";
-
-// Навигация
+// Main/Catalog/Form -> Navigation
 @import "./block/navigation/navigation";
-@import "./block/navigation/navigation-wrapper";
-@import "./block/navigation/navigation-list";
 
-// Главная - Промо
+// Main (буду еще править)
+@import "./block/main/page-main";
+
+// Footer (буду еще править)
+@import "./block/footer/page-footer";
+
+// Main -> Promo (буду еще править)
 @import "./block/promo/promo";
 @import "./block/promo/promo-item";
 
-// Главная - Программа
+// Main -> Programme (буду еще править)
 @import "./block/programme/programme";
 @import "./block/programme/programme-list";
 @import "./block/programme/programme-item";
 
-// Главная - Как это работает
+// Main -> Description (буду еще править)
 @import "./block/description/description";
 @import "./block/description/description-list";
 @import "./block/description/description-item";
 
-// Главная - Пример
+// Main -> Example (буду еще править)
 @import "./block/example/example";
 @import "./block/example/example-list";
 @import "./block/example/example-item";
 @import "./block/example/example-slider";
 
-// Главная - Приглавшение (Контакты)
+// Main/Catalog -> Invitation (буду еще править)
 @import "./block/invitation/invitation";
 
-// Главная - Карта
+// Main -> Map
 @import "./block/map/map";
 
-// Социальные сети
+// Footer -> Social (буду еще править)
 @import "./block/social/social";
 @import "./block/social/social-list";
 @import "./block/social/social-link";
 
-// Лого HTML Academy
+// Footer -> Partner (буду еще править)
 @import "./block/partner/partner";
 @import "./block/partner/partner-list";
 @import "./block/partner/partner-link";
 
-// Каталог - Товары
-@import "./block/product-catalog/product-wrapper";
+// Catalog -> Product
+@import "./block/product-catalog/product";
 @import "./block/product-catalog/product-item";
 
-// Каталог - Дополнительные товары
-@import "./block/subproduct/subproduct-wrapper";
-@import "./block/subproduct/subproduct-title";
-@import "./block/subproduct/subproduct-list";
+// Catalog -> Subproduct
+@import "./block/subproduct/subproduct";
 @import "./block/subproduct/subproduct-item";
 
-// Каталог - Подарок
+// Catalog -> Present
 @import "./block/present/present";
+
+// Product-form -> Configuration
+@import "./block/product-form/configuration";
+@import "./block/product-form/configuration-group";
