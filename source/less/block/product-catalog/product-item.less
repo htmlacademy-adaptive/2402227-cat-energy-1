@@ -2,11 +2,14 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
+  justify-content: space-between;
   width: 320px;
   height: 209px;
   padding: 20px;
+  column-gap: 20px;
+  align-items: center;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
 }
 
 .product-item__img {
@@ -27,9 +30,6 @@
 .product-item__annotation {
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
   width: 140px;
   min-height: 103px;
   box-sizing: border-box;
@@ -45,7 +45,9 @@
   text-align: left;
 }
 
-.product-item__button {
+.product-item__btn {
   grid-column: 1 / -1;
   width: 280px;
+  height: 40px;
+  margin-top: 20px;
 }

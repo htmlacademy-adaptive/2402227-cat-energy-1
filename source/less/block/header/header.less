@@ -1,5 +1,47 @@
-.header-wrapper {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 320px;
-  margin: 0 auto;
-  padding: 10px;
+}
+
+/* Бургер меню */
+// .page-header__burger {
+//   display: none;
+// }
+
+.header__burger {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.header__burger::before,
+.header__burger::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 24px;
+  height: 2px;
+  // top: 3px;
+  // left: 0;
+}
+
+.header__burger::before {
+  top: 18px;
+}
+
+.header__burger::after {
+  bottom: 0;
+}
+
+.header__burger span {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 24px;
+  height: 2px;
+  top: 10px;
+  left: 0;
 }

@@ -7,12 +7,69 @@
 }
 
 .description__title {
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 40px;
+  color: @default-secondary-color-dark;
+}
+
+.description__list {
+  display: grid;
+  width: 280px;
+  min-height: 300px;
+  row-gap: 20px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.description__item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.description__icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(104, 183, 56);
+  border: none;
+}
+
+.description__icon--position {
+  display: flex;
+  padding: 20px;
+  align-self: center;
+}
+
+.description__icon--health {
+  width: 25px;
+  height: 28px;
+}
+
+.description__icon--type {
+  width: 27px;
+  height: 29px;
+}
+
+.description__icon--feed {
+  width: 26px;
+  height: 30px;
+}
+
+.description__icon--time {
+  width: 27px;
+  height: 31px;
+}
+
+.description__text {
+  width: 200px;
+  min-height: 54px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 18px;
+  text-align: start;
   margin: 0;
   padding: 0;
-  align-items: center;
-  text-align: center;
 }

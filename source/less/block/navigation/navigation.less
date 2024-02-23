@@ -1,10 +1,12 @@
 .navigation__list {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 436px;
   margin: 0;
   padding: 0;
-  gap: 30px;
+  row-gap: 30px;
 }
 
 .navigation__item {
@@ -35,4 +37,10 @@
 
 .navigation__link:active {
   color: @active-secondary-color-dark;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
 }

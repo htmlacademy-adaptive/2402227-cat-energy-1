@@ -1,5 +1,133 @@
-.programm {
+.programme {
   width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.programme__list {
+  display: grid;
+  grid-template-rows: repeat(2, 266px);
+  min-height: 552px;
+  row-gap: 20px;
+  padding: 20px;
+  margin: 0;
+  background-color: rgb(242, 242, 242);
+}
+
+.programme__item {
+  display: grid;
+  grid-template-columns: 60px 185px;
+  grid-template-rows: repeat(4, auto);
+  justify-content: space-between;
+  row-gap: 20px;
+  margin: 0;
+  padding: 20px;
+}
+
+.programme__item--slim {
+  background-image: url("../img/icons/cat-slim.svg");
+  background-repeat: no-repeat;
+  background-color: @default-primary-background;
+  width: 36px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.programme__item--fat {
+  background-image: url("../img/icons/cat-fat.svg");
+  background-repeat: no-repeat;
+  background-color: @default-primary-background;
+  width: 67px;
+  height: 29px;
+  border-radius: 50%;
+}
+
+.programme__subtitle {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 37px;
+  text-align: start;
+  text-transform: uppercase;
   margin: 0;
   padding: 0;
+}
+
+.programme__text {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 18px;
+  text-align: start;
+  margin: 0;
+  padding: 0;
+}
+
+.programme__line {
+  width: 240px;
+  border: none;
+  height: 1px;
+  background-color: rgb(217, 217, 217);
+}
+
+.programme__link {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px 0 4px 0;
+  column-gap: 15px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.programme__link--text {
+  font-family: "Oswald", sans-serif;
+  font-size: 16;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: @default-secondary-color-dark;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.programme__link--text::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 100px;
+  z-index: 1;
+  width: 32px;
+  height: 12px;
+  background-image: url("../img/icons/icon_arrow.svg");
+  cursor: pointer;
+}
+
+.programme__link--text:hover {
+  color: @hover-secondary-color-dark;
+}
+
+.programme__link--text:focus {
+  color: @focus-secondary-color-dark;
+}
+
+.programme-item__link--text:active {
+  color: @active-secondary-color-dark;
 }
