@@ -1,7 +1,9 @@
-.programme {
+.programme__wrapper {
+  display: grid;
   width: 320px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .programme__list {
@@ -9,9 +11,8 @@
   grid-template-rows: repeat(2, 266px);
   min-height: 552px;
   row-gap: 20px;
-  padding: 20px;
+  padding: 0;
   margin: 0;
-  background-color: rgb(242, 242, 242);
 }
 
 .programme__item {
@@ -19,27 +20,9 @@
   grid-template-columns: 60px 185px;
   grid-template-rows: repeat(4, auto);
   justify-content: space-between;
-  row-gap: 20px;
   margin: 0;
   padding: 20px;
-}
-
-.programme__item--slim {
-  background-image: url("../img/icons/cat-slim.svg");
-  background-repeat: no-repeat;
-  background-color: @default-primary-background;
-  width: 36px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.programme__item--fat {
-  background-image: url("../img/icons/cat-fat.svg");
-  background-repeat: no-repeat;
-  background-color: @default-primary-background;
-  width: 67px;
-  height: 29px;
-  border-radius: 50%;
+  background-color: rgb(242, 242, 242);
 }
 
 .programme__subtitle {
@@ -58,14 +41,39 @@
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.programme__subtitle--slim::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -55px;
+  background-image: url("../img/icons/cat-slim.svg");
+  background-repeat: no-repeat;
+  background-color: @default-primary-background;
+  width: 36px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.programme__subtitle--fat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -55px;
+  background-image: url("../img/icons/cat-fat.svg");
+  background-repeat: no-repeat;
+  background-color: @default-primary-background;
+  width: 67px;
+  height: 29px;
+  border-radius: 50%;
 }
 
 .programme__text {
   grid-column: 1 / -1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  align-self: flex-start;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;

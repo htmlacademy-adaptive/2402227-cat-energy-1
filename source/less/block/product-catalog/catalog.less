@@ -1,6 +1,27 @@
 .catalog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.catalog__wrapper {
   display: grid;
-  grid-template-rows: repeat(2, auto);
   width: 320px;
-  row-gap: 20px;
+  height: auto;
+}
+
+.catalog__heading {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.catalog__line {
+  width: 320px;
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgb(217, 217, 217);
+  margin: 0;
 }

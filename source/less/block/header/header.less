@@ -1,12 +1,21 @@
-.header {
+.header__wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   width: 320px;
+  min-height: 40px;
+  margin: 0;
+  padding: 10px 20px;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-/* Бургер меню */
-// .page-header__burger {
+// // /* Бургер меню */
+// .header__burger {
 //   display: none;
 // }
 
@@ -29,7 +38,7 @@
 }
 
 .header__burger::before {
-  top: 18px;
+  top: 16px;
 }
 
 .header__burger::after {

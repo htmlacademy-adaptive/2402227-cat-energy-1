@@ -1,13 +1,12 @@
-.promo {
+.promo__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  width: 320px;
   min-height: 480px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .promo__annotation {
@@ -46,21 +45,22 @@
   text-align: center;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
+  margin: 20px;
 }
 
 .promo__icon {
-  position: absolute;
-  content: "";
   width: 280px;
   height: 270px;
-  top: 170px;
-  left: 20px;
+  background-position: center;
   background-color: transparent;
   background-size: cover;
-  z-index: 1;
+  z-index: 2;
+  position: absolute;
+  bottom: -125px;
+  left: 20px;
 }
 
 .promo__btn {
   width: 280px;
-  height: 40px;
+  min-height: 40px;
 }

@@ -1,12 +1,33 @@
 .configuration {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  column-gap: 20px;
+  display: grid;
   width: 320px;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.configuration__wrapper {
+  display: grid;
+  width: 320px;
+  height: auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #ffffff;
+  border: none;
+  margin: 0;
+}
+
+.configuration__line {
+  width: 320px;
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgb(217, 217, 217);
+  margin: 0;
+}
+
+.configuration__heading {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .configuration__paragraph {
@@ -23,7 +44,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  column-gap: 20px;
+  row-gap: 10px;
 }
 
 .configuration__footnote {
@@ -37,5 +58,5 @@
 
 .configuration__btn {
   width: 280px;
-  height: 40px;
+  min-height: 40px;
 }

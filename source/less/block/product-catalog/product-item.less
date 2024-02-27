@@ -4,11 +4,12 @@
   grid-template-rows: repeat(3, auto);
   justify-content: space-between;
   width: 320px;
-  height: 209px;
+  height: auto;
   padding: 20px;
+  box-sizing: border-box;
+  min-height: 209px;
   column-gap: 20px;
   align-items: center;
-  box-sizing: border-box;
   background-color: rgb(255, 255, 255);
 }
 
@@ -45,9 +46,13 @@
   text-align: left;
 }
 
-.product-item__btn {
+.product-item__button {
   grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.product-item__btn {
   width: 280px;
-  height: 40px;
+  min-height: 40px;
   margin-top: 20px;
 }
