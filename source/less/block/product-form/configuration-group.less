@@ -1,0 +1,51 @@
+.configuration-group {
+  display: grid;
+  width: 320px;
+  height: auto;
+  padding: 20px;
+  row-gap: 10px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+}
+
+.configuration-group__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 280px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.configuration-group__subtitle {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.configuration-group__radio[type="radio"]:checked {
+  background-color: @default-primary-background;
+}
+
+.configuration-group__checkbox[type="checkbox"]:checked {
+  background-color: @default-primary-background;
+}
+
+.configuration-group__name {
+  width: 228px;
+}
+
+.configuration-group__weight {
+  width: 207px;
+}
+
+.configuration-group__age {
+  width: 173px;
+}
+
+.configuration-group__comment {
+  width: 280px;
+  height: 150px;
+}
