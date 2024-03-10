@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   width: 280px;
   min-height: 34px;
   margin: 0;
@@ -38,4 +39,11 @@
 
 .partner__link--icon:active {
   fill: @icon-active-fill;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .partner__list {
+    width: 168px;
+  }
 }

@@ -1,49 +1,12 @@
 .navigation {
   position: relative;
   width: auto;
-  min-height: 40px;
   padding: 10px 0 0 0;
 }
 
-@media (min-width: @tablet-width) {
-  .navigation__wrapper {
-    display: flex;
-  }
-
-  .navigation__burger {
-    display: none;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .navigation__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .navigation__list {
-    width: 475px;
-  }
-}
-
-.navigation__item {
-  align-self: center;
-}
-
-@media (min-width: @tablet-width) {
-  .navigation__item {
-    margin: 0 0 0 32px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .navigation__item {
-    margin: 0 0 0 32px;
-  }
+.navigation__wrapper {
+  max-width: 320px;
+  position: relative;
 }
 
 .navigation__link {
@@ -83,7 +46,7 @@
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 18px;
+  top: -7px;
   left: -27px;
   z-index: 3;
   border: none;
@@ -102,15 +65,24 @@
 }
 
 .navigation--opened .navigation__burger {
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  right: 0;
-  background-color: rgb(0, 0, 0);
-  border: none;
-  cursor: pointer;
+  top: 0;
+  right: auto;
+  left: 0;
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 10px;
+    bottom: 10px;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
 
   &::before {
     transform: rotate(45deg);
@@ -119,6 +91,50 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .navigation__wrapper {
+    max-width: 708px;
+  }
+
+  .navigation__burger {
+    display: none;
+  }
+
+  .navigation__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .navigation__item {
+    margin: 0 0 0 32px;
+  }
+
+  .navigation__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .navigation--closed .navigation__item {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .navigation__list {
+    width: 475px;
+  }
+
+  .navigation__link {
+    color: rgb(255, 255, 255);
+  }
+
+  .navigation--closed .navigation__item {
+    display: none;
   }
 }
 

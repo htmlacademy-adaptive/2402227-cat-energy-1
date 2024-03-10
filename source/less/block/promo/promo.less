@@ -1,38 +1,27 @@
 .promo__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 480px;
-  margin: 0;
-  padding: 0;
-}
-
-.promo__annotation {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  height: 302px;
-  background-color: rgba(104, 183, 56, 0.85);
   position: relative;
 }
 
-.promo__annotation::before {
-  position: absolute;
-  content: "";
-  width: 320px;
-  height: 302px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/promo_image--background.jpg");
-  background-size: cover;
-  z-index: -1;
+.promo__body {
+  position: relative;
+  min-height: 480px;
+  padding: 27px 0 0 0;
+  z-index: 2;
 }
+
+.promo__body:not(:last-child) > * {
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+// Зеленый фон никак не получается
+// .promo::after {
+//   background-color: rgba(104, 183, 56, 0.85);
+//   z-index: 1;
+// }
 
 .promo__heading {
   color: @default-all-color-light;
-  margin-top: 20px;
 }
 
 .promo__text {
@@ -45,10 +34,19 @@
   text-align: center;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  margin: 20px;
 }
 
-.promo__icon {
+.promo__background {
+  position: absolute;
+  max-width: 320px;
+  max-height: 302px;
+  top: 0;
+  left: -20px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.promo__img {
   width: 280px;
   height: 270px;
   background-position: center;
@@ -56,11 +54,101 @@
   background-size: cover;
   z-index: 2;
   position: absolute;
-  bottom: -125px;
-  left: 20px;
+  top: 165px;
+  left: 0;
 }
 
 .promo__btn {
   width: 280px;
+  box-sizing: border-box;
   min-height: 40px;
+  margin-top: 350px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__btn {
+    margin-top: 50px;
+    width: 244px;
+    min-height: 54px;
+  }
+
+  .promo__heading {
+    text-align: start;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+
+  .promo__text {
+    text-align: start;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+
+  .promo__img {
+    width: 709px;
+    height: 609px;
+    top: 240px;
+    left: -24px;
+    z-index: -1;
+  }
+
+  .promo__background {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin-top: 30px;
+  }
+
+  .promo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    background: rgba(104, 183, 56, 0.85);
+    z-index: -1;
+  }
+
+  .promo__btn {
+    margin-top: 50px;
+    width: 244px;
+    min-height: 54px;
+  }
+
+  .promo__heading {
+    text-align: start;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+  }
+
+  .promo__text {
+    text-align: start;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .promo__img {
+    width: 552px;
+    height: 499px;
+    top: 8px;
+    left: 400px;
+  }
+
+  .promo__background {
+    position: absolute;
+    max-width: 720px;
+    max-height: 694px;
+    top: 0;
+    left: 0;
+  }
 }
