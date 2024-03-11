@@ -1,3 +1,7 @@
+.contact {
+  position: relative;
+}
+
 .contact--form,
 .contact--catalog {
   background-color: rgb(242, 242, 242);
@@ -6,12 +10,8 @@
 .contact__wrapper {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: 320px;
+  column-gap: 18px;
   min-height: 60px;
-  padding: 20px;
-  margin: 0;
 }
 
 .contact__title {
@@ -33,4 +33,41 @@
 
 .contact--configuration {
   background-color: rgba(242, 242, 242, 1);
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .contact__wrapper {
+    max-width: 708px;
+  }
+
+  .contact__wrapper > p {
+    padding: 40px 40px 40px 40px;
+  }
+
+  .contact__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .contact__text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .contact {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 -220px 0;
+  }
+
+  .contact__wrapper {
+    max-width: 565px;
+    min-height: 199px;
+    background-color: rgb(255, 255, 255);
+  }
 }
