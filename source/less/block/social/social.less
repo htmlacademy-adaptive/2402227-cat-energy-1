@@ -1,28 +1,34 @@
 .social__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  width: 132px;
+  min-width: 132px;
   margin: 0;
-  padding: 0;
 }
 
 .social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px;
+  box-sizing: border-box;
+  background-position: center;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
-.social__link:hover {
-  fill: @icon-hover-fill;
+.social__link:hover svg {
+  fill: rgba(104, 183, 56, 1);
 }
 
-.social__link:focus {
-  fill: @icon-focus-fill;
+.social__link:focus svg {
+  fill: rgba(104, 183, 56, 1);
 }
 
-.social__link:active {
-  fill: @icon-active-fill;
+.social__link:active svg {
+  fill: rgba(104, 183, 56, 0.3);
 }

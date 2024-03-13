@@ -1,47 +1,39 @@
 .present {
   position: relative;
-}
-
-.present__container {
-  background-color: rgba(104, 183, 56, 0.85);
+  padding-bottom: 40px;
 }
 
 .present__wrapper {
-  display: grid;
-  height: auto;
-  min-height: 290px;
-  box-sizing: border-box;
   position: relative;
+  min-height: 290px;
 }
 
-.present__link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+// Картинка и фон-------------------------------------------------
+.present__wrapper::before {
   content: "";
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
-  background-image: url("../img/icons/icon_present.svg");
+  width: 280px;
+  height: 290px;
+  background-image: url("../img/pictures/cat-inthebag.png");
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  width: 78px;
-  height: 80px;
-  text-decoration: none;
-  cursor: pointer;
+  z-index: 1;
 }
 
-.present__background {
+.present__wrapper::after {
   content: "";
   position: absolute;
-  width: 280px;
-  min-height: 290px;
+  display: block;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 280px;
+  height: 290px;
+  background-color: rgba(104, 183, 56, 0.85);
+  z-index: 1;
 }
 
 .present__text {
@@ -52,4 +44,29 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
+  min-width: 280px;
+  padding: 160px 20px 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.present__text::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  background-image: url("../img/icons/icon_present.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 78px;
+  height: 80px;
+  z-index: 2;
+}
+
+.present__link {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 .promo {
-  padding-bottom: 10px;
   position: relative;
+  padding-bottom: 30px;
 }
 
 .promo__wrapper {
@@ -9,8 +9,7 @@
 
 .promo__body {
   position: relative;
-  min-height: 480px;
-  padding: 27px 0 0 0;
+  padding-top: 20px;
   z-index: 2;
 }
 
@@ -20,42 +19,28 @@
 }
 
 // Картинка и фон --------------------------------------------------------------------------------------------------------
-.promo::before {
+.promo__wrapper::before,
+.promo__wrapper::after {
   content: "";
   position: absolute;
   display: block;
   top: 0;
   left: 0;
   width: 100%;
-  height: 302px;
-  background-image: url("../img/pictures/promo_image--background.jpg");
+  height: 100%;
+}
+
+.promo__wrapper::before {
+  background-image: url("../img/pictures/promo__image-background.jpg");
   background-repeat: no-repeat;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
   z-index: -1;
 }
 
-.promo::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 302px;
+.promo__wrapper::after {
   background-color: rgba(104, 183, 56, 0.85);
   z-index: 1;
-}
-
-.promo__img {
-  width: 280px;
-  height: 270px;
-  background-position: center;
-  background-color: transparent;
-  background-size: cover;
-  z-index: 2;
-  position: absolute;
-  top: 165px;
-  left: 0;
 }
 
 .promo__heading {
@@ -74,14 +59,28 @@
   text-transform: uppercase;
 }
 
+.promo__img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  z-index: 2;
+}
+
 .promo__btn {
   width: 280px;
   box-sizing: border-box;
   min-height: 40px;
-  margin-top: 350px;
 }
 
 @media (min-width: @tablet-width) {
+  .promo__wrapper::before {
+    display: none;
+  }
+
+  .promo__wrapper::after {
+    display: none;
+  }
+
   .promo__btn {
     margin-top: 50px;
     width: 244px;
@@ -105,39 +104,45 @@
   }
 
   .promo__img {
+    display: block;
     width: 709px;
     height: 609px;
-    top: 240px;
-    left: -24px;
     z-index: 1;
   }
-
-  // .promo::before {
-  //   display: none;
-  // }
-
-  // .promo::after {
-  //   display: none;
-  // }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
-    margin-top: 30px;
+    padding-top: 30px;
     position: static;
   }
 
-  .promo::before {
+  .promo__wrapper {
+    position: static;
+  }
+
+  .promo__wrapper::before,
+  .promo__wrapper::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
     width: 50%;
     height: 694px;
-    left: 50%;
     z-index: -1;
   }
 
-  .promo::after {
-    width: 50%;
-    height: 694px;
-    left: 50%;
+  .promo__wrapper::before {
+    background-image: url("../img/pictures/promo__desktop-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    z-index: -1;
+  }
+
+  .promo__wrapper::after {
+    background-color: rgba(104, 183, 56, 0.85);
     z-index: 1;
   }
 
@@ -164,7 +169,5 @@
   .promo__img {
     width: 552px;
     height: 499px;
-    top: 8px;
-    left: 400px;
   }
 }

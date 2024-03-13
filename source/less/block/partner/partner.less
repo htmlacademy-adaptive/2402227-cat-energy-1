@@ -3,15 +3,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
+  min-width: 280px;
   min-height: 34px;
   margin: 0;
   padding: 0;
 }
 
 .partner__link {
-  outline: none;
+  background-position: center;
   text-decoration: none;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -23,27 +25,40 @@
   color: rgb(68, 68, 68);
 }
 
+.partner__link--text:hover {
+  color: rgba(68, 68, 68, 0.6);
+}
+
+.partner__link--text:focus {
+  color: rgba(68, 68, 68, 0.6);
+}
+
+.partner__link--text:active {
+  color: rgba(68, 68, 68, 0.3);
+}
+
 .partner__link--icon {
+  display: block;
   width: 27px;
   height: 34px;
   border: none;
 }
 
-.partner__link--icon:hover {
-  fill: @icon-hover-fill;
+.partner__link--icon:hover svg {
+  fill: rgba(94, 170, 47, 0.6);
 }
 
-.partner__link--icon:focus {
-  fill: @icon-focus-fill;
+.partner__link--icon:focus svg {
+  fill: rgba(94, 170, 47, 0.6);
 }
 
-.partner__link--icon:active {
-  fill: @icon-active-fill;
+.partner__link--icon:active svg {
+  fill: rgba(94, 170, 47, 0.3);
 }
 
 // Tablet
 @media (min-width: @tablet-width) {
   .partner__list {
-    width: 168px;
+    min-width: 168px;
   }
 }
