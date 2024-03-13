@@ -3,7 +3,6 @@
 }
 
 .map__container {
-  width: 320px;
   position: relative;
 }
 
@@ -14,16 +13,19 @@
 
 .map__spb {
   display: block;
-  max-width: 320px;
+  width: 100%;
   min-height: 362px;
   border: none;
+  position: relative;
+  z-index: -1;
 }
 
-.map__logo {
+.map__spb::after {
   content: "";
   position: absolute;
-  top: 135px;
-  left: 145px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/pictures/logo_pin.png");
   width: 57px;
   height: 53px;
   z-index: 1;
@@ -31,31 +33,8 @@
 
 // Tablet
 @media (min-width: @tablet-width) {
-  .map__spb {
-    max-width: 768px;
-    min-height: 400px;
-  }
-
-  .map__logo {
-    top: 155px;
-    left: 145px;
-  }
-}
-
-
-// Desktop
-@media (min-width: @desktop-width) {
-  .map {
-    z-index: -1;
-  }
-
-  .map__spb {
-    max-width: 1440px;
-    min-height: 400px;
-  }
-
-  .map__logo {
-    top: 155px;
-    left: 145px;
+  .map__spb::after {
+    width: 113px;
+    height: 106px;
   }
 }
