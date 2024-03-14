@@ -1,12 +1,25 @@
-.example__slider {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+.slider {
+  position: relative;
 }
 
 .slider__cat {
+  display: block;
   width: 240px;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .slider__wrapper {
+    position: static;
+    width: 100%;
+    min-height: 462px;
+    background-color: rgb(234, 234, 234);
+  }
+
+  .slider__cat {
+    width: 400px;
+    position: absolute;
+    top: -150px;
+    left: 100px;
+  }
 }
