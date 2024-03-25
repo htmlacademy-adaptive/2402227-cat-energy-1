@@ -25,9 +25,10 @@
 }
 
 .configuration__heading {
-  text-align: left;
+  margin: 0;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: @default-secondary-color-dark;
 }
 
 .configuration__paragraph {
@@ -56,7 +57,16 @@
   color: @default-secondary-color-dark;
 }
 
-.configuration__btn {
-  width: 280px;
-  min-height: 40px;
+// Tablet
+@media (min-width: @tablet-width) {
+  .configuration__btn {
+    width: 284px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .configuration__btn {
+    width: 570px;
+  }
 }

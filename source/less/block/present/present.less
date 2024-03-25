@@ -1,47 +1,29 @@
 .present {
   position: relative;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
-.present__container {
-  background-color: rgba(104, 183, 56, 0.85);
-}
-
+// Картинка и фон-------------------------------------------------
 .present__wrapper {
-  display: grid;
-  height: auto;
+  display: block;
+  width: 280px;
   min-height: 290px;
-  box-sizing: border-box;
+  background-image: url("../img/pictures/cat-inthebag.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
-.present__link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+.present__wrapper::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../img/icons/icon_present.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  width: 78px;
-  height: 80px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.present__background {
-  content: "";
-  position: absolute;
-  width: 280px;
+  width: 100%;
   min-height: 290px;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  background-color: rgba(104, 183, 56, 0.85);
 }
 
 .present__text {
@@ -52,4 +34,56 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
+  min-width: 280px;
+  padding: 160px 20px 5px 20px;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.present__text::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  background-image: url("../img/icons/icon_present.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 78px;
+  height: 80px;
+  z-index: 2;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .present__wrapper {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../img/pictures/cat-inthebag-tablet.png");
+  }
+
+  .present__wrapper::after {
+    min-height: 200px;
+  }
+
+  .present__text {
+    padding: 60px 70px 50px 400px;
+    text-align: left;
+  }
+
+  .present__text::after {
+    top: 50px;
+    left: 50px;
+    width: 80px;
+    height: 83px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .subproduct__line {
+    width: 895px;
+  }
 }

@@ -1,12 +1,24 @@
-.example__slider {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+.slider {
+  position: relative;
 }
 
 .slider__cat {
+  display: block;
   width: 240px;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .slider__wrapper {
+    position: static;
+    width: 100%;
+  }
+
+  .slider__cat {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
 }

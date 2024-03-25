@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
-  width: 280px;
   min-height: 98px;
+  align-self: center;
+  justify-self: center;
 }
 
 .subproduct-item__title {
@@ -13,8 +14,10 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  color: #222222;
+  color: rgb(34, 34, 34);
   text-align: left;
+  margin: 0;
+  padding: 10px 0 10px 0;
 }
 
 .subproduct-item__annotation {
@@ -31,13 +34,29 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  color: #444444;
+  color: rgb(68, 68, 68);
   text-align: center;
 }
 
 .subproduct-item__btn {
   grid-row: 3 / -1;
   grid-column: 1 / -1;
-  width: 280px;
-  height: 40px;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .subproduct-item {
+    min-height: 85px;
+  }
+
+  .subproduct-item__btn {
+    width: 632px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .subproduct-item__btn {
+    width: 244px;
+  }
 }

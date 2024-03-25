@@ -1,3 +1,4 @@
+// Для Похудение и набрать вес - возможно удалю за ненадобностью позже
 .secondary-btn {
   display: flex;
   justify-content: center;
@@ -26,4 +27,11 @@
 
 .secondary-btn:active {
   color: @active-secondary-color-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .secondary-btn {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

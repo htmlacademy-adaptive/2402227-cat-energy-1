@@ -42,13 +42,21 @@
   text-align: left;
 }
 
-.product-item__button {
+.product-item__btn {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
 }
 
-.product-item__btn {
-  width: 280px;
-  min-height: 40px;
-  margin-top: 20px;
+// Tablet
+@media (min-width: @tablet-width) {
+  .product-item__btn {
+    width: 250px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .product-item__btn {
+    width: 169px;
+  }
 }

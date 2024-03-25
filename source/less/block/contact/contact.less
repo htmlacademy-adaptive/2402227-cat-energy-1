@@ -1,10 +1,7 @@
+// Mobile --------------------------------------------
 .contact {
   position: relative;
-}
-
-.contact--form,
-.contact--catalog {
-  background-color: rgb(242, 242, 242);
+  padding: 20px 0 20px 0;
 }
 
 .contact__wrapper {
@@ -31,18 +28,27 @@
   color: rgb(68, 68, 68);
 }
 
-.contact--configuration {
-  background-color: rgba(242, 242, 242, 1);
+// Catalog ------------------------------------------------------------------
+.contact--catalog {
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+}
+
+// Form ---------------------------------------------------------------------------
+.contact--form {
+  background-color: rgb(242, 242, 242);
 }
 
 // Tablet
 @media (min-width: @tablet-width) {
+  //Main --------------------------------------------------------------------
   .contact__wrapper {
     max-width: 708px;
   }
 
   .contact__wrapper > p {
     padding: 40px 40px 40px 40px;
+    margin: 0;
   }
 
   .contact__title {
@@ -55,18 +61,32 @@
     line-height: 20px;
     text-align: right;
   }
+
+  // Catalog ------------------------------------------------------------------
+  .contact--catalog {
+    background-color: rgb(242, 242, 242);
+    width: 100%;
+  }
 }
 
 // Desktop
 @media (min-width: @desktop-width) {
+  //Main --------------------------------------------------------------------------
   .contact {
     position: relative;
+    padding-top: 185px;
+    margin: -123px 0 -282px 0;
     z-index: 2;
-    margin: -83px 0 -282px 0;
   }
 
   .contact__wrapper {
     min-height: 199px;
     background-color: rgb(255, 255, 255);
+  }
+
+  // Catalog ------------------------------------------------------------
+  .contact--catalog {
+    background-color: transparent;
+    width: 100%;
   }
 }
