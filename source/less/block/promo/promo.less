@@ -68,12 +68,6 @@
   z-index: 2;
 }
 
-.promo__btn {
-  width: 280px;
-  box-sizing: border-box;
-  min-height: 40px;
-}
-
 @media (min-width: @tablet-width) {
   .promo {
     padding-top: 30px;
@@ -90,46 +84,38 @@
 
   .promo__body {
     display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
     background-color: transparent;
     z-index: 2;
   }
 
   .promo__heading {
     grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    text-align: start;
-    font-size: 60px;
-    line-height: 60px;
-    color: #000000;
+    color: @default-secondary-color-dark;
     margin-bottom: 40px;
   }
 
   .promo__text {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
+    grid-row: 2 / 3;
     text-align: start;
     font-size: 20px;
     line-height: 20px;
     color: #000000;
-    margin-top: 170px;
   }
 
   .promo__btn {
-    grid-row: 2 / -1;
-    grid-column: 1 / 2;
+    grid-row: 4 / -1;
     width: 244px;
     min-height: 54px;
-    margin-top: 50px;
     font-size: 20px;
     line-height: 26px;
+    margin-top: 50px;
     z-index: 1;
   }
 
   .promo__img {
-    grid-row: 2 / -1;
-    grid-column: 2 / 3;
+    grid-row: 3 / -1;
     display: block;
     width: 709px;
     height: 609px;
@@ -175,25 +161,35 @@
     z-index: 1;
   }
 
+  .promo__body {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    z-index: 2;
+  }
+
   .promo__heading {
-    text-align: start;
-    font-size: 60px;
-    line-height: 60px;
-    color: #000000;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
   }
 
   .promo__text {
-    text-align: start;
-    font-size: 20px;
-    line-height: 20px;
-    color: #000000;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+
+  .promo__btn {
+    grid-row: 4 / -1;
+    grid-column: 1 / 2;
   }
 
   .promo__img {
+    grid-row: 1 / -1;
+    grid-column: 3 / -1;
     width: 552px;
     height: 499px;
-    position: absolute;
-    top: -260px;
-    left: -198px;
+    top: -30px;
+    right: 179px;
   }
 }
