@@ -1,9 +1,9 @@
 .footer {
   position: relative;
-  background-color: rgb(242, 242, 242);
+  background-color: @default-third-background;
 }
 
-.footer__wrapper {
+.footer__container {
   display: grid;
   grid-template-rows: repeat(5, auto);
   place-items: center;
@@ -33,16 +33,20 @@
   min-height: 34px;
 }
 
+.footer__line {
+  .deviding-line;
+}
+
 // Tablet
 @media (min-width: @tablet-width) {
-  .footer__wrapper {
+  .footer__container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px 0 20px;
     min-height: 147px;
+    padding: 0 20px 0 20px;
     box-sizing: border-box;
   }
 
@@ -57,7 +61,7 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
-  .footer__wrapper {
+  .footer__container {
     min-height: 169px;
   }
 

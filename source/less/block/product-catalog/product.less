@@ -1,8 +1,132 @@
-.product__list {
-  display: grid;
+.product {
   position: relative;
 }
 
+.product__list {
+  display: grid;
+}
+
+.product__item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: repeat(3, auto);
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center;
+  min-height: 209px;
+  background-color: @default-all-color-light;
+}
+
+.product__img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  padding-left: 30px;
+}
+
+.product__img--500 {
+  width: 68px;
+  height: 86px;
+}
+
+.product__img--1000 {
+  width: 84px;
+  height: 100px;
+}
+
+.product__annotation {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  width: 140px;
+  min-height: 103px;
+  box-sizing: border-box;
+}
+
+.product__title {
+  font-family: @font-main;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.product__table {
+  .table;
+}
+
+.product__button {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__btn {
+  .primary-btn;
+}
+
+.product__redirect {
+  .third-btn;
+}
+
 .product__line {
-  width: 320px;
+  .deviding-line;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .product__list {
+    grid-template-columns: repeat(2, 324px);
+    column-gap: 60px;
+    row-gap: 80px;
+  }
+
+  .product__item {
+    grid-template-columns: none;
+    grid-template-rows: repeat(6, auto);
+    justify-content: space-between;
+    align-items: center;
+    min-height: 511px;
+    background-color: @default-third-background;
+  }
+
+  .product__img {
+    grid-row: 1 / 3;
+  }
+
+  .product__annotation {
+    grid-row: 3 / 5;
+    width: 250px;
+    min-height: 157px;
+    box-sizing: border-box;
+  }
+
+  .product__title {
+    grid-row: 3 / 4;
+  }
+
+  .product__button {
+    grid-row: 5 / 6;
+  }
+
+  .product__btn,
+  .product__redirect {
+    width: 250px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .product__list {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 90px;
+  }
+
+  .product__btn,
+  .product__redirect {
+    width: 169px;
+  }
 }

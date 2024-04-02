@@ -3,10 +3,6 @@
   padding-bottom: 30px;
 }
 
-.promo__wrapper {
-  position: relative;
-}
-
 .promo__body {
   position: relative;
   padding-top: 20px;
@@ -19,8 +15,8 @@
 }
 
 // Картинка и фон --------------------------------------------------------------------------------------------------------
-.promo__wrapper::before,
-.promo__wrapper::after {
+.promo::before,
+.promo::after {
   content: "";
   position: absolute;
   display: block;
@@ -30,7 +26,7 @@
   height: 302px;
 }
 
-.promo__wrapper::before {
+.promo::before {
   background-image: url("../img/pictures/promo__image-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,21 +34,24 @@
   z-index: -1;
 }
 
-.promo__wrapper::after {
+.promo::after {
   background-color: rgba(104, 183, 56, 0.85);
   z-index: 1;
 }
 
 .promo__heading {
-  color: @default-all-color-light;
-  margin-bottom: 25px;
+  .heading-h1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  color: @default-all-color-light;
 }
 
 .promo__text {
   display: block;
-  font-family: "Oswald", sans-serif;
+  font-family: @font-main;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -70,17 +69,21 @@
   z-index: 2;
 }
 
+.promo__btn {
+  .primary-btn;
+}
+
 @media (min-width: @tablet-width) {
   .promo {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  .promo__wrapper::before {
+  .promo::before {
     display: none;
   }
 
-  .promo__wrapper::after {
+  .promo::after {
     display: none;
   }
 
@@ -93,6 +96,8 @@
   }
 
   .promo__heading {
+    justify-content: flex-start;
+    align-items: start;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     color: @default-secondary-color-dark;
@@ -137,12 +142,8 @@
     position: static;
   }
 
-  .promo__wrapper {
-    position: static;
-  }
-
-  .promo__wrapper::before,
-  .promo__wrapper::after {
+  .promo::before,
+  .promo::after {
     content: "";
     position: absolute;
     display: block;
@@ -153,7 +154,7 @@
     z-index: -1;
   }
 
-  .promo__wrapper::before {
+  .promo::before {
     background-image: url("../img/pictures/promo__desktop-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -161,7 +162,7 @@
     z-index: -1;
   }
 
-  .promo__wrapper::after {
+  .promo::after {
     background-color: rgba(104, 183, 56, 0.85);
     z-index: 1;
   }
@@ -177,7 +178,6 @@
   .promo__heading {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    max-width: 414px;
   }
 
   .promo__text {

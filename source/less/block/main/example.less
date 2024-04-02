@@ -1,20 +1,18 @@
 .example {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: rgb(234, 234, 234);
   position: relative;
 }
 
 .example__container {
-  background-color: rgb(234, 234, 234);
-}
-
-.example__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 20px;
 }
 
 .example__title {
+  .heading-h2;
   grid-column: 1 / -1;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -23,12 +21,12 @@
 
 .example__text {
   grid-column: 1 / -1;
-  font-family: "Lato", sans-serif;
+  font-family: @font-text;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   text-align: left;
-  color: rgb(68, 68, 68);
+  color: @default-third-color;
   margin: 0;
 }
 
@@ -54,23 +52,22 @@
 }
 
 .example__subtitle {
-  line-height: 24px;
-  color: @default-secondary-color-dark;
+  .heading-h3;
 }
 
 .example__subtext {
-  font-family: "Lato", sans-serif;
+  font-family: @font-text;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
   text-align: center;
-  color: rgb(68, 68, 68);
+  color: @default-third-color;
   background-color: rgb(234, 234, 234);
+  max-width: 77px;
   margin: 0;
   margin-bottom: -10px;
   padding: 16px 16px 0 16px;
   position: relative;
-  max-width: 77px;
 }
 
 .example__expenses {
@@ -83,15 +80,15 @@
 }
 
 .example__expenses--text {
-  font-family: "Oswald", sans-serif;
+  font-family: @font-main;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: rgb(0, 0, 0);
+  color: @default-secondary-color-dark;
   text-align: center;
+  text-transform: uppercase;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
 }
 
 .example__expenses--dsc {
@@ -109,19 +106,12 @@
 
 // Tablet
 @media (min-width: @tablet-width) {
-  .example__container {
+  .example {
     background-color: rgb(255, 255, 255);
   }
 
-  .example__wrapper {
+  .example__container {
     row-gap: 60px;
-  }
-
-  .example__title {
-    font-size: 60px;
-    line-height: 60px;
-    text-align: left;
-    margin-bottom: 0;
   }
 
   .example__subtitle {
@@ -132,17 +122,14 @@
   .example__subtext {
     font-size: 14px;
     line-height: 14px;
-    color: rgb(68, 68, 68);
-    background-color: rgb(255, 255, 255);
-    padding: 20px 10px 0 10px;
     max-width: 162px;
+    padding: 20px 10px 0 10px;
+    background-color: @default-all-color-light;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
-    text-align: left;
-    color: rgb(68, 68, 68);
     margin: 0 33px 0 0;
   }
 
@@ -184,18 +171,13 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .example {
-    padding-top: 80px;
-    padding-bottom: 0;
-  }
-
-  .example__container {
+    padding: 80px 0 60px 0;
     background-color: rgb(234, 234, 234);
     min-height: 462px;
-    padding: 0 0 60px 0;
     position: static;
   }
 
-  .example__wrapper {
+  .example__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, auto);
@@ -205,7 +187,6 @@
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     margin: 0;
-    margin-bottom: 50px;
   }
 
   .example__text {
@@ -223,7 +204,6 @@
   .example__subtext {
     font-size: 14px;
     line-height: 14px;
-    color: rgb(68, 68, 68);
     background-color: rgb(234, 234, 234);
   }
 

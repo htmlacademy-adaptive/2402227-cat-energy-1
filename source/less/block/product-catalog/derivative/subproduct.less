@@ -1,13 +1,6 @@
 .subproduct {
   display: grid;
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.subproduct__title {
-  margin: 0;
-  padding: 10px 0 30px 0;
 }
 
 .subproduct__list {
@@ -17,17 +10,13 @@
 }
 
 .subproduct__line {
+  .deviding-line;
   width: 100%;
   color: rgb(205, 205, 205);
 }
 
 // Tablet
 @media (min-width: @tablet-width) {
-  .subproduct__wrapper {
-    display: grid;
-    width: 100%;
-  }
-
   .subproduct__title {
     padding-bottom: 60px;
   }

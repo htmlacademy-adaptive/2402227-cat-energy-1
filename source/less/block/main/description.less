@@ -1,10 +1,6 @@
 .description {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 30px;
-  position: relative;
-}
-
-.description__wrapper {
   position: relative;
 }
 
@@ -13,8 +9,9 @@
 }
 
 .description__title {
+  .heading-h2;
   color: @default-secondary-color-dark;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .description__item {
@@ -39,11 +36,11 @@
   position: absolute;
   top: 15px;
   left: 20px;
+  width: 25px;
+  height: 28px;
   background-image: url("../img/description-items/health.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 25px;
-  height: 28px;
 }
 
 .description__item--type::after {
@@ -51,11 +48,11 @@
   position: absolute;
   top: 15px;
   left: 17px;
+  width: 27px;
+  height: 29px;
   background-image: url("../img/description-items/type.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 27px;
-  height: 29px;
 }
 
 .description__item--feed::after {
@@ -63,11 +60,11 @@
   position: absolute;
   top: 15px;
   left: 16px;
+  width: 26px;
+  height: 30px;
   background-image: url("../img/description-items/feed.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 26px;
-  height: 30px;
 }
 
 .description__item--time::after {
@@ -75,33 +72,28 @@
   position: absolute;
   top: 15px;
   left: 16px;
+  width: 27px;
+  height: 31px;
   background-image: url("../img/description-items/time.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 27px;
-  height: 31px;
 }
 
 .description__text {
   min-width: 200px;
   min-height: 54px;
-  font-family: "Lato", sans-serif;
+  font-family: @font-text;
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
   line-height: 18px;
   text-align: start;
-  color: rgb(68, 68, 68);
+  color: @default-third-color;
   margin: 0;
 }
 
 // Tablet
 @media (min-width: @tablet-width) {
-  .description__title {
-    font-size: 60px;
-    text-align: start;
-  }
-
   .description__list {
     display: grid;
     grid-template-columns: repeat(2, auto);

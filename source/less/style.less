@@ -1,4 +1,4 @@
-// Base
+// Base ------------------------------------------------------------------------------
 @import "./base/visually-hidden";
 @import "./base/clear-list";
 @import "./base/fonts";
@@ -7,29 +7,9 @@
 @import "./base/mixins";
 @import "./base/variables";
 
-// Input
-@import "./base/input/label-field";
-@import "./base/input/input-field";
-
-// Heading
-@import "./base/heading/heading-h1";
-@import "./base/heading/heading-h2";
-@import "./base/heading/heading-h3";
-
-// Table
-@import "./base/table/table";
-
-// Blocks
+// Blocks ---------------------------------------------------------------------------
 // Page
 @import "./block/page/page";
-
-// Button
-@import "./block/button/primary-btn";
-@import "./block/button/secondary-btn";
-@import "./block/button/third-btn";
-
-// line
-@import "./base/line/deviding-line";
 
 // Header
 @import "./block/header/header";
@@ -40,29 +20,29 @@
 // Main/Catalog/Form -> Navigation
 @import "./block/navigation/navigation";
 
-// Footer
-@import "./block/footer/footer";
+// Main -> Promo (Промо) --------------------------------------------------------------
+@import "./block/main/promo";
 
-// Main -> Promo
-@import "./block/promo/promo";
+// Main -> Programme (Похудеть / Набрать вес) -----------------------------------------
+@import "./block/main/programme";
 
-// Main -> Programme
-@import "./block/programme/programme";
+// Main -> Description (Как это работает) ---------------------------------------------
+@import "./block/main/description";
 
-// Main -> Description
-@import "./block/description/description";
-
-// Main -> Example
-@import "./block/example/example";
+// Main -> Example (Живой пример) -----------------------------------------------------
+@import "./block/main/example";
 
 // Main -> Slider
-@import "./block/slider/slider";
+@import "./block/main/slider";
 
-// Main/Catalog -> Contact
+// Main/Catalog -> Contact (Контакты) ------------------------------------------------
 @import "./block/contact/contact";
 
-// Main -> Map
+// Main -> Map (Карта) ---------------------------------------------------------------
 @import "./block/map/map";
+
+// Footer (Футер) --------------------------------------------------------------------
+@import "./block/footer/footer";
 
 // Footer -> Social
 @import "./block/social/social";
@@ -70,20 +50,18 @@
 // Footer -> Partner
 @import "./block/partner/partner";
 
-// Product-catalog -> Catalog
+// Product-catalog -> Catalog (Каталог) ---------------------------------------------
 @import "./block/product-catalog/catalog";
 
 // Product-catalog -> Product
 @import "./block/product-catalog/product";
-@import "./block/product-catalog/product-item";
 
-// Product-catalog -> Subproduct
-@import "./block/subproduct/subproduct";
-@import "./block/subproduct/subproduct-item";
+// Product-catalog -> Derivative (Доп.товары + Подарок) -----------------------------
+@import "./block/product-catalog/derivative/derivative";
+@import "./block/product-catalog/derivative/subproduct";
+@import "./block/product-catalog/derivative/subproduct-item";
+@import "./block/product-catalog/derivative/present";
 
-// Product-catalog -> Present
-@import "./block/present/present";
-
-// Product-form -> Configuration
+// Product-form -> Configuration (Форма для заполнения) ----------------------------
 @import "./block/product-form/configuration";
 @import "./block/product-form/configuration-group";

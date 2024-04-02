@@ -1,1 +1,254 @@
-// test
+// Заголовки H1 уровня -------------------------------------------------------------------------------------------------------------------
+.heading-h1() {
+  font-family: @font-main;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+}
+
+// Заголовки h2 уровня -------------------------------------------------------------------------------------------------------------------
+.heading-h2() {
+  font-family: @font-main;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  color: @default-secondary-color-dark;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+}
+
+// Заголовки h3 уровня ---------------------------------------------------------------------------------------------------------------
+.heading-h3() {
+  font-family: @font-main;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: @default-secondary-color-dark;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+// Кнопки --------------------------------------------------------------------------------------------------------------------------
+
+// Primary-btn ---------------------------------------
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @default-all-color-light;
+  background-color: @default-primary-background;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @hover-all-color-light;
+    background-color: @hover-primary-background;
+  }
+
+  &:focus {
+    color: @focus-all-color-light;
+    background-color: @focus-primary-background;
+    outline: none;
+  }
+
+  &:active {
+    color: @active-all-color-light;
+    background-color: @active-primary-background;
+  }
+}
+
+// Secondary-btn -------------------------------------
+// Для Похудение и набрать вес - возможно удалю за ненадобностью позже
+.secondary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0 4px 0;
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @default-secondary-color-dark;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @hover-secondary-color-dark;
+  }
+
+  &:focus {
+    color: @focus-secondary-color-dark;
+    outline: none;
+  }
+
+  &:active {
+    color: @active-secondary-color-dark;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// Third-btn -----------------------------------------
+.third-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 40px;
+  padding: 10px;
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @default-third-color;
+  background-color: @default-third-background;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @hover-third-color;
+    background-color: @hover-third-background;
+  }
+
+  &:focus {
+    color: @focus-third-color;
+    background-color: @focus-third-background;
+    outline: none;
+  }
+
+  &:active {
+    color: @active-third-color;
+    background-color: @active-third-background;
+  }
+}
+
+// Поля ввода ----------------------------------------------------------------------------------------------------------------------
+.input-field(@include-error: false) {
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @default-third-color;
+  border: 1px solid @default-border-color;
+  outline: none;
+  padding: 10px;
+
+  &:hover {
+    border-color: @hover-border-color;
+  }
+
+  &:focus {
+    border: 2px;
+    border-color: @focus-border-color;
+  }
+
+  &::placeholder {
+    font-family: @font-main;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @default-third-color;
+  }
+
+  // Стили для ошибки -------------------------------------------------------------------------------------------------------------------
+  & when (@include-error = true) {
+    border: 2px;
+    border-color: @error-border-color;
+  }
+}
+
+// Лейбл для полей воода ----------------------------------------------------------------------------------------------------------------
+.label-field() {
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @default-third-color;
+  padding: 10px 10px 10px 0;
+}
+
+// Разделяющая линия --------------------------------------------------------------------------------------------------------------------
+.deviding-line() {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgb(217, 217, 217);
+  margin: 0;
+}
+
+// Таблица -------------------------------------------------------------------------------------------------------------------------------
+.table() {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  outline: none;
+
+  .table__item {
+    font-family: @font-text;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: @default-third-color;
+    text-align: justify;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
