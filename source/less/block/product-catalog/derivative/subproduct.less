@@ -1,18 +1,13 @@
 .subproduct {
   display: grid;
   position: relative;
+  padding: 20px 0 20px 0;
 }
 
 .subproduct__list {
   display: grid;
   row-gap: 20px;
   width: 100%;
-}
-
-.subproduct__line {
-  .deviding-line;
-  width: 100%;
-  color: rgb(205, 205, 205);
 }
 
 // Tablet
@@ -24,7 +19,7 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
-  .subproduct__line {
-    width: 895px;
+  .subproduct {
+    padding: 0;
   }
 }

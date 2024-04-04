@@ -30,7 +30,7 @@
 .subproduct-item__label {
   grid-row: 2 / 3;
   grid-column: 1 / -1;
-  font-family: @font-text;
+  font-family: @font-secondary;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -47,7 +47,29 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .subproduct-item {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-between;
     min-height: 85px;
+  }
+
+  .subproduct-item__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .subproduct-item__label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .subproduct-item__annotation {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+    gap: 20px;
   }
 
   .subproduct-item__btn {
@@ -57,7 +79,32 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
+  .subproduct-item {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: none;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 40px;
+  }
+
+  .subproduct-item__title {
+    grid-column: 1 / 2;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .subproduct-item__annotation {
+    grid-column: 2 / 3;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .subproduct-item__label {
+    align-self: flex-end;
+  }
+
   .subproduct-item__btn {
+    grid-column: 3 / 4;
     width: 244px;
   }
 }
