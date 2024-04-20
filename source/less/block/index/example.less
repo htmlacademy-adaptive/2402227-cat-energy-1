@@ -1,11 +1,12 @@
 .example {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgb(234, 234, 234);
-  position: relative;
 }
 
 .example__container {
+  .container;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 20px;
@@ -31,10 +32,10 @@
 }
 
 .example__list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, auto);
   column-gap: 32px;
-  position: relative;
 }
 
 .example__item {
@@ -56,6 +57,7 @@
 }
 
 .example__subtext {
+  position: relative;
   font-family: @font-secondary;
   font-size: 12px;
   font-weight: 400;
@@ -67,7 +69,6 @@
   margin: 0;
   margin-bottom: -10px;
   padding: 16px 16px 0 16px;
-  position: relative;
 }
 
 .example__expenses {
@@ -138,10 +139,10 @@
   }
 
   .example__item {
+    position: relative;
     min-width: 162px;
     justify-items: start;
     align-items: center;
-    position: relative;
   }
 
   .example__expenses {
@@ -171,10 +172,10 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .example {
+    position: static;
+    min-height: 462px;
     padding: 80px 0 60px 0;
     background-color: rgb(234, 234, 234);
-    min-height: 462px;
-    position: static;
   }
 
   .example__container {

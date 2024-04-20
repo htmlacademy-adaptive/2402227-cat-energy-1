@@ -62,16 +62,13 @@
   .table;
 }
 
-.product__button {
+.product__btn {
+  .primary-btn;
   grid-column: 1 / -1;
   grid-row: 3 / 4;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.product__btn {
-  .primary-btn;
 }
 
 .product__line {
@@ -80,9 +77,23 @@
 
 // Больше товаров --------------------------------------------------------------------------------
 .product__item--more {
+  position: relative;
   grid-template-columns: none;
   grid-template-rows: none;
   align-self: center;
+}
+
+.product__item--more::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 120px;
+  background-image: url("../img/icons/mobile-plus.svg");
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 10px 0;
+  background-repeat: no-repeat;
+  text-decoration: none;
 }
 
 .product__content {
@@ -90,7 +101,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 219px;
-  margin: 0;
+  margin: 25px 0 0 30px;
   padding: 20px 0 20px 0;
   box-sizing: border-box;
 }
@@ -98,21 +109,6 @@
 .product__title--more {
   margin: 0;
   padding: 0 10px 0 0;
-}
-
-.product__link {
-  text-decoration: none;
-  position: relative;
-  margin: 10px 0 10px 0;
-}
-
-.product__icon {
-  background-image: url("../img/icons/mobile-plus.svg");
-  width: 30px;
-  height: 30px;
-  margin: 10px 0 10px 0;
-  background-repeat: no-repeat;
-  text-decoration: none;
 }
 
 .product__text {
@@ -135,36 +131,38 @@
   .product__list {
     grid-template-columns: repeat(2, 324px);
     align-items: center;
-    column-gap: 25px;
-    row-gap: 80px;
-    margin-top: 50px;
+    column-gap: 20px;
+    row-gap: 40px;
+    margin-top: 20px;
   }
 
   .product__item {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
     min-width: 324px;
-    min-height: 511px;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 40px 0;
     background-color: @default-third-background;
     position: relative;
   }
 
+  .product__content {
+    width: 170px;
+    row-gap: 30px;
+    margin: 20px 0 20px 0;
+  }
+
   .product__img {
-    content: "";
-    position: absolute;
-    top: -55px;
-    left: 85px;
+    padding-left: 0;
   }
 
   .product__annotation {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 250px;
+    row-gap: 10px;
     min-height: 157px;
+    margin: 20px 0 25px 0;
   }
 
   .product__title {
@@ -182,28 +180,28 @@
   .product__item--more {
     background-color: @default-all-color-light;
     border: 1px solid @default-third-background;
+    padding-top: 60px;
   }
 
-  .product__content {
-    width: 170px;
-  }
-
-  .product__icon {
+  .product__item--more::after {
+    top: 0;
+    left: 125px;
     background-image: url("../img/icons/tablet-plus.svg");
     width: 60px;
     height: 60px;
-    margin: 10px 0 50px 0;
+    margin: 20px 0 0 0;
   }
 
   .product__title--more {
     font-size: 20px;
     line-height: 24px;
+    padding: 0 10px 0 10px;
   }
 
   .product__text {
     font-size: 16px;
     line-height: 18px;
-    padding: 20px 0 20px 0;
+    padding: 15px 0 20px 0;
   }
 }
 
@@ -211,8 +209,8 @@
 @media (min-width: @desktop-width) {
   .product__list {
     grid-template-columns: repeat(4, 245px);
-    column-gap: 65px;
-    row-gap: 90px;
+    column-gap: 67px;
+    row-gap: 60px;
   }
 
   .product__item {
@@ -225,6 +223,15 @@
 
   .product__title {
     padding: 0 25px 0 25px;
+  }
+
+  .product__title--more {
+    padding: 20px 10px 0 10px;
+  }
+
+  .product__item--more::after {
+    left: 90px;
+    margin: 20px 0 20px 0;
   }
 
   .product__btn,

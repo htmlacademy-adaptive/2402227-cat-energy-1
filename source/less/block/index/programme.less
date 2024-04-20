@@ -6,6 +6,10 @@
   z-index: 2;
 }
 
+.programme__container {
+  .container;
+}
+
 .programme__list {
   display: grid;
   row-gap: 20px;
@@ -17,6 +21,7 @@
 }
 
 .programme__subtitle {
+  position: relative;
   justify-content: center;
   align-items: center;
   align-self: flex-start;
@@ -28,7 +33,6 @@
   line-height: 37px;
   text-align: start;
   text-transform: uppercase;
-  position: relative;
 }
 
 .programme__subtitle--slim::before,
@@ -98,6 +102,7 @@
 }
 
 .programme__link--text {
+  position: relative;
   font-family: @font-main;
   font-size: 16px;
   font-weight: 400;
@@ -105,7 +110,6 @@
   text-align: center;
   color: @default-secondary-color-dark;
   text-transform: uppercase;
-  position: relative;
 }
 
 .programme__link--text::after {

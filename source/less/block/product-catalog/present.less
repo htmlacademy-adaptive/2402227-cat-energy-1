@@ -1,12 +1,7 @@
+// Картинка и фон---------------------------------------------------
 .present {
   position: relative;
-  padding: 0 0 20px 0;
-}
-
-// Картинка и фон-------------------------------------------------
-.present__container {
   display: block;
-  width: 280px;
   min-height: 290px;
   background-image: url("../img/pictures/cat-inthebag.png");
   background-repeat: no-repeat;
@@ -14,7 +9,7 @@
   background-size: cover;
 }
 
-.present__container::after {
+.present::after {
   content: "";
   position: absolute;
   top: 0;
@@ -55,18 +50,11 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .present {
-    padding-top: 40px;
-    padding-bottom: 30px;
-  }
-
-  .present__container {
-    display: block;
-    width: 100%;
     min-height: 200px;
     background-image: url("../img/pictures/cat-inthebag-tablet.png");
   }
 
-  .present__container::after {
+  .present::after {
     min-height: 200px;
   }
 
@@ -87,9 +75,6 @@
 @media (min-width: @desktop-width) {
   .present {
     padding: 0;
-  }
-
-  .present__container {
     display: block;
     width: 245px;
     min-height: 288px;
@@ -100,7 +85,7 @@
     position: relative;
   }
 
-  .present__container::after {
+  .present::after {
     content: "";
     position: absolute;
     top: 0;

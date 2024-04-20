@@ -1,3 +1,19 @@
+// Контейнер
+.container() {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    max-width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+  }
+}
+
 // Заголовки H1 уровня -------------------------------------------------------------------------------------------------------------------
 .heading-h1() {
   font-family: @font-main;
@@ -244,11 +260,14 @@
     font-weight: 400;
     line-height: 16px;
     color: @default-third-color;
-    text-align: justify;
 
     @media (min-width: @tablet-width) {
       font-size: 16px;
       line-height: 20px;
     }
+  }
+
+  .table__item--value {
+    text-align: right;
   }
 }

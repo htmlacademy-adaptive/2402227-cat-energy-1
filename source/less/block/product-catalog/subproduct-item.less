@@ -80,9 +80,8 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .subproduct-item {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 250px 350px 244px;
     grid-template-rows: none;
-    justify-content: space-between;
     width: 100%;
     min-height: 40px;
   }
@@ -95,8 +94,7 @@
 
   .subproduct-item__annotation {
     grid-column: 2 / 3;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: space-between;
   }
 
   .subproduct-item__label {

@@ -11,7 +11,7 @@
     <!-- Шапка сайта -->
     <!-- Открыть/Закрыть меню: header--closed / header--opened -->
     <header class="header header--opened">
-      <section class="header__container container">
+      <section class="header__container">
         <!-- Блок Логотипы -->
         <h2 class="visually-hidden">Логотипы шапки сайта</h2>
         <a class="header__logo logo logo--img" href="index.html">
@@ -48,8 +48,8 @@
     <main class="page__main">
       <!-- Блок Каталог продукции -->
       <div class="catalog">
-        <div class="container__catalog container">
-          <header class="description__header">
+        <div class="catalog__container">
+          <header class="catalog__header">
             <h1 class="catalog__heading">Каталог продукции</h2>
           </header>
           <!-- Блок Карточки товаров -->
@@ -59,190 +59,173 @@
                 <img class="product__img product__img--500" src="img/catalog-items/product-chicken-500.jpg" alt="Cat energy Pro chicken 500 gramm">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy PRO 500 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">500 г</td>
+                        <td class="table__item table__item--value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Курица</td>
+                        <td class="table__item table__item--value">Курица</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">700 ₽</td>
+                        <td class="table__item table__item--value">700 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item">
                 <img class="product__img product__img--1000" src="./img/catalog-items/product-chicken-1000.jpg" width="84" height="100" alt="Cat energy Pro chicken 1000 gramm">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy PRO 1000 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">1000 г</td>
+                        <td class="table__item table__item--value">1000 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Курица</td>
+                        <td class="table__item table__item--value">Курица</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">1000 ₽</td>
+                        <td class="table__item table__item--value">1000 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item">
                 <img class="product__img product__img--500" src="./img/catalog-items/product-fish-500.jpg" width="68" height="78" alt="Cat energy Pro fish 500">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy PRO 500 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">500 г</td>
+                        <td class="table__item table__item--value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Рыба</td>
+                        <td class="table__item table__item--value">Рыба</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">700 ₽</td>
+                        <td class="table__item table__item--value">700 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item">
                 <img class="product__img product__img--1000" src="./img/catalog-items/product-fish-1000.jpg" width="84" height="100" alt="Cat energy Pro fish 1000 gramm">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy PRO 1000 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">1000 г</td>
+                        <td class="table__item table__item--value">1000 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Рыба</td>
+                        <td class="table__item table__item--value">Рыба</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">1000 ₽</td>
+                        <td class="table__item table__item--value">1000 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item">
                 <img class="product__img product__img--500" src="./img/catalog-items/product-buckwheat-500.jpg" width="68" height="78" alt="Cat energy Slim buckwheat 500 gramm">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy Slim 500 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">500 г</td>
+                        <td class="table__item table__item--value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Гречка</td>
+                        <td class="table__item table__item--value">Гречка</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">400 ₽</td>
+                        <td class="table__item table__item--value">400 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item">
                 <img class="product__img product__img--1000" src="./img/catalog-items/product-buckwheat-1000.jpg" width="84" height="100" alt="Cat energy Slim buckwheat 1000">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy Slim 1000 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">1000 г</td>
+                        <td class="table__item table__item--value">1000 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Гречка</td>
+                        <td class="table__item table__item--value">Гречка</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">700 ₽</td>
+                        <td class="table__item table__item--value">700 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item">
                 <img class="product__img product__img--500" src="./img/catalog-items/product-rice-500.jpg" width="72" height="84" alt="Cat energy Slim rice 500 gramm">
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy Slim 500 г</h2>
-                  <table clas="product__table">
+                  <table class="product__table">
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item">500 г</td>
+                        <td class="table__item table__item--value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item">Рис</td>
+                        <td class="table__item table__item--value">Рис</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item">500 ₽</td>
+                        <td class="table__item table__item--value">500 ₽</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <form class="product__button">
-                  <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
-                </form>
+                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
               </li>
 
               <li class="product__item product__item--more">
                 <div class="product__content">
-                  <a class="product__icon" href="catalog.html" target="_blank"></a>
-                  <a class="product__link" href="catalog.html" target="_blank">
-                    <h2 class="product__title product__title--more">Показать еще 100500 товаров</h2>
-                  </a>
+                  <h2 class="product__title product__title--more">Показать еще 100500 товаров</h2>
                   <p class="product__text">На самом деле вкусов гораздо больше!</p>
                 </div>
                 <a class="product__redirect" href="product-catalog.html" target="_blank">Показать все</a>
@@ -254,7 +237,7 @@
 
       <!-- Блок Дополнительные товары -->
       <div class="derivative">
-        <div class="derivative__container container">
+        <div class="derivative__container">
           <header class="derivative__header">
             <h2 class="derivative__title">Дополнительные товары</h2>
           </header>
@@ -297,17 +280,15 @@
           </section>
           <!-- Блок Подарок -->
           <section class="derivative__present present">
-            <div class="present__container">
-              <h2 class="visually-hidden">Подарок за заказ</h2>
-              <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
-            </div>
+            <h2 class="visually-hidden">Подарок за заказ</h2>
+            <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
           </section>
         </div>
       </div>
 
       <!-- Блок Приглашаем к сотрудничеству -->
       <section class="contact contact--catalog">
-        <div class="contact__container container">
+        <div class="contact__container">
           <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
           <p class="contact__title">Приглашаем<br/> к сотрудничеству<br/> дилеров!</p>
           <p class="contact__text">ул. Большая Конюшенная, д. 19/8<br/> Санкт-Петербург</p>
@@ -324,7 +305,7 @@
     </main>
 
     <footer class="page__footer footer">
-      <section class="footer__container container">
+      <section class="footer__container">
         <!-- Блок Логотипы -->
         <a class="footer__logo logo logo--txt" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
