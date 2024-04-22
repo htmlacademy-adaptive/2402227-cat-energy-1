@@ -96,6 +96,10 @@
   margin: 0;
 }
 
+// .description__line {
+//   display: none;
+// }
+
 // Tablet
 @media (min-width: @tablet-width) {
   .description__list {
@@ -131,13 +135,18 @@
     color: rgb(242, 242, 242);
     z-index: -1;
   }
+
+  .description__line {
+    .deviding-line;
+    background-color: rgb(230, 230, 230);
+    margin: 100px 0 20px 0;
+  }
 }
 
 // Desktop
 @media (min-width: @desktop-width) {
   .description__list {
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: none;
     column-gap: 70px;
     margin-top: 70px;
   }
@@ -146,4 +155,8 @@
     position: relative;
     padding: 90px 20px 20px 0;
   }
+
+  // .description__line {
+  //   display: none;
+  // }
 }

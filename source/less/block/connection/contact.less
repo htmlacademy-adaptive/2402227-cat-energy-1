@@ -32,7 +32,6 @@
 // Catalog ------------------------------------------------------------------
 .contact--catalog {
   background-color: @default-third-background;
-  width: 100%;
 }
 
 // Form ---------------------------------------------------------------------------
@@ -63,9 +62,12 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .contact {
-    position: relative;
-    padding-top: 185px;
-    margin: -123px 0 -282px -610px;
+    content: "";
+    position: absolute;
+    top: 95px;
+    left: 125px;
+    margin: 0;
+    padding: 0;
     z-index: 2;
   }
 
