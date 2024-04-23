@@ -1,7 +1,6 @@
 .navigation {
   position: relative;
   width: 100%;
-  padding: 15px 0 0 0;
   background-color: rgb(255, 255, 255);
 }
 
@@ -50,9 +49,9 @@
   //   left: 0;
   // }
 
-  .navigation--closed {
-    display: none;
-  }
+  // .navigation--closed {
+  //   display: none;
+  // }
 }
 
 @media (min-width: @tablet-width) {
@@ -71,6 +70,12 @@
   .navigation__link {
     font-size: 18px;
     line-height: 24px;
+    padding: 10px;
+  }
+
+  .navigation__item:not(:last-child) {
+    border-top: none;
+    border-bottom: none;
   }
 }
 

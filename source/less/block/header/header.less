@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.header__container {
+.header__wrapper {
   .container;
   display: flex;
   flex-direction: row;
@@ -14,6 +14,13 @@
   justify-content: space-between;
   align-items: center;
   min-height: 40px;
+  padding-bottom: 10px;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
 
 // /* Бургер меню */-------------------------------------------------------------
@@ -80,6 +87,13 @@
   }
 
   .header__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__wrapper {
     min-height: 50px;
     flex-wrap: nowrap;
   }
@@ -94,7 +108,7 @@
     padding-top: 45px;
   }
 
-  .header__container {
+  .header__wrapper {
     min-height: 60px;
     flex-wrap: nowrap;
   }

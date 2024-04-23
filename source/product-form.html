@@ -49,100 +49,102 @@
     <main class="page__main">
       <!-- Блок Подбор программы -->
       <div class="configuration">
-        <hr class="configuration__line">
-        <section class="configuration__wrapper">
-          <h1 class="heading-h1 configuration__heading">Подбор программы</h1>
-          <p class="configuration__paragraph">Заполните анкету, и мы подберем <br /> программу питания для вашего кота</p>
-        </section>
-
-        <form class="configuration__list" action="https://echo.htmlacademy.ru/" method="get">
-          <!-- Параметры питомца -->
-          <fieldset class="configuration-group configuration-group--introduction">
-            <legend class="visually-hidden">Параметры питомца</legend>
-            <label class="configuration-group__item" for="name">
-              <span class="label-field configuration-group__label">Имя:*</span>
-              <input class="input-field configuration-group__name" type="text" id="name" minlength="1" maxlength="100" name="name" placeholder="Барсик">
-            </label>
-            <label class="configuration-group__item" for="weight">
-              <span class="label-field configuration-group__label">Вес (КГ):*</span>
-              <input class="input-field configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
-            </label>
-            <label class="configuration-group__item" for="age">
-              <span class="label-field configuration-group__label">Возраст (Лет):</span>
-              <input class="input-field configuration-group__age" type="number" min="1" max="20" name="age" id="age" placeholder="5">
-            </label>
-          </fieldset>
-
-          <!-- Тип программы -->
+        <div class="configuration__container">
           <hr class="configuration__line">
-          <fieldset class="configuration-group configuration-group--type">
-            <legend class="visually-hidden">Тип программы</legend>
-            <label class="configuration-group__item" for="slim">
-              <input class="input-field configuration-group__radio" type="radio" name="slim" id="slim" checked>
-              <span class="label-field configuration-group__label">Похудение</span>
-            </label>
-            <label class="configuration-group__item" for="fat">
-              <input class="input-field configuration-group__radio" type="radio" name="fat" id="fat">
-              <span class="label-field configuration-group__label">Набор массы</span>
-            </label>
-            <label class="configuration-group__item" for="ask">
-              <input class="input-field configuration-group__radio" type="radio" name="ask" id="ask">
-              <span class="label-field configuration-group__label">Не знаю (Нужен ваш совет)</span>
-            </label>
-          </fieldset>
-          <hr class="configuration__line">
+          <header class="configuration__header">
+            <h1 class="configuration__heading">Подбор программы</h1>
+            <p class="configuration__paragraph">Заполните анкету, и мы подберем <br /> программу питания для вашего кота</p>
+          </header>
 
-          <!-- Контактная информация -->
-          <fieldset class="configuration-group configuration-group--contact">
-            <legend class="heading-h3 configuration-group__subtitle">Контактные данные <br/> (владельца кота)</legend>
-            <label class="configuration-group__item" for="email">
-              <span class="label-field configuration-group__label">E-mail:*</span>
-              <input class="input-field configuration-group__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
-              <svg class="configuration-group__icon configuration-group__icon--email" xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 18 14"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M.5 5.5v8h17.004v-8M.5.5h17.004v2l-8.502 6L.5 2.5v-2Z"/></svg>
-            </label>
-            <label class="configuration-group__item" for="tel">
-              <span class="label-field configuration-group__label">Телефон:*</span>
-              <input class="input-field configuration-group__tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
-              <svg class="configuration-group__icon configuration-group__icon--tel" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M7.002 8h8.502m0 0-2.5-2.5m2.5 2.5-2.5 2.5M5.502.5v5h-3v5h3v5h-2.5C1.5 15.5.5 14.5.5 13V3C.5 1.5 1.5.5 3 .5h2.5Z"/></svg>
-            </label>
-          </fieldset>
+          <form class="configuration__list" action="https://echo.htmlacademy.ru/" method="get">
+            <!-- Параметры питомца -->
+            <fieldset class="configuration-group configuration-group--introduction">
+              <legend class="visually-hidden">Параметры питомца</legend>
+              <label class="configuration-group__item" for="name">
+                <span class="label-field configuration-group__label">Имя:*</span>
+                <input class="input-field configuration-group__name" type="text" id="name" minlength="1" maxlength="100" name="name" placeholder="Барсик">
+              </label>
+              <label class="configuration-group__item" for="weight">
+                <span class="label-field configuration-group__label">Вес (КГ):*</span>
+                <input class="input-field configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
+              </label>
+              <label class="configuration-group__item" for="age">
+                <span class="label-field configuration-group__label">Возраст (Лет):</span>
+                <input class="input-field configuration-group__age" type="number" min="1" max="20" name="age" id="age" placeholder="5">
+              </label>
+            </fieldset>
 
-          <!-- Комментарии -->
-          <fieldset class="configuration-group configuration-group--comment">
-            <legend class="heading-h3 configuration-group__subtitle">Комментарий</legend>
-            <label class="configuration-group__item" for="comment">
-              <span class="visually-hidden label-field configuration-group__label">Комментарий</span>
-              <textarea class="input-field configuration-group__comment" name="comment" id="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
-            </label>
-          </fieldset>
+            <!-- Тип программы -->
+            <hr class="configuration__line">
+            <fieldset class="configuration-group configuration-group--type">
+              <legend class="visually-hidden">Тип программы</legend>
+              <label class="configuration-group__item" for="slim">
+                <input class="input-field configuration-group__radio" type="radio" name="slim" id="slim" checked>
+                <span class="label-field configuration-group__label">Похудение</span>
+              </label>
+              <label class="configuration-group__item" for="fat">
+                <input class="input-field configuration-group__radio" type="radio" name="fat" id="fat">
+                <span class="label-field configuration-group__label">Набор массы</span>
+              </label>
+              <label class="configuration-group__item" for="ask">
+                <input class="input-field configuration-group__radio" type="radio" name="ask" id="ask">
+                <span class="label-field configuration-group__label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </fieldset>
+            <hr class="configuration__line">
 
-          <!-- Дополнительная информация -->
-          <fieldset class="configuration-group configuration-group--additional">
-            <legend class="heading-h3 configuration-group__subtitle">Дополнительно</legend>
-            <label class="configuration-group__item" for="sweetener">
-              <input class="input-field configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-              <span class="label-field configuration-group__label">сахарозаменитель</span>
-            </label>
-            <label class="configuration-group__item" for="water">
-              <input class="input-field configuration-group__checkbox" type="checkbox" name="water" id="water">
-              <span class="label-field configuration-group__label">питьевая вода</span>
-            </label>
-            <label class="configuration-group__item" for="milk">
-              <input class="input-field configuration-group__checkbox" type="checkbox" name="milk" id="milk">
-              <span class="label-field configuration-group__label">молоко</span>
-            </label>
-            <label class="configuration-group__item" for="vitamins">
-              <input class="input-field configuration-group__checkbox" type="checkbox" name="vitamins" id="vitamins">
-              <span class="label-field configuration-group__label">витамины</span>
-            </label>
-          </fieldset>
+            <!-- Контактная информация -->
+            <fieldset class="configuration-group configuration-group--contact">
+              <legend class="heading-h3 configuration-group__subtitle">Контактные данные <br/> (владельца кота)</legend>
+              <label class="configuration-group__item" for="email">
+                <span class="label-field configuration-group__label">E-mail:*</span>
+                <input class="input-field configuration-group__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+                <svg class="configuration-group__icon configuration-group__icon--email" xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 18 14"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M.5 5.5v8h17.004v-8M.5.5h17.004v2l-8.502 6L.5 2.5v-2Z"/></svg>
+              </label>
+              <label class="configuration-group__item" for="tel">
+                <span class="label-field configuration-group__label">Телефон:*</span>
+                <input class="input-field configuration-group__tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+                <svg class="configuration-group__icon configuration-group__icon--tel" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M7.002 8h8.502m0 0-2.5-2.5m2.5 2.5-2.5 2.5M5.502.5v5h-3v5h3v5h-2.5C1.5 15.5.5 14.5.5 13V3C.5 1.5 1.5.5 3 .5h2.5Z"/></svg>
+              </label>
+            </fieldset>
 
-          <!-- Кнопка -->
-          <section class="configuration-group">
-            <button class="primary-btn configuration__btn">Отправить заявку</button>
-            <p class="configuration__footnote">* — Обязательные поля</p>
-          </section>
-        </form>
+            <!-- Комментарии -->
+            <fieldset class="configuration-group configuration-group--comment">
+              <legend class="heading-h3 configuration-group__subtitle">Комментарий</legend>
+              <label class="configuration-group__item" for="comment">
+                <span class="visually-hidden label-field configuration-group__label">Комментарий</span>
+                <textarea class="input-field configuration-group__comment" name="comment" id="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
+              </label>
+            </fieldset>
+
+            <!-- Дополнительная информация -->
+            <fieldset class="configuration-group configuration-group--additional">
+              <legend class="heading-h3 configuration-group__subtitle">Дополнительно</legend>
+              <label class="configuration-group__item" for="sweetener">
+                <input class="input-field configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+                <span class="label-field configuration-group__label">сахарозаменитель</span>
+              </label>
+              <label class="configuration-group__item" for="water">
+                <input class="input-field configuration-group__checkbox" type="checkbox" name="water" id="water">
+                <span class="label-field configuration-group__label">питьевая вода</span>
+              </label>
+              <label class="configuration-group__item" for="milk">
+                <input class="input-field configuration-group__checkbox" type="checkbox" name="milk" id="milk">
+                <span class="label-field configuration-group__label">молоко</span>
+              </label>
+              <label class="configuration-group__item" for="vitamins">
+                <input class="input-field configuration-group__checkbox" type="checkbox" name="vitamins" id="vitamins">
+                <span class="label-field configuration-group__label">витамины</span>
+              </label>
+            </fieldset>
+
+            <!-- Кнопка -->
+            <section class="configuration-group">
+              <button class="primary-btn configuration__btn">Отправить заявку</button>
+              <p class="configuration__footnote">* — Обязательные поля</p>
+            </section>
+          </form>
+        </div>
       </div>
 
       <!-- Контакты и Карта -->
