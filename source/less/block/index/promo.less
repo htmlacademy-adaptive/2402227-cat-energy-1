@@ -91,6 +91,10 @@
     display: none;
   }
 
+  .promo__container {
+    width: 600px;
+  }
+
   .promo__body {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -171,11 +175,17 @@
     z-index: 1;
   }
 
+  .promo__container {
+    width: 1120px;
+  }
+
   .promo__body {
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: 1fr 150px 1fr;
     background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
     z-index: 2;
   }
 
@@ -187,19 +197,21 @@
   .promo__text {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
+    margin: 0;
   }
 
   .promo__btn {
-    grid-row: 4 / -1;
+    grid-row: 3 / 4;
     grid-column: 1 / 2;
+    margin-top: 50px;
   }
 
   .promo__img {
     grid-row: 1 / -1;
-    grid-column: 3 / -1;
+    grid-column: 2 / 3;
     width: 552px;
     height: 499px;
     top: -30px;
-    right: 179px;
+    right: 0;
   }
 }

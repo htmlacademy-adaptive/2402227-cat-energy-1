@@ -1,35 +1,22 @@
 .configuration {
-  .container;
-  display: grid;
-  width: 320px;
-  height: auto;
+  position: relative;
   background-color: #ffffff;
 }
 
-.configuration__wrapper {
-  display: grid;
-  width: 320px;
-  height: auto;
-  padding: 20px;
-  box-sizing: border-box;
-  border: none;
-  margin: 0;
+.configuration__container {
+  .container;
 }
 
-.configuration__line {
-  width: 320px;
-  border: none;
-  outline: none;
-  height: 1px;
-  background-color: rgb(217, 217, 217);
-  margin: 0;
+// Заголовок и параграф ------------------------------------------------------------------------------------------
+.configuration__header {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .configuration__heading {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: @default-secondary-color-dark;
+  .heading-h1;
+  text-align: left;
+  padding-bottom: 20px;
 }
 
 .configuration__paragraph {
@@ -42,6 +29,7 @@
   color: @default-secondary-color-dark;
 }
 
+// Формы для заполнения списком --------------------------------------------------------------------------------
 .configuration__list {
   display: flex;
   flex-direction: column;
@@ -58,14 +46,14 @@
   color: @default-secondary-color-dark;
 }
 
-// Tablet
+// Tablet ----------------------------------------------------------------------------------------------------------
 @media (min-width: @tablet-width) {
   .configuration__btn {
     width: 284px;
   }
 }
 
-// Desktop
+// Desktop ----------------------------------------------------------------------------------------------------------
 @media (min-width: @desktop-width) {
   .configuration__btn {
     width: 570px;

@@ -1,11 +1,9 @@
 .configuration-group {
   display: grid;
-  width: 320px;
-  height: auto;
-  padding: 20px;
   row-gap: 10px;
-  box-sizing: border-box;
   border: none;
+  padding: 0;
+  padding-bottom: 20px;
   margin: 0;
 }
 
@@ -14,15 +12,50 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 280px;
   box-sizing: border-box;
+  width: 280px;
   padding: 0;
+  position: relative;
 }
 
-.configuration-group__subtitle {
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
+// Параметры питомца: Имя Вес Возраст ----------------------------------------------------------------------------------------
+.configuration-group__label {
+  .label-field;
+}
+
+.configuration-group__input {
+  .input-field;
+}
+
+.configuration-group__name {
+  width: 228px;
+}
+
+.configuration-group__weight {
+  width: 188px;
+}
+
+.configuration-group__age {
+  width: 155px;
+}
+
+// Тип программы - радиокнопки ----------------------------------------------------------------------------
+.configuration-group__radio {
+  .input-field;
+  margin: 0;
+}
+
+.configuration-group__radio::before {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.configuration-group__radio::after {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
 }
 
 .configuration-group__radio[type="radio"]:checked {
@@ -33,19 +66,52 @@
   background-color: @default-primary-background;
 }
 
-.configuration-group__name {
-  width: 228px;
+// Контактная информация ---------------------------------------------------------------------------------------
+.configuration-group__subtitle {
+  .heading-h3;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
-.configuration-group__weight {
-  width: 207px;
+.configuration-group__email {
+  .input-field;
+  width: 198px;
 }
 
-.configuration-group__age {
-  width: 173px;
+.configuration-group__tel {
+  .input-field;
+  width: 190px;
 }
 
+.configuration-group__icon {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.configuration-group__icon:hover {
+  fill: @icon-hover-fill;
+}
+
+.configuration-group__icon:focus {
+  fill: @icon-focus-fill;
+}
+
+.configuration-group__icon:active {
+  fill: @icon-active-fill;
+}
+
+// Комментарии ---------------------------------------------------------------------------------------------------
 .configuration-group__comment {
+  .input-field;
   width: 280px;
   height: 150px;
+  text-align: center;
+  padding: 0;
+}
+
+// Кнопка ---------------------------------------------------------------------------------------------------------
+.configuration__btn {
+  .primary-btn;
 }

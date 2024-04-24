@@ -1,7 +1,7 @@
 // Mobile --------------------------------------------
 .contact {
-  position: relative;
   padding: 20px 0 20px 0;
+  position: relative;
 }
 
 .contact__container {
@@ -62,19 +62,20 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .contact {
-    content: "";
-    position: absolute;
-    top: 95px;
-    left: 125px;
     margin: 0;
     padding: 0;
     z-index: 2;
   }
 
   .contact__container {
+    content: "";
+    position: absolute;
+    top: 95px;
+    left: 0;
     width: 565px;
     min-height: 199px;
     background-color: @default-all-color-light;
+    z-index: 2;
   }
 
   // Catalog ------------------------------------------------------------------
