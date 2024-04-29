@@ -13,7 +13,6 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 280px;
   padding: 0;
   position: relative;
 }
@@ -25,18 +24,6 @@
 
 .configuration-group__input {
   .input-field;
-}
-
-.configuration-group__name {
-  width: 228px;
-}
-
-.configuration-group__weight {
-  width: 188px;
-}
-
-.configuration-group__age {
-  width: 155px;
 }
 
 // Тип программы - радиокнопки ----------------------------------------------------------------------------
@@ -75,12 +62,10 @@
 
 .configuration-group__email {
   .input-field;
-  width: 198px;
 }
 
 .configuration-group__tel {
   .input-field;
-  width: 190px;
 }
 
 .configuration-group__icon {
@@ -111,7 +96,68 @@
   padding: 0;
 }
 
-// Кнопка ---------------------------------------------------------------------------------------------------------
-.configuration__btn {
-  .primary-btn;
+// Tablet ----------------------------------------------------------------------------------------------------------
+@media (min-width: @tablet-width) {
+  .configuration-group {
+    width: 628px;
+  }
+
+  .configuration-group--type {
+    border: 1px solid @default-border-color;
+  }
+
+  .configuration-group__comment {
+    width: 628px;
+    height: 175px;
+  }
+
+  // Дополнительная информация
+  .configuration-group--additional {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  // Кнопка
+  .configuration-group--button {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+}
+
+// Desktop ----------------------------------------------------------------------------------------------------------
+@media (min-width: @desktop-width) {
+  .configuration-group {
+    width: 100%;
+  }
+
+  .configuration-group--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 50px;
+  }
+
+  .configuration-group--contact {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+
+  .configuration-group--additional {
+    grid-template-rows: none;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .configuration-group__comment {
+    width: 100%;
+  }
+
+  .configuration-group--button {
+    justify-content: start;
+  }
+
+  .configuration__footnote {
+    margin-left: 200px;
+  }
 }

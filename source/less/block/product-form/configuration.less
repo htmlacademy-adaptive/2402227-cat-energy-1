@@ -46,15 +46,42 @@
   color: @default-secondary-color-dark;
 }
 
+// Кнопка ---------------------------------------------------------------------------------------------------------
+.configuration__btn {
+  .primary-btn;
+}
+
 // Tablet ----------------------------------------------------------------------------------------------------------
 @media (min-width: @tablet-width) {
+  .configuration__container {
+    width: 628px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .configuration__paragraph {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .configuration__btn {
     width: 284px;
+  }
+
+  .configuration__footnote {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
 // Desktop ----------------------------------------------------------------------------------------------------------
 @media (min-width: @desktop-width) {
+  .configuration__container {
+    width: 100%;
+    padding: 0;
+  }
+
   .configuration__btn {
     width: 570px;
   }

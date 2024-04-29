@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="img/favicons/152.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -56,39 +58,41 @@
           </header>
 
           <form class="configuration__list" action="https://echo.htmlacademy.ru/" method="get">
-            <!-- Параметры питомца -->
-            <fieldset class="configuration-group configuration-group--introduction">
-              <legend class="visually-hidden">Параметры питомца</legend>
-              <label class="configuration-group__item" for="name">
-                <span class="configuration-group__label">Имя:*</span>
-                <input class="configuration-group__input configuration-group__name" type="text" id="name" minlength="1" maxlength="100" name="name" placeholder="Барсик">
-              </label>
-              <label class="configuration-group__item" for="weight">
-                <span class="configuration-group__label">Вес (КГ):*</span>
-                <input class="configuration-group__input configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
-              </label>
-              <label class="configuration-group__item" for="age">
-                <span class="configuration-group__label">Возраст (Лет):</span>
-                <input class="configuration-group__input configuration-group__age" type="number" min="1" max="20" name="age" id="age" placeholder="5">
-              </label>
-            </fieldset>
+            <div class="configuration-group configuration-group--wrapper">
+              <!-- Параметры питомца -->
+              <fieldset class="configuration-group configuration-group--introduction">
+                <legend class="visually-hidden">Параметры питомца</legend>
+                <label class="configuration-group__item" for="name">
+                  <span class="configuration-group__label">Имя:*</span>
+                  <input class="configuration-group__input configuration-group__name" type="text" id="name" minlength="1" maxlength="100" name="name" placeholder="Барсик">
+                </label>
+                <label class="configuration-group__item" for="weight">
+                  <span class="configuration-group__label">Вес (КГ):*</span>
+                  <input class="configuration-group__input configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
+                </label>
+                <label class="configuration-group__item" for="age">
+                  <span class="configuration-group__label">Возраст (Лет):</span>
+                  <input class="configuration-group__input configuration-group__age" type="number" min="1" max="20" name="age" id="age" placeholder="5">
+                </label>
+              </fieldset>
 
-            <!-- Тип программы -->
-            <fieldset class="configuration-group configuration-group--type">
-              <legend class="visually-hidden">Тип программы</legend>
-              <label class="configuration-group__item" for="slim">
-                <input class="configuration-group__radio" type="radio" name="slim" id="slim" checked>
-                <span class="configuration-group__label">Похудение</span>
-              </label>
-              <label class="configuration-group__item" for="fat">
-                <input class="configuration-group__radio" type="radio" name="fat" id="fat">
-                <span class="configuration-group__label">Набор массы</span>
-              </label>
-              <label class="configuration-group__item" for="ask">
-                <input class="configuration-group__radio" type="radio" name="ask" id="ask">
-                <span class="configuration-group__label">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </fieldset>
+              <!-- Тип программы -->
+              <fieldset class="configuration-group configuration-group--type">
+                <legend class="visually-hidden">Тип программы</legend>
+                <label class="configuration-group__item" for="slim">
+                  <input class="configuration-group__radio" type="radio" name="slim" id="slim" checked>
+                  <span class="configuration-group__label">Похудение</span>
+                </label>
+                <label class="configuration-group__item" for="fat">
+                  <input class="configuration-group__radio" type="radio" name="fat" id="fat">
+                  <span class="configuration-group__label">Набор массы</span>
+                </label>
+                <label class="configuration-group__item" for="ask">
+                  <input class="configuration-group__radio" type="radio" name="ask" id="ask">
+                  <span class="configuration-group__label">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </fieldset>
+            </div>
 
             <!-- Контактная информация -->
             <fieldset class="configuration-group configuration-group--contact">
@@ -116,27 +120,27 @@
 
             <!-- Дополнительная информация -->
             <fieldset class="configuration-group configuration-group--additional">
-              <legend class="heading-h3 configuration-group__subtitle">Дополнительно</legend>
+              <legend class="configuration-group__subtitle">Дополнительно</legend>
               <label class="configuration-group__item" for="sweetener">
-                <input class="input-field configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-                <span class="label-field configuration-group__label">сахарозаменитель</span>
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+                <span class="configuration-group__label">сахарозаменитель</span>
               </label>
               <label class="configuration-group__item" for="water">
-                <input class="input-field configuration-group__checkbox" type="checkbox" name="water" id="water">
-                <span class="label-field configuration-group__label">питьевая вода</span>
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="water" id="water">
+                <span class="configuration-group__label">питьевая вода</span>
               </label>
               <label class="configuration-group__item" for="milk">
-                <input class="input-field configuration-group__checkbox" type="checkbox" name="milk" id="milk">
-                <span class="label-field configuration-group__label">молоко</span>
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="milk" id="milk">
+                <span class="configuration-group__label">молоко</span>
               </label>
               <label class="configuration-group__item" for="vitamins">
-                <input class="input-field configuration-group__checkbox" type="checkbox" name="vitamins" id="vitamins">
-                <span class="label-field configuration-group__label">витамины</span>
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="vitamins" id="vitamins">
+                <span class="configuration-group__label">витамины</span>
               </label>
             </fieldset>
 
             <!-- Кнопка -->
-            <section class="configuration-group">
+            <section class="configuration-group configuration-group--button">
               <button class="configuration__btn">Отправить заявку</button>
               <p class="configuration__footnote">* — Обязательные поля</p>
             </section>

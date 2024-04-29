@@ -216,13 +216,18 @@
     text-decoration: none;
     text-transform: uppercase;
     color: @default-third-color;
-    padding-left: 10px;
+    padding: 10px;
   }
 
   // Стили для ошибки -------------------------------------------------------------------------------------------------------------------
   & when (@include-error = true) {
     border: 2px;
     border-color: @error-border-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
