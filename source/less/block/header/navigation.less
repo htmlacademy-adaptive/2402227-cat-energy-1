@@ -1,6 +1,5 @@
 .navigation {
   position: relative;
-  width: 100%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -55,16 +54,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .navigation__wrapper {
-    max-width: 100%;
-  }
-
   .navigation__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-self: center;
     align-items: center;
-    margin-left: 29px;
   }
 
   .navigation__link {
@@ -86,7 +81,7 @@
   }
 
   .navigation__list {
-    margin-left: 500px;
+    margin-left: auto;
   }
 
   .navigation__item {

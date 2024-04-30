@@ -6,21 +6,18 @@
   position: relative;
 }
 
-.header__wrapper {
+.header__container {
   .container;
+}
+
+.header__wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  align-self: center;
   min-height: 40px;
   padding-bottom: 10px;
-}
-
-.header__logo {
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
 }
 
 // /* Бургер меню */-------------------------------------------------------------
@@ -47,6 +44,13 @@
   height: 2px;
   background-color: rgb(0, 0, 0);
   box-shadow: 0 6px 0 0  rgb(0, 0, 0), 0 12px 0 0  rgb(0, 0, 0);
+}
+
+.header__close {
+  display: none;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
 }
 
 @media (min-width: @mobile-width-only) {
@@ -87,6 +91,7 @@
   }
 
   .header__container {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -96,6 +101,7 @@
   .header__wrapper {
     min-height: 50px;
     flex-wrap: nowrap;
+    padding-bottom: 0;
   }
 
   .header__burger {

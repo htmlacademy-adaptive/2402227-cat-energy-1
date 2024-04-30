@@ -58,12 +58,14 @@
           <section class="catalog__product product">
             <ul class="product__list clear-list">
               <li class="product__item">
-                <picture>
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog-items/tablet-chicken-500.png 1x ./img/catalog-items/tablet-chicken-500@2x.png 2x" width="161" height="172">
-                  <img class="product__img product__img--500" src="./img/catalog-items/mobile-chicken-500.png"
-                    srcset="./img/catalog-items/mobile-chicken-500@2x.png 2x" width="68" height="86" alt="Energy Pro chicken 500 gramm">
-                </picture>
+                <div class="product__picture">
+                  <picture>
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog-items/tablet-chicken-500@1x.png 1x, ./img/catalog-items/tablet-chicken-500@2x.png 2x" width="161" height="172">
+                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-chicken-500@1x.png 1x"
+                      srcset="./img/catalog-items/mobile-chicken-500@2x.png 2x" width="68" height="86" alt="Energy Pro chicken 500 gramm">
+                  </picture>
+                </div>
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy PRO 500 г</h2>
                   <table class="product__table">
@@ -87,14 +89,16 @@
               </li>
 
               <li class="product__item">
-                <picture>
-                  <source media="(min-width: 1200px)"
-                    srcset="./img/catalog-items/desktop-chicken-1000.png 1x ./img/catalog-items/desktop-chicken-1000@2x.png 2x" width="172" height="196">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog-items/tablet-chicken-1000.png 1x ./img/catalog-items/tablet-chicken-1000@2x.png 2x" width="168" height="206">
-                  <img class="product__img product__img--1000" src="./img/catalog-items/mobile-chicken-1000.png"
-                    srcset="./img/catalog-items/mobile-chicken-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro chicken 1000 gramm">
-                </picture>
+                <div class="product__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog-items/desktop-chicken-1000@1x.png 1x, ./img/catalog-items/mobile-desktop-1000@2x.png 2x" width="172" height="196">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog-items/tablet-chicken-1000@1x.png 1x, ./img/catalog-items/tablet-chicken-1000@2x.png 2x" width="168" height="206">
+                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-chicken-1000@1x.png 1x"
+                      srcset="./img/catalog-items/mobile-chicken-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro chicken 1000 gramm">
+                  </picture>
+                </div>
                 <div class="product__annotation">
                   <h2 class="product__title">Cat Energy PRO 1000 г</h2>
                   <table class="product__table">
