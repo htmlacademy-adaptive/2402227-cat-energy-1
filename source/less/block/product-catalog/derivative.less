@@ -1,6 +1,6 @@
 .derivative {
   position: relative;
-  padding: 60px 0 20px 0;
+  padding: 30px 0 60px 0;
 }
 
 .derivative__container {
@@ -24,15 +24,19 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
+  .derivative {
+    padding: 60px 0 60px 0;
+  }
+
   .derivative__container {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: 896px 245px;
     row-gap: 20px;
     column-gap: 40px;
+    align-items: center;
   }
 
   .derivative__subproduct {
-    width: 896px;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
   }
@@ -40,7 +44,6 @@
   .derivative__header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    width: 896px;
     justify-self: start;
   }
 

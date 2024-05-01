@@ -1,9 +1,13 @@
+.configuration__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
 .configuration-group {
   display: grid;
   row-gap: 10px;
   border: none;
   padding: 0;
-  padding-bottom: 20px;
   margin: 0;
 }
 
@@ -11,10 +15,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0;
-  position: relative;
+  width: 100%;
 }
 
 // Параметры питомца: Имя Вес Возраст ----------------------------------------------------------------------------------------
@@ -24,6 +25,7 @@
 
 .configuration-group__input {
   .input-field;
+  width: 100%;
 }
 
 // Тип программы - радиокнопки ----------------------------------------------------------------------------
@@ -54,6 +56,10 @@
 }
 
 // Контактная информация ---------------------------------------------------------------------------------------
+.configuration-group--contact {
+  position: relative;
+}
+
 .configuration-group__subtitle {
   .heading-h3;
   padding-top: 20px;
@@ -61,18 +67,16 @@
 }
 
 .configuration-group__email {
-  .input-field;
+  width: 100%;
 }
 
 .configuration-group__tel {
-  .input-field;
+  width: 100%;
 }
 
 .configuration-group__icon {
   content: "";
   position: absolute;
-  top: 12px;
-  right: 12px;
 }
 
 .configuration-group__icon:hover {
@@ -87,6 +91,16 @@
   fill: @icon-active-fill;
 }
 
+.configuration-group__icon--tel {
+  top: 60px;
+  right: 12px;
+}
+
+.configuration-group__icon--email {
+  top: 12px;
+  right: 12px;
+}
+
 // Комментарии ---------------------------------------------------------------------------------------------------
 .configuration-group__comment {
   .input-field;
@@ -94,6 +108,18 @@
   height: 150px;
   text-align: center;
   padding: 0;
+}
+
+// Дополнительно ----------------------------------------------------------------------------------------------------
+.configuration-group--additional {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.configuration-group--button {
+  width: 100%;
 }
 
 // Tablet ----------------------------------------------------------------------------------------------------------
@@ -132,7 +158,7 @@
     width: 100%;
   }
 
-  .configuration-group--wrapper {
+  .configuration__wrapper {
     display: grid;
     grid-template-columns: repeat(2, auto);
     column-gap: 50px;
