@@ -1,0 +1,34 @@
+.social__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 132px;
+  margin: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px;
+  box-sizing: border-box;
+  background-position: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.social__link:hover path {
+  fill: @icon-hover-fill;
+}
+
+.social__link:focus path {
+  fill: @icon-focus-fill;
+}
+
+.social__link:active path {
+  fill: @icon-active-fill;
+}

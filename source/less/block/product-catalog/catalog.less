@@ -1,20 +1,22 @@
 .catalog {
-  display: flex;
   position: relative;
 }
 
+.catalog__container {
+  .container;
+}
+
+.catalog__header {
+  display: flex;
+  padding: 30px 0 35px 0;
+  color: @default-secondary-color-dark;
+}
+
 .catalog__heading {
+  .heading-h1;
   text-align: left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 20px;
 }
 
 .catalog__line {
-  width: 320px;
-  border: none;
-  outline: none;
-  height: 1px;
-  background-color: rgb(217, 217, 217);
-  margin: 0;
+  .deviding-line;
 }

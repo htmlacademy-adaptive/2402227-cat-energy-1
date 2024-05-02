@@ -1,0 +1,233 @@
+.example {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(234, 234, 234);
+}
+
+.example__container {
+  .container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+}
+
+.example__title {
+  .heading-h2;
+  grid-column: 1 / -1;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: @default-secondary-color-dark;
+}
+
+.example__text {
+  grid-column: 1 / -1;
+  font-family: @font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: @default-third-color;
+  margin: 0;
+}
+
+.example__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 32px;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  width: 124px;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 10px;
+}
+
+.example__subtitle {
+  .heading-h3;
+}
+
+.example__subtext {
+  position: relative;
+  font-family: @font-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: @default-third-color;
+  background-color: rgb(234, 234, 234);
+  max-width: 77px;
+  margin: 0;
+  margin-bottom: -10px;
+  padding: 16px 16px 0 16px;
+}
+
+.example__expenses {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  box-sizing: border-box;
+}
+
+.example__expenses--text {
+  font-family: @font-main;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: @default-secondary-color-dark;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.example__expenses--dsc {
+  margin-right: 5px;
+}
+
+// Слайдер -----------------------------------------------------------------------------------------------------
+.example__slider {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .example {
+    background-image: linear-gradient(#ffffff 570px, #eaeaea 25%);
+  }
+
+  .example__container {
+    row-gap: 60px;
+  }
+
+  .example__subtitle {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__subtext {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 162px;
+    padding: 20px 10px 0 10px;
+    background-color: @default-all-color-light;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 33px 0 0;
+  }
+
+  .example__list {
+    grid-column: 1 / 2;
+  }
+
+  .example__item {
+    position: relative;
+    min-width: 162px;
+    justify-items: start;
+    align-items: center;
+  }
+
+  .example__expenses {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+
+  .example__expenses--text {
+    font-size: 20px;
+    line-height: 20px;
+    align-self: flex-end;
+    min-height: 30px;
+  }
+
+  .example__expenses--dsc {
+    margin-right: 0;
+  }
+
+  .example__slider {
+    position: relative;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .example {
+    position: static;
+    min-height: 462px;
+    padding: 40px 0 60px 0;
+    background-image: linear-gradient(#ffffff 30%, #eaeaea 30%);
+  }
+
+  .example__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+
+  .example__title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0;
+  }
+
+  .example__text {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin: 0;
+  }
+
+  .example__list {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    column-gap: 0;
+  }
+
+  .example__subtext {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: rgb(234, 234, 234);
+  }
+
+  .example__expenses {
+    grid-column: 1 / 2;
+    grid-row: 5 / -1;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  .example__expenses--text {
+    align-self: flex-start;
+  }
+
+  .example__expenses--dsc {
+    margin-right: 5px;
+  }
+
+  .example__slider {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}

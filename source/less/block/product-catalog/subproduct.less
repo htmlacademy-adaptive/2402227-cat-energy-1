@@ -1,0 +1,28 @@
+.subproduct {
+  position: relative;
+  padding: 20px 0 20px 0;
+}
+
+.subproduct__list {
+  display: grid;
+  row-gap: 25px;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .subproduct__title {
+    padding-bottom: 60px;
+  }
+
+  .subproduct__list {
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .subproduct {
+    padding: 0;
+  }
+}

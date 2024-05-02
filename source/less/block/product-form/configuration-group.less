@@ -1,11 +1,13 @@
+.configuration__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
 .configuration-group {
   display: grid;
-  width: 320px;
-  height: auto;
-  padding: 20px;
   row-gap: 10px;
-  box-sizing: border-box;
   border: none;
+  padding: 0;
   margin: 0;
 }
 
@@ -13,16 +15,36 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 280px;
-  box-sizing: border-box;
-  padding: 0;
+  width: 100%;
 }
 
-.configuration-group__subtitle {
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
+// Параметры питомца: Имя Вес Возраст ----------------------------------------------------------------------------------------
+.configuration-group__label {
+  .label-field;
+}
+
+.configuration-group__input {
+  .input-field;
+  width: 100%;
+}
+
+// Тип программы - радиокнопки ----------------------------------------------------------------------------
+.configuration-group__radio {
+  .input-field;
+  margin: 0;
+}
+
+.configuration-group__radio::before {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.configuration-group__radio::after {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
 }
 
 .configuration-group__radio[type="radio"]:checked {
@@ -33,19 +55,135 @@
   background-color: @default-primary-background;
 }
 
-.configuration-group__name {
-  width: 228px;
+// Контактная информация ---------------------------------------------------------------------------------------
+.configuration-group--contact {
+  position: relative;
 }
 
-.configuration-group__weight {
-  width: 207px;
+.configuration-group__subtitle {
+  .heading-h3;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
-.configuration-group__age {
-  width: 173px;
+.configuration-group__email {
+  width: 100%;
 }
 
+.configuration-group__tel {
+  width: 100%;
+}
+
+.configuration-group__icon {
+  content: "";
+  position: absolute;
+}
+
+.configuration-group__icon:hover {
+  fill: @icon-hover-fill;
+}
+
+.configuration-group__icon:focus {
+  fill: @icon-focus-fill;
+}
+
+.configuration-group__icon:active {
+  fill: @icon-active-fill;
+}
+
+.configuration-group__icon--tel {
+  top: 60px;
+  right: 12px;
+}
+
+.configuration-group__icon--email {
+  top: 12px;
+  right: 12px;
+}
+
+// Комментарии ---------------------------------------------------------------------------------------------------
 .configuration-group__comment {
+  .input-field;
   width: 280px;
   height: 150px;
+  text-align: center;
+  padding: 0;
+}
+
+// Дополнительно ----------------------------------------------------------------------------------------------------
+.configuration-group--additional {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.configuration-group--button {
+  width: 100%;
+}
+
+// Tablet ----------------------------------------------------------------------------------------------------------
+@media (min-width: @tablet-width) {
+  .configuration-group {
+    width: 628px;
+  }
+
+  .configuration-group--type {
+    border: 1px solid @default-border-color;
+  }
+
+  .configuration-group__comment {
+    width: 628px;
+    height: 175px;
+  }
+
+  // Дополнительная информация
+  .configuration-group--additional {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  // Кнопка
+  .configuration-group--button {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+}
+
+// Desktop ----------------------------------------------------------------------------------------------------------
+@media (min-width: @desktop-width) {
+  .configuration-group {
+    width: 100%;
+  }
+
+  .configuration__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 50px;
+  }
+
+  .configuration-group--contact {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+
+  .configuration-group--additional {
+    grid-template-rows: none;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .configuration-group__comment {
+    width: 100%;
+  }
+
+  .configuration-group--button {
+    justify-content: start;
+  }
+
+  .configuration__footnote {
+    margin-left: 200px;
+  }
 }

@@ -1,4 +1,230 @@
+.product {
+  position: relative;
+}
+
 .product__list {
   display: grid;
-  min-width: 280px;
+}
+
+.product__item {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: @default-all-color-light;
+}
+
+.product__picture {
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 85px;
+  min-height: 100px;
+}
+
+.product__annotation {
+  grid-column: 2 / 3;
+  margin-bottom: 10px;
+}
+
+.product__title {
+  font-family: @font-main;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 40px 0 0;
+}
+
+.product__table {
+  .table;
+}
+
+.product__btn {
+  .primary-btn;
+  grid-column: 1 / -1;
+}
+
+.product__line {
+  .deviding-line;
+}
+
+// Больше товаров --------------------------------------------------------------------------------
+.product__item--more {
+  position: relative;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  align-self: center;
+}
+
+.product__item--more::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 120px;
+  background-image: url("../img/icons/mobile-plus.svg");
+  width: 30px;
+  height: 30px;
+  margin: 20px 0 10px 0;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.product__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 219px;
+  margin: auto;
+  padding: 70px 0 0 0;
+  box-sizing: border-box;
+}
+
+.product__title--more {
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+.product__text {
+  font-family: @font-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: @default-third-color;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0 10px 0;
+}
+
+.product__redirect {
+  .third-btn;
+}
+
+// Tablet --------------------------------------------------------------------------------------
+@media (min-width: @tablet-width) {
+  .product__list {
+    grid-template-columns: repeat(2, 324px);
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+
+  .product__item,
+  .product__item--more {
+    grid-template-columns: 324px;
+    grid-template-rows: 250px 150px 100px;
+    justify-content: center;
+    justify-items: center;
+    background-image: linear-gradient(#ffffff 20%, @default-third-background 12%);
+    position: relative;
+  }
+
+  .product__picture {
+    min-width: 100px;
+    min-height: 150px;
+  }
+
+  .product__annotation {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    row-gap: 10px;
+  }
+
+  .product__title {
+    margin: 0;
+    padding: 0 65px 0 65px;
+    text-align: center;
+  }
+
+  .product__btn,
+  .product__redirect {
+    width: 250px;
+  }
+
+  // Больше товаров --------------------------------------------------------------------------------
+  .product__item--more {
+    background-color: @default-all-color-light;
+    border: 1px solid @default-third-background;
+    background-image: none;
+  }
+
+  .product__item--more::after {
+    top: 90px;
+    left: 125px;
+    background-image: url("../img/icons/tablet-plus.svg");
+    width: 60px;
+    height: 60px;
+  }
+
+  .product__title--more {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 10px 0 10px;
+  }
+
+  .product__content {
+    grid-row: 2 / 3;
+    width: 170px;
+    row-gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product__text {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 15px 0 20px 0;
+  }
+
+  .product__redirect {
+    grid-row: 3 / -1;
+  }
+}
+
+// Desktop --------------------------------------------------------------------------------------
+@media (min-width: @desktop-width) {
+  .product__list {
+    grid-template-columns: repeat(4, 245px);
+    grid-template-rows: auto;
+    column-gap: 67px;
+    row-gap: 60px;
+  }
+
+  .product__item {
+    grid-template-columns: 245px;
+  }
+
+  .product__annotation {
+    width: 169px;
+  }
+
+  .product__title {
+    padding: 0 25px 0 25px;
+  }
+
+  // Product More -----------------------------------------------------------------------------------
+  .product__item--more {
+    padding-top: 0;
+  }
+
+  .product__item--more::after {
+    left: 90px;
+    margin: 20px 0 20px 0;
+  }
+
+  .product__title--more {
+    padding: 20px 10px 0 10px;
+  }
+
+  .product__btn,
+  .product__redirect {
+    width: 169px;
+  }
 }

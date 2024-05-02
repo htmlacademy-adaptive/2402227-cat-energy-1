@@ -1,5 +1,4 @@
 .logo {
-  display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -7,51 +6,46 @@
   outline: none;
 }
 
-@media (max-width: 200px) {
-  .logo--img {
-    margin: 0 16px 0 0;
-  }
+.logo--img {
+  margin-right: 60px;
 }
 
-@media (min-width: @tablet-width) {
-  .logo--txt {
-    justify-content: flex-start;
-    margin: 0 0 0 16px;
-  }
+.logo--txt {
+  margin-right: 60px;
 }
 
-@media (min-width: @desktop-width) {
-  .logo--txt {
-    margin: 0 0 0 16px;
-  }
+.logo__icon--img:hover {
+  opacity: @logo-hover-opacity;
 }
 
-.logo__icon--img {
-  width: 33px;
-  height: 38px;
-}
-
-.header__logo .logo__icon--txt {
-  width: 101px;
-  height: 18px;
-}
-
-.footer__logo .logo__icon--txt {
-  width: 128px;
-  height: 24px;
-}
-
-.logo__icon--img:hover,
 .logo__icon--txt:hover {
   opacity: @logo-hover-opacity;
 }
 
-.logo__icon--img:focus,
+.logo__icon--img:focus {
+  opacity: @logo-focus-opacity;
+}
+
 .logo__icon--txt:focus {
   opacity: @logo-focus-opacity;
 }
 
-.logo__icon--img:active,
+.logo__icon--img:active {
+  opacity: @logo-active-opacity;
+}
+
 .logo__icon--txt:active {
   opacity: @logo-active-opacity;
+}
+
+@media (min-width: @tablet-width) {
+  .logo--img {
+    margin-right: 0;
+  }
+
+  .logo--txt {
+    justify-content: flex-start;
+    margin-left: 16px;
+    padding-top: 7px;
+  }
 }

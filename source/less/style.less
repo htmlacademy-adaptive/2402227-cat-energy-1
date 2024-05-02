@@ -1,86 +1,63 @@
-// Base
+// Base ------------------------------------------------------------------------------
 @import "./base/visually-hidden";
 @import "./base/clear-list";
 @import "./base/fonts";
 @import "./base/base";
-@import "./base/container";
 @import "./base/mixins";
 @import "./base/variables";
 
-// Input
-@import "./base/input/label-field";
-@import "./base/input/input-field";
-
-// Heading
-@import "./base/heading/heading";
-@import "./base/heading/title";
-@import "./base/heading/subtitle";
-
-// Table
-@import "./base/table/table";
-
-// Blocks
+// Blocks ---------------------------------------------------------------------------
 // Page
 @import "./block/page/page";
 
-// Button
-@import "./block/button/primary-btn";
-@import "./block/button/secondary-btn";
-@import "./block/button/third-btn";
-
-// Header
+// Header + Navigation --------------------------------------------------------------
 @import "./block/header/header";
+@import "./block/header/navigation";
 
 // Main/Catalog/Form -> Logo
 @import "./block/logo/logo";
 
-// Main/Catalog/Form -> Navigation
-@import "./block/navigation/navigation";
+// Main -> Promo (Промо) --------------------------------------------------------------
+@import "./block/index/promo";
 
-// Footer
-@import "./block/footer/footer";
+// Main -> Programme (Похудеть / Набрать вес) -----------------------------------------
+@import "./block/index/programme";
 
-// Main -> Promo
-@import "./block/promo/promo";
+// Main -> Description (Как это работает) ---------------------------------------------
+@import "./block/index/description";
 
-// Main -> Programme
-@import "./block/programme/programme";
-
-// Main -> Description
-@import "./block/description/description";
-
-// Main -> Example
-@import "./block/example/example";
+// Main -> Example (Живой пример) -----------------------------------------------------
+@import "./block/index/example";
 
 // Main -> Slider
-@import "./block/slider/slider";
+@import "./block/index/slider";
 
-// Main/Catalog -> Contact
-@import "./block/contact/contact";
+// Connection (Контакты и Карта) -----------------------------------------------------
+@import "./block/connection/connection";
+@import "./block/connection/contact";
+@import "./block/connection/map";
 
-// Main -> Map
-@import "./block/map/map";
+// Footer ----------------------------------------------------------------------------
+@import "./block/footer/footer";
 
 // Footer -> Social
-@import "./block/social/social";
+@import "./block/footer/social";
 
 // Footer -> Partner
-@import "./block/partner/partner";
+@import "./block/footer/partner";
 
-// Product-catalog -> Catalog
+// Product-catalog -> Catalog (Каталог) ---------------------------------------------
 @import "./block/product-catalog/catalog";
 
 // Product-catalog -> Product
 @import "./block/product-catalog/product";
-@import "./block/product-catalog/product-item";
 
-// Product-catalog -> Subproduct
-@import "./block/subproduct/subproduct";
-@import "./block/subproduct/subproduct-item";
+// Product-catalog -> Derivative (Доп.товары + Подарок) -----------------------------
+@import "./block/product-catalog/derivative";
+@import "./block/product-catalog/subproduct";
+@import "./block/product-catalog/subproduct-item";
+@import "./block/product-catalog/present";
 
-// Product-catalog -> Present
-@import "./block/present/present";
-
-// Product-form -> Configuration
+// Product-form -> Configuration (Форма для заполнения) ----------------------------
 @import "./block/product-form/configuration";
 @import "./block/product-form/configuration-group";
