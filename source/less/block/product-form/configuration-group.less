@@ -15,7 +15,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
   width: 100%;
+  position: relative;
 }
 
 // Параметры питомца: Имя Вес Возраст ----------------------------------------------------------------------------------------
@@ -29,30 +31,53 @@
 }
 
 // Тип программы - радиокнопки ----------------------------------------------------------------------------
-.configuration-group__radio {
-  .input-field;
+.configuration-group__radio,
+.configuration-group__checkbox {
+  appearance: none;
+  position: absolute;
   margin: 0;
+  padding: 0;
+  border: none;
 }
 
-.configuration-group__radio::before {
+.configuration-group__label--radio {
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.configuration-group__label--radio::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  display: block;
   width: 30px;
   height: 30px;
+  background-color: #ffffff;
   border: 1px solid rgb(205, 205, 205);
   border-radius: 50%;
+  z-index: 1;
 }
 
-.configuration-group__radio::after {
-  width: 13px;
-  height: 13px;
+.configuration-group__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: @default-primary-background;
   border-radius: 50%;
+  outline: none;
+  opacity: 0;
+  background-position: center;
+  background-size: 15px 15px;
+  z-index: 2;
 }
 
-.configuration-group__radio[type="radio"]:checked {
-  background-color: @default-primary-background;
-}
-
-.configuration-group__checkbox[type="checkbox"]:checked {
-  background-color: @default-primary-background;
+.configuration-group__radio:checked + .configuration-group__label--radio::after {
+  opacity: 1;
 }
 
 // Контактная информация ---------------------------------------------------------------------------------------
@@ -79,23 +104,19 @@
   position: absolute;
 }
 
-.configuration-group__icon:hover {
-  fill: @icon-hover-fill;
+.configuration-group__icon:hover path {
+  border-color: @icon-hover-fill;
 }
 
-.configuration-group__icon:focus {
-  fill: @icon-focus-fill;
+.configuration-group__icon:focus path {
+  border-color: @icon-focus-fill;
 }
 
-.configuration-group__icon:active {
-  fill: @icon-active-fill;
+.configuration-group__icon:active path {
+  border-color: @icon-active-fill;
 }
 
-.configuration-group__icon--tel {
-  top: 60px;
-  right: 12px;
-}
-
+.configuration-group__icon--tel,
 .configuration-group__icon--email {
   top: 12px;
   right: 12px;
@@ -106,7 +127,7 @@
   .input-field;
   width: 280px;
   height: 150px;
-  text-align: center;
+  text-align: left;
   padding: 0;
 }
 
@@ -118,8 +139,58 @@
   width: 100%;
 }
 
+.configuration-group__label--checkbox {
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.configuration-group__label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid rgb(205, 205, 205);
+  z-index: 1;
+}
+
+// Hover Focus - границ чекбокса
+// .configuration-group__label--checkbox::before:hover {
+//   border: 1px solid rgb(186, 186, 186);
+// }
+
+// .configuration-group__label--checkbox::before:focus {
+//   border: 1px solid rgb(186, 186, 186);
+// }
+
+.configuration-group__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  display: block;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/form/checkbox-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 14px;
+  opacity: 0;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.configuration-group__checkbox:checked + .configuration-group__label::after {
+  opacity: 1;
+}
+
 .configuration-group--button {
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 // Tablet ----------------------------------------------------------------------------------------------------------
@@ -128,10 +199,35 @@
     width: 628px;
   }
 
+  // Радиокнопки
   .configuration-group--type {
     border: 1px solid @default-border-color;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
+  .configuration-group__label--radio {
+    padding-left: 70px;
+  }
+
+  .configuration-group__label--radio::before {
+    top: 0;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .configuration-group__label--radio::after {
+    top: 11px;
+    left: 26px;
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
+
+  // Комментарий
   .configuration-group__comment {
     width: 628px;
     height: 175px;
@@ -139,16 +235,31 @@
 
   // Дополнительная информация
   .configuration-group--additional {
+    display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-    align-items: start;
+  }
+
+  .configuration-group__label--checkbox::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .configuration-group__label--checkbox::after {
+    top: 13px;
+    left: 10px;
+    width: 24px;
+    height: 19px;
   }
 
   // Кнопка
   .configuration-group--button {
+    display: grid;
     grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
+  }
+
+  .configuration__footnote {
+    margin-left: -250px;
   }
 }
 
@@ -160,14 +271,20 @@
 
   .configuration__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    column-gap: 50px;
+    grid-template-columns: repeat(2, 570px);
+    justify-content: space-between;
   }
 
   .configuration-group--contact {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 570px);
     justify-content: space-between;
+  }
+
+  .configuration-group__icon--tel,
+  .configuration-group__icon--email {
+    top: 14px;
+    right: 12px;
   }
 
   .configuration-group--additional {
@@ -184,6 +301,6 @@
   }
 
   .configuration__footnote {
-    margin-left: 200px;
+    margin-left: 75px;
   }
 }

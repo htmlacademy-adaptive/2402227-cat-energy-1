@@ -189,7 +189,7 @@
   font-family: @font-main;
   font-size: 16px;
   line-height: 18px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   text-transform: uppercase;
   color: @default-third-color;
@@ -204,6 +204,10 @@
   &:focus {
     border: 2px;
     border-color: @focus-border-color;
+  }
+
+  &:active {
+    border-color: @default-border-color;
   }
 
   &::placeholder {

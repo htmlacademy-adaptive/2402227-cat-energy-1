@@ -6,19 +6,18 @@
   outline: none;
 }
 
-.logo--img {
-  margin-right: 60px;
-}
-
 .logo--txt {
-  margin-right: 60px;
+  background-image: url("../img/logo/logo-text-mobile@1x.svg");
+  background-repeat: no-repeat;
+  width: 101px;
+  height: 18px;
 }
 
 .logo__icon--img:hover {
   opacity: @logo-hover-opacity;
 }
 
-.logo__icon--txt:hover {
+.logo--txt:hover {
   opacity: @logo-hover-opacity;
 }
 
@@ -26,7 +25,7 @@
   opacity: @logo-focus-opacity;
 }
 
-.logo__icon--txt:focus {
+.logo--txt:focus {
   opacity: @logo-focus-opacity;
 }
 
@@ -34,10 +33,11 @@
   opacity: @logo-active-opacity;
 }
 
-.logo__icon--txt:active {
+.logo--txt:active {
   opacity: @logo-active-opacity;
 }
 
+// Tablet
 @media (min-width: @tablet-width) {
   .logo--img {
     margin-right: 0;
@@ -46,6 +46,13 @@
   .logo--txt {
     justify-content: flex-start;
     margin-left: 16px;
-    padding-top: 7px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .logo--txt {
+    width: 118px;
+    height: 21px;
   }
 }

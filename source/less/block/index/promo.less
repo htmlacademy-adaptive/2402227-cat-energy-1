@@ -32,11 +32,15 @@
 }
 
 .promo::before {
-  background-image: url("../img/pictures/promo__image-background.jpg");
+  background-image: url("../img/promo/mobile-promo-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/mobile-promo-background@2x.jpg");
+  }
 }
 
 .promo::after {
@@ -149,11 +153,15 @@
   }
 
   .promo::before {
-    background-image: url("../img/pictures/promo__desktop-background.jpg");
+    background-image: url("../img/promo/desktop-promo-background@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/desktop-promo-background@2x.jpg");
+    }
   }
 
   .promo::after {

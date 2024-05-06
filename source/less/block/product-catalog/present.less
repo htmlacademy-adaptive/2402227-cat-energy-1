@@ -3,10 +3,14 @@
   position: relative;
   display: block;
   min-height: 290px;
-  background-image: url("../img/pictures/cat-inthebag.png");
+  background-image: url("../img/present/mobile-cat-inthebag@1x.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/present/mobile-cat-inthebag@2x.png");
+  }
 }
 
 .present::after {
@@ -50,7 +54,11 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .present {
-    background-image: url("../img/pictures/cat-inthebag-tablet.png");
+    background-image: url("../img/present/tablet-cat-inthebag@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present/tablet-cat-inthebag@2x.png");
+    }
   }
 
   .present::after {
@@ -74,18 +82,12 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .present {
-    background-image: url("../img/pictures/cat-inthebag.png");
     position: relative;
-  }
+    background-image: url("../img/present/mobile-cat-inthebag@1x.png");
 
-  .present::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(104, 183, 56, 0.85);
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present/mobile-cat-inthebag@2x.png");
+    }
   }
 
   .present__text {
@@ -94,15 +96,9 @@
   }
 
   .present__text::after {
-    content: "";
-    position: absolute;
     top: 25px;
     left: 76px;
     width: 78px;
     height: 80px;
-    background-image: url("../img/icons/icon_present.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 2;
   }
 }
