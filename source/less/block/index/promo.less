@@ -10,7 +10,6 @@
 
 .promo__body {
   position: relative;
-  padding-top: 10px;
   z-index: 2;
 }
 
@@ -48,14 +47,19 @@
   z-index: 1;
 }
 
+.promo__header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .promo__heading {
   .heading-h1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
   color: @default-all-color-light;
+  padding: 10px;
 }
 
 .promo__text {
@@ -68,7 +72,8 @@
   text-align: center;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 15px 0 20px 0;
+  padding: 0;
 }
 
 .promo__btn {
@@ -92,22 +97,29 @@
   .promo__body {
     display: grid;
     grid-template-rows: repeat(4, auto);
-    grid-template-columns: 565px;
+    grid-template-columns: 109px 450px 109px;
     justify-content: center;
     background-color: transparent;
     z-index: 2;
     position: relative;
   }
 
-  .promo__heading {
-    justify-content: flex-start;
-    align-items: start;
+  .promo__header {
     grid-row: 1 / 2;
-    color: @default-secondary-color-dark;
+    grid-column: 2 / 3;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
+  .promo__heading {
+    justify-content: flex-start;
+    align-items: start;
+    color: @default-secondary-color-dark;
+    padding-left: 0;
+  }
+
   .promo__text {
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
     text-align: start;
     font-size: 20px;
@@ -118,12 +130,12 @@
   .promo__btn {
     position: relative;
     grid-row: 3 / 4;
-    grid-column: 1 / -1;
+    grid-column: 2 / 3;
     width: 244px;
     min-height: 54px;
     font-size: 20px;
     line-height: 26px;
-    margin-top: 20px;
+    margin-top: 25px;
     z-index: 1;
   }
 
@@ -180,25 +192,27 @@
     z-index: 2;
   }
 
-  .promo__heading {
+  .promo__header {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
+    margin: 0;
+    margin-top: -50px;
   }
 
   .promo__text {
     grid-row: 3 / 4;
-    grid-column: 1 / 3;
-    margin-top: 30px;
+    grid-column: 1 / 2;
   }
 
   .promo__btn {
-    grid-row: 4 / 5;
+    grid-row: 3 / 5;
     grid-column: 1 / 3;
-    margin-top: 60px;
+    height: 64px;
+    margin-top: 75px;
   }
 
   .promo__img {
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
     grid-column: 2 / 4;
   }
 }

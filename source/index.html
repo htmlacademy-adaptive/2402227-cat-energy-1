@@ -31,6 +31,7 @@
           </a>
           <a class="logo logo--txt" href="index.html">
             <span class="visually-hidden">Cat Energy</span>
+            <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
           </a>
           <button class="header__burger burger burger--open" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -62,11 +63,11 @@
       <section class="promo">
         <div class="promo__container">
           <div class="promo__body">
-            <header class="promo__header visually-hidden">
-              <h2 class="visually-hidden">Лучшие предложения сайта</h2>
+            <h2 class="visually-hidden">Лучшие предложения сайта</h2>
+            <header class="promo__header">
+              <h3 class="promo__heading">Функциональное <br/> питание для котов</h3>
             </header>
-            <h3 class="promo__heading">Функциональное <br/> питание для котов</h3>
-            <p class="promo__text">Занялся собой? Займись котом! и собой заодно</p>
+            <p class="promo__text">Занялся собой? Займись котом!</p>
             <picture class="promo__img">
               <source media="(min-width: 1440px)"
                 srcset="./img/promo/promo-desktop@1x.png 1x, ./img/promo/promo-desktop@2x.png 2x" width="552" height="499">
@@ -83,9 +84,7 @@
       <!-- Блок рекомендаций и переход в каталог -->
       <section class="programme">
         <div class="programme__container">
-          <header class="programme__header visually-hidden">
-            <h2 class="visually-hidden">Подбор программы</h2>
-          </header>
+          <h2 class="visually-hidden">Подбор программы</h2>
           <ul class="programme__list clear-list">
             <li class="programme__item">
               <h2 class="programme__subtitle programme__subtitle--slim">Похудение</h2>
@@ -134,7 +133,9 @@
       <!-- Блок Живой пример -->
       <section class="example">
         <div class="example__container">
-          <h2 class="example__title">Живой пример</h2>
+          <header class="example__header">
+            <h2 class="example__title">Живой пример</h2>
+          </header>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <ul class="example__list clear-list">
             <li class="example__item">
@@ -177,7 +178,7 @@
           <div class="contact__container">
             <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
             <p class="contact__title">Приглашаем<br/> к сотрудничеству<br/> дилеров!</p>
-            <p class="contact__text">ул. Большая Конюшенная, д. 19/8<br/> Санкт-Петербург</p>
+            <p class="contact__text">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
           </div>
         </section>
         <section class="connection__map map">
@@ -190,8 +191,9 @@
     <footer class="page__footer footer">
       <section class="footer__container">
         <!-- Блок Логотипы -->
-        <a class="footer__logo logo logo--txt" href="index.html">
+        <a class="footer__logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
+          <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="128" height="24" alt="Cat Energy text logotip">
         </a>
         <hr class="footer__line">
         <!-- Блок Социяальные сети -->

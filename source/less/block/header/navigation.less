@@ -39,19 +39,6 @@
   color: @active-secondary-color-dark;
 }
 
-@media (min-width: @mobile-width-only) {
-  // .navigation--opened {
-  //   position: absolute;
-  //   width: 100%;
-  //   top: 50px;
-  //   left: 0;
-  // }
-
-  // .navigation--closed {
-  //   display: none;
-  // }
-}
-
 @media (min-width: @tablet-width) {
   .navigation__list {
     display: flex;
@@ -117,5 +104,17 @@
 
   .navigation__link--current-main::after {
     background-color: @default-all-color-light;
+  }
+
+  .navigation__link--current-main:hover::after {
+    background-color: @hover-secondary-color-dark;
+  }
+
+  .navigation__link--current-main:focus::after {
+    background-color: @focus-secondary-color-dark;
+  }
+
+  .navigation__link--current-main:active::after {
+    background-color: @active-secondary-color-dark;
   }
 }
