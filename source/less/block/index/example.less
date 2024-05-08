@@ -8,15 +8,17 @@
 .example__container {
   .container;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   row-gap: 20px;
+}
+
+.example__header {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .example__title {
   .heading-h2;
-  grid-column: 1 / -1;
-  margin-top: 30px;
-  margin-bottom: 20px;
   color: @default-secondary-color-dark;
 }
 
@@ -116,6 +118,10 @@
     row-gap: 60px;
   }
 
+  .example__header {
+    margin: 0;
+  }
+
   .example__subtitle {
     font-size: 30px;
     line-height: 37px;
@@ -181,11 +187,11 @@
 
   .example__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(5, auto);
   }
 
-  .example__title {
+  .example__header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     margin: 0;

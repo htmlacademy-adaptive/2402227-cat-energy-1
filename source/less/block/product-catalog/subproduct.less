@@ -5,7 +5,6 @@
 
 .subproduct__list {
   display: grid;
-  row-gap: 25px;
 }
 
 // Tablet
@@ -15,14 +14,18 @@
   }
 
   .subproduct__list {
-    padding: 10px 20px 10px 20px;
-    box-sizing: border-box;
+    grid-template-columns: min-content;
+    row-gap: 0;
   }
 }
 
 // Desktop
 @media (min-width: @desktop-width) {
   .subproduct {
+    padding: 0;
+  }
+
+  .subproduct__list {
     padding: 0;
   }
 }
