@@ -33,13 +33,15 @@
             <span class="visually-hidden">Cat Energy</span>
             <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
           </a>
-          <button class="header__burger burger burger--open" type="button">
+          <!-- Блок навигация: header__burger--opened / header__burger--closed
+          header__burger--opened + header__navigation--closed = меню не отображается
+          header__burger--closed + header__navigation--opened = меню отображается-->
+          <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <svg class="burger burger--close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path stroke="#000" stroke-width="1.5" d="M0-.75h24.758" transform="scale(.97098 1.0282) rotate(-45 24.51 7.237)"/><path stroke="#000" stroke-width="1.5" d="M0-.75h24.758" transform="matrix(.68659 .72705 -.68659 .72705 1 2)"/></svg>
           </button>
         </div>
-        <!-- Блок навигация: navigation--opened / navigation--closed -->
-        <nav class="header__navigation navigation navigation--opened">
+        <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
+        <nav class="header__navigation navigation header__navigation--opened">
           <div class="navigation__wrapper">
           <h2 class="visually-hidden">Навигация сайта</h2>
             <ul class="navigation__list clear-list">
@@ -152,22 +154,22 @@
             <p class="example__expenses example__expenses--text">15 000 руб.</p>
           </div>
           <div class="example__slider slider">
-            <ul class="slider__list">
-              <li class="slider__item slider__item--before">
-                <div class="slider__box slider__box--before">
-                  <picture>
-                    <img src="./img/slider/mobile-slider-fat@1x.png" width="311" height="232" alt="Толстый кот">
-                  </picture>
-                </div>
-              </li>
-              <li class="slider__item slider__item--after slider__item--current">
-                <div class="slider__box slider__box--after">
-                  <picture>
-                    <img src="./img/slider/mobile-slider-pro@1x.png" height="232" alt="Тощий кот">
-                  </picture>
-                </div>
-              </li>
-            </ul>
+            <section class="slider__item slider__item--before">
+              <picture class="slider__img">
+                <source media="(min-width: 768px)"
+                  srcset="./img/slider/fat-tablet-before@1x.png 1px, ./img/slider/fat-tablet-before@2x.png 2px" width="560" height="512">
+                <img src="./img/slider/fat-mobile-before@1x.png 1px"
+                  srcset="./img/slider/fat-mobile-before@2x.png 2px" alt="Толстый кот">
+              </picture>
+            </section>
+            <section class="slider__item slider__item--after slider__item--current">
+              <picture class="slider__img">
+                <source media="(min-width: 768px)"
+                  srcset="./img/slider/slim-tablet-after@1x.png 1px, ./img/slider/slim-tablet-after@2x.png 2px" width="560" height="512">
+                <img src="./img/slider/slim-mobile-after@1x.png 1px"
+                  srcset="./img/slider/slim-mobile-after@2x.png 2px" alt="Тонкий кот">
+              </picture>
+            </section>
           </div>
         </div>
       </section>

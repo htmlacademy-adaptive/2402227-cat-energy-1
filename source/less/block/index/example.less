@@ -100,10 +100,8 @@
 
 // Слайдер -----------------------------------------------------------------------------------------------------
 .example__slider {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -170,10 +168,6 @@
   .example__expenses--dsc {
     margin-right: 0;
   }
-
-  .example__slider {
-    position: relative;
-  }
 }
 
 // Desktop
@@ -187,8 +181,9 @@
 
   .example__container {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 450px 150px 560px;
     grid-template-rows: repeat(5, auto);
+    column-gap: 10px;
   }
 
   .example__header {
@@ -206,6 +201,7 @@
   .example__list {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    justify-content: space-between;
     column-gap: 0;
   }
 
@@ -233,7 +229,7 @@
   }
 
   .example__slider {
-    grid-column: 2 / -1;
+    grid-column: 3 / -1;
     grid-row: 1 / -1;
   }
 }

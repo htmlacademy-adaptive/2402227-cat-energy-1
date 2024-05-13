@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
+
     <!-- Шапка сайта -->
     <header class="header">
       <section class="header__container">
@@ -30,15 +31,17 @@
             <span class="visually-hidden">Cat Energy</span>
             <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
           </a>
-          <button class="header__burger burger burger--open" type="button">
+          <!-- Блок навигация: header__burger--opened / header__burger--closed
+          header__burger--opened + header__navigation--closed = меню не отображается
+          header__burger--closed + header__navigation--opened = меню отображается-->
+          <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <svg class="burger burger--close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path stroke="#000" stroke-width="1.5" d="M0-.75h24.758" transform="scale(.97098 1.0282) rotate(-45 24.51 7.237)"/><path stroke="#000" stroke-width="1.5" d="M0-.75h24.758" transform="matrix(.68659 .72705 -.68659 .72705 1 2)"/></svg>
           </button>
         </div>
-        <!-- Блок навигация: navigation--opened / navigation--closed -->
-        <nav class="header__navigation navigation navigation--opened">
+        <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
+        <nav class="header__navigation navigation header__navigation--opened">
           <div class="navigation__wrapper">
-          <h2 class="visually-hidden">Навигация сайта</h2>
+            <h2 class="visually-hidden">Навигация сайта</h2>
             <ul class="navigation__list clear-list">
               <li class="navigation__item">
                 <a class="navigation__link navigation__link--catalog" href="index.html">Главная</a>
@@ -93,7 +96,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item">
@@ -126,7 +129,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item">
@@ -157,7 +160,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item">
@@ -190,7 +193,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item">
@@ -221,7 +224,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item">
@@ -254,7 +257,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item">
@@ -285,7 +288,7 @@
                     </tbody>
                   </table>
                 </div>
-                <button class="product__btn" name="product__btn" type="submit" value="order">Заказать</button>
+                <a class="product__btn" name="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
 
               <li class="product__item product__item--more">
@@ -302,10 +305,10 @@
 
       <!-- Блок Дополнительные товары -->
       <div class="derivative">
+        <header class="derivative__header">
+          <h2 class="derivative__title title title--decoration">Дополнительные товары</h2>
+        </header>
         <div class="derivative__container">
-          <header class="derivative__header">
-            <h2 class="derivative__title">Дополнительные товары</h2>
-          </header>
           <!-- Блок Доп.товары -->
           <section class="derivative__subproduct subproduct">
             <ul class="subproduct__list clear-list">

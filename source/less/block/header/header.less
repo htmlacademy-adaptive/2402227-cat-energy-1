@@ -19,75 +19,51 @@
   justify-content: space-between;
   min-height: 40px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 // /* Бургер меню */-------------------------------------------------------------
-.burger--open {
-  display: block;
+.header__burger--opened,
+.header__burger--closed {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: @logo-hover-opacity;
+  }
+
+  &:focus {
+    opacity: @logo-focus-opacity;
+  }
+
+  &:active {
+    opacity: @logo-active-opacity;
+  }
+}
+
+.header__burger--opened {
+  background-image: url("../img/logo/burger_open.svg");
   width: 24px;
   height: 24px;
-  content: "";
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
 }
 
-.burger--open::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 1px;
-  width: 24px;
-  height: 2px;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 0 6px 0 0  rgb(0, 0, 0), 0 12px 0 0  rgb(0, 0, 0);
+.header__burger--closed {
+  background-image: url("../img/logo/burger_close.svg");
+  width: 18px;
+  height: 18px;
 }
 
-.burger--close {
+// Отображение навигации
+.header__navigation--opened {
+  display: block;
+}
+
+.header__navigation--closed {
   display: none;
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-}
-
-
-@media (min-width: @mobile-width-only) {
-  .header--opened .burger--open::before {
-    top: 0;
-    right: auto;
-    left: 0;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 2px;
-      top: 10px;
-      bottom: 10px;
-      right: 0;
-      background-color: rgb(0, 0, 0);
-      border: none;
-      cursor: pointer;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
 }
 
 // Планшет / Десктоп --------------------------------------------------------
@@ -110,7 +86,8 @@
     padding-bottom: 0;
   }
 
-  .burger--open {
+  // Отображение навигации
+  .header__burger {
     display: none;
   }
 }
@@ -123,9 +100,5 @@
   .header__wrapper {
     min-height: 60px;
     flex-wrap: nowrap;
-  }
-
-  .burger--open {
-    display: none;
   }
 }

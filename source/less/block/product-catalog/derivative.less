@@ -5,6 +5,7 @@
 
 .derivative__container {
   .container;
+  overflow: hidden;
 }
 
 .derivative__header {
@@ -15,6 +16,33 @@
   .heading-h3;
 }
 
+.title {
+  position: relative;
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 0 20px 0 20px;
+}
+
+.title--decoration::before,
+.title--decoration::after {
+  content: "";
+  display: block;
+  width: 800%;
+  height: 2px;
+  background-color: @default-primary-background;
+  position: absolute;
+  z-index: -1;
+}
+
+.title--decoration::before {
+  display: none;
+}
+
+.title--decoration::after {
+  top: 15px;
+  left: 0;
+}
+
 // Tablet
 @media (min-width: @tablet-width) {
   .derivative__container {
@@ -22,7 +50,18 @@
   }
 
   .derivative__header {
-    padding-left: 40px;
+    padding-left: 90px;
+  }
+
+  .title--decoration::before {
+    display: inline-block;
+    top: 20px;
+    right: 0;
+  }
+
+  .title--decoration::after {
+    top: 20px;
+    left: 0;
   }
 }
 

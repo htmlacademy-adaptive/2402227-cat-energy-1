@@ -185,7 +185,7 @@
 }
 
 // Поля ввода ----------------------------------------------------------------------------------------------------------------------
-.input-field(@include-error: false) {
+.input-field {
   font-family: @font-main;
   font-size: 16px;
   line-height: 18px;
@@ -193,21 +193,46 @@
   text-decoration: none;
   text-transform: uppercase;
   color: @default-third-color;
+  background-color: transparent;
   border: 1px solid @default-border-color;
   outline: none;
   padding: 10px;
 
   &:hover {
-    border-color: @hover-border-color;
+    border: 1px solid @hover-border-color;
   }
 
-  &:focus {
-    border: 2px;
-    border-color: @focus-border-color;
+  &:focus:not([type="radio"]):not([type="checkbox"]) {
+    border: 1px solid @default-border-color;
+    outline: 1px solid @focus-border-color;
   }
 
-  &:active {
-    border-color: @default-border-color;
+  &:focus + svg path {
+    stroke: @default-primary-background;
+  }
+
+  &:active:not([type="radio"]):not([type="checkbox"]) {
+    border: 1px solid @default-border-color;
+    outline: 1px solid @focus-border-color;
+  }
+
+  &:active + svg path {
+    stroke: @default-primary-background;
+  }
+
+  // Стили для ошибки -------------------------------------------------------------------------------------------------------------------
+  &:focus:invalid {
+    border: 1px solid @error-border-color;
+    outline: 1px solid @error-border-color;
+  }
+
+  &:focus:invalid + svg path {
+    stroke: @error-border-color;
+  }
+
+  &:active:invalid {
+    border: 1px solid @error-border-color;
+    outline: 1px solid @error-border-color;
   }
 
   &::placeholder {
@@ -218,13 +243,6 @@
     text-decoration: none;
     text-transform: uppercase;
     color: @default-third-color;
-    padding: 10px;
-  }
-
-  // Стили для ошибки -------------------------------------------------------------------------------------------------------------------
-  & when (@include-error = true) {
-    border: 2px;
-    border-color: @error-border-color;
   }
 
   @media (min-width: @tablet-width) {
