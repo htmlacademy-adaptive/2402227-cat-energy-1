@@ -69,15 +69,19 @@
 // Планшет / Десктоп --------------------------------------------------------
 @media (min-width: @tablet-width) {
   .header {
-    padding-top: 15px;
-  }
-
-  .header__container {
+    .container;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding-top: 15px;
+  }
+
+  .header__container {
+    max-width: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .header__wrapper {
@@ -99,6 +103,5 @@
 
   .header__wrapper {
     min-height: 60px;
-    flex-wrap: nowrap;
   }
 }
