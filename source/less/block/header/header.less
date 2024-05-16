@@ -1,9 +1,9 @@
 .header {
-  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   z-index: 50;
   position: relative;
+  overflow: hidden;
 }
 
 .header__container {
@@ -69,24 +69,18 @@
 // Планшет / Десктоп --------------------------------------------------------
 @media (min-width: @tablet-width) {
   .header {
-    .container;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-  }
-
-  .header__container {
-    max-width: 0;
-    margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .header__wrapper {
     min-height: 50px;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding-top: 15px;
     padding-bottom: 0;
   }
 

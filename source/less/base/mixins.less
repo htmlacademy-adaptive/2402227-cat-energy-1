@@ -198,8 +198,9 @@
   outline: none;
   padding: 10px;
 
-  &:hover {
-    border: 1px solid @hover-border-color;
+  &:hover:not([type="radio"]):not([type="checkbox"]) {
+    border: 1px solid @default-border-color;
+    outline: 1px solid @focus-border-color;
   }
 
   &:focus:not([type="radio"]):not([type="checkbox"]) {

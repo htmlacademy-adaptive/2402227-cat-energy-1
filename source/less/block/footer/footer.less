@@ -6,8 +6,9 @@
 .footer__container {
   .container;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: min-content;
   grid-template-rows: repeat(5, auto);
+  justify-content: center;
   place-items: center;
   justify-self: center;
   align-items: center;
@@ -17,8 +18,10 @@
 }
 
 .footer__logo {
-  grid-row: 1 / 2;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  align-self: auto;
 }
 
 .footer__social {

@@ -1,31 +1,29 @@
 .navigation {
   position: relative;
+  width: 100%;
   background-color: rgb(255, 255, 255);
+  padding-top: 10px;
 }
 
 .navigation__wrapper {
   position: relative;
 }
 
+// Полосочки меню через псевдоэлемент
 .navigation__item {
-  border-top: 1px solid rgb(230, 230, 230);
+  position: relative;
 }
 
-// Попытка сделать полосочки меню через псевдоэлемент - удалить
-// .navigation__item {
-//   position: relative;
-// }
-
-// .navigation__item::before {
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   height: 1px;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   background-color: rgb(230, 230, 230);
-// }
+.navigation__item::before {
+  content: "";
+  position: absolute;
+  width: 600%;
+  height: 1px;
+  top: 0;
+  left: -350%;
+  bottom: 0;
+  background-color: rgb(230, 230, 230);
+}
 
 .navigation__link {
   display: block;
@@ -56,6 +54,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .navigation {
+    width: auto;
+    margin-left: auto;
+    padding-top: 0;
+  }
+
   .navigation__list {
     display: flex;
     flex-direction: row;
@@ -69,6 +73,10 @@
     border-top: none;
     border-bottom: none;
     padding: 10px;
+  }
+
+  .navigation__item::before {
+    display: none;
   }
 
   .navigation__link {

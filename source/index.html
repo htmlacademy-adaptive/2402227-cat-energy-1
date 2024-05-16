@@ -37,28 +37,28 @@
           <!-- Блок навигация: header__burger--opened / header__burger--closed
           header__burger--opened + header__navigation--closed = меню не отображается
           header__burger--closed + header__navigation--opened = меню отображается-->
+                <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
           <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+          <nav class="header__navigation navigation header__navigation--opened">
+            <div class="navigation__wrapper">
+            <h2 class="visually-hidden">Навигация сайта</h2>
+              <ul class="navigation__list clear-list">
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--current navigation__link--current-main" href="#">Главная</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="product-catalog.html">Каталог продукции</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--summary" href="product-form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </section>
-      <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
-      <nav class="header__navigation navigation header__navigation--opened">
-        <div class="navigation__wrapper">
-        <h2 class="visually-hidden">Навигация сайта</h2>
-          <ul class="navigation__list clear-list">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--current navigation__link--current-main" href="#">Главная</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="product-catalog.html">Каталог продукции</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--summary" href="product-form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
 
     <main class="page__main">
@@ -160,7 +160,7 @@
                 <picture class="slider__img">
                   <source media="(min-width: 768px)"
                     srcset="./img/slider/fat-tablet-before@1x.png 1px, ./img/slider/fat-tablet-before@2x.png 2px" width="560" height="512">
-                  <img src="./img/slider/fat-mobile-before@1x.png 1px"
+                  <img src="./img/slider/fat-mobile-before@1x.png"
                     srcset="./img/slider/fat-mobile-before@2x.png 2px" alt="Толстый кот">
                 </picture>
               </div>
@@ -170,7 +170,7 @@
                 <picture class="slider__img">
                   <source media="(min-width: 768px)"
                     srcset="./img/slider/slim-tablet-after@1x.png 1px, ./img/slider/slim-tablet-after@2x.png 2px" width="560" height="512">
-                  <img src="./img/slider/slim-mobile-after@1x.png 1px"
+                  <img src="./img/slider/slim-mobile-after@1x.png"
                     srcset="./img/slider/slim-mobile-after@2x.png 2px" alt="Тонкий кот">
                 </picture>
               </div>
