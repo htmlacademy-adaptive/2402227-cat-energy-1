@@ -91,7 +91,8 @@
   padding-bottom: 40px;
 }
 
-.configuration-group__input--email {
+.configuration-group__input--email,
+.configuration-group__input--tel {
   width: 100%;
 }
 
@@ -102,31 +103,25 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 0 30px #ffffff inset;
 }
 
-.configuration-group__input--tel {
-  width: 100%;
-}
-
 .configuration-group__icon {
   content: "";
   position: absolute;
-}
-
-.configuration-group__icon:hover path {
-  border-color: @icon-hover-fill;
-}
-
-.configuration-group__icon:focus path {
-  border-color: @icon-focus-fill;
-}
-
-.configuration-group__icon:active path {
-  border-color: @icon-active-fill;
-}
-
-.configuration-group__icon--tel,
-.configuration-group__icon--email {
+  width: 20px;
+  height: 20px;
   top: 12px;
   right: 12px;
+
+  &:hover {
+    stroke: @icon-hover-fill;
+  }
+
+  &:focus {
+    stroke: @icon-focus-fill;
+  }
+
+  &:active {
+    stroke: @icon-active-fill;
+  }
 }
 
 // Комментарии ---------------------------------------------------------------------------------------------------

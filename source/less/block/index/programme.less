@@ -35,8 +35,7 @@
   text-transform: uppercase;
 }
 
-.programme__subtitle--slim::before,
-.programme__subtitle--fat::before {
+.programme__subtitle::before {
   content: "";
   position: absolute;
   top: 0;
@@ -47,26 +46,24 @@
   border-radius: 50%;
 }
 
-.programme__subtitle--slim::after {
-  content: "";
+.programme__icon {
   position: absolute;
-  top: 0;
-  left: -77px;
-  width: 36px;
-  height: 50px;
-  background-image: url("../img/icons/cat-slim.svg");
-  background-repeat: no-repeat;
+  display: block;
+  z-index: 2;
 }
 
-.programme__subtitle--fat::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -94px;
+.programme__icon--slim {
+  width: 36px;
+  height: 50px;
+  top: 50px;
+  left: 50px;
+}
+
+.programme__icon--pro {
   width: 67px;
   height: 29px;
-  background-image: url("../img/icons/cat-fat.svg");
-  background-repeat: no-repeat;
+  bottom: 250px;
+  left: 30px;
 }
 
 .programme__text {
@@ -124,7 +121,7 @@
   z-index: 1;
 
   &:hover {
-    color: @hover-secondary-color-dark;
+    background-color: @hover-secondary-color-dark;
   }
 
   &:focus {
@@ -159,28 +156,25 @@
     margin-left: 0;
   }
 
-  .programme__subtitle--slim::before,
-  .programme__subtitle--fat::before {
+  .programme__subtitle::before {
     top: 0;
     left: 370px;
     width: 200px;
     height: 200px;
   }
 
-  .programme__subtitle--slim::after {
-    top: -10px;
-    left: 400px;
+  .programme__icon--slim {
     width: 140px;
     height: 194px;
-    background-size: cover;
+    top: 75px;
+    left: 510px;
   }
 
-  .programme__subtitle--fat::after {
-    top: 40px;
-    left: 338px;
+  .programme__icon--pro {
     width: 268px;
     height: 112px;
-    background-size: cover;
+    bottom: 160px;
+    left: 455px;
   }
 
   .programme__text {
@@ -224,8 +218,7 @@
     margin: 20px 0 20px 85px;
   }
 
-  .programme__subtitle--slim::before,
-  .programme__subtitle--fat::before {
+  .programme__subtitle::before {
     content: "";
     position: absolute;
     top: 0;
@@ -234,22 +227,18 @@
     height: 50px;
   }
 
-  .programme__subtitle--slim::after {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -75px;
+  .programme__icon--slim {
     width: 36px;
     height: 50px;
+    top: 95px;
+    left: 210px;
   }
 
-  .programme__subtitle--fat::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: -95px;
+  .programme__icon--pro {
     width: 67px;
     height: 29px;
+    bottom: 310px;
+    left: 810px;
   }
 
   .programme__line {
