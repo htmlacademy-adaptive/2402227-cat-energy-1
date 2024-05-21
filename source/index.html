@@ -71,14 +71,16 @@
               <h3 class="promo__heading">Функциональное <br/> питание для котов</h3>
             </header>
             <p class="promo__text">Занялся собой? Займись котом!</p>
-            <picture class="promo__img">
-              <source media="(min-width: 1440px)"
-                srcset="./img/promo/promo-desktop@1x.png 1x, ./img/promo/promo-desktop@2x.png 2x" width="552" height="499">
-              <source media="(min-width: 768px)"
-                srcset="./img/promo/promo-tablet@1x.png 1x, /img/promo/promo-tablet@2x.png 2x" width="708" height="608">
-              <img src="./img/promo/promo-mobile@1x.png 1px"
-                srcset="./img/promo/promo-mobile@2x.png 2x" width="280" height="270" alt="Банка с кормом со вкусом курицы">
-            </picture>
+            <div class="promo__img">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="./img/promo/promo-desktop@1x.png 1x, ./img/promo/promo-desktop@2x.png 2x" width="552" height="499">
+                <source media="(min-width: 768px)"
+                  srcset="./img/promo/promo-tablet@1x.png 1x, /img/promo/promo-tablet@2x.png 2x" width="708" height="608">
+                <img src="./img/promo/promo-mobile@1x.png"
+                  srcset="./img/promo/promo-mobile@2x.png 2x" width="280" height="270" alt="Банка с кормом со вкусом курицы">
+              </picture>
+            </div>
             <a class="promo__btn" href="product-form.html" target="_blank">Подобрать программу</a>
           </div>
         </div>
@@ -140,19 +142,21 @@
             <h2 class="example__title">Живой пример</h2>
           </header>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="example__list clear-list">
-            <li class="example__item">
-              <span class="example__subtitle">5 кг</span>
-              <p class="example__subtext example__subtext--weight">снижение веса</p>
-            </li>
-            <li class="example__item">
-              <span class="example__subtitle">60 дней</span>
-              <p class="example__subtext example__subtext--day">затрачено времени</p>
-            </li>
-          </ul>
-          <div class="example__expenses">
-            <p class="example__expenses example__expenses--text example__expenses--dsc">затраты на питание:</p>
-            <p class="example__expenses example__expenses--text">15 000 руб.</p>
+          <div class="example__info">
+            <ul class="example__list clear-list">
+              <li class="example__item">
+                <span class="example__subtitle">5 кг</span>
+                <p class="example__subtext example__subtext--weight">снижение веса</p>
+              </li>
+              <li class="example__item">
+                <span class="example__subtitle">60 дней</span>
+                <p class="example__subtext example__subtext--day">затрачено времени</p>
+              </li>
+            </ul>
+            <div class="example__expenses">
+              <p class="example__expenses example__expenses--text example__expenses--dsc">затраты на питание:</p>
+              <p class="example__expenses example__expenses--text">15 000 руб.</p>
+            </div>
           </div>
           <div class="example__slider slider">
             <section class="slider__item slider__item--before">
@@ -211,7 +215,7 @@
               <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
                 <span class="visually-hidden">вконтакте</span>
                 <svg class="social__icon">
-                  <use xlink:href="sprite.svg#vkontakte"></use>
+                  <use xlink:href="./img/sprite.svg#vkontakte"></use>
                 </svg>
               </a>
             </li>
@@ -219,7 +223,7 @@
               <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
                 <span class="visually-hidden">ютуб</span>
                 <svg class="social__icon">
-                  <use xlink:href="sprite.svg#youtube"></use>
+                  <use xlink:href="./img/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -227,7 +231,7 @@
               <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
                 <span class="visually-hidden">телеграм</span>
                 <svg class="social__icon">
-                  <use xlink:href="sprite.svg#telegram"></use>
+                  <use xlink:href="./img/sprite.svg#telegram"></use>
                 </svg>
               </a>
             </li>
@@ -247,7 +251,7 @@
               <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
                 <span class="visually-hidden">HTML Academy</span>
                 <svg class="partner__icon">
-                  <use xlink:href="sprite.svg#htmlacademy"></use>
+                  <use xlink:href="./img/sprite.svg#htmlacademy"></use>
                 </svg>
               </a>
             </li>
