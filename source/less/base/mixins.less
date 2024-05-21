@@ -199,41 +199,36 @@
   padding: 10px;
 
   &:hover:not([type="radio"]):not([type="checkbox"]) {
-    border: 1px solid @default-border-color;
-    outline: 1px solid @focus-border-color;
+    border: 1px solid @hover-border-color;
+    outline: 1px solid @hover-border-color;
   }
 
   &:focus:not([type="radio"]):not([type="checkbox"]) {
-    border: 1px solid @default-border-color;
+    border: 1px solid @focus-border-color;
     outline: 1px solid @focus-border-color;
   }
 
-  &:focus + svg path {
+  &:focus + .configuration-group__icon {
     stroke: @default-primary-background;
   }
 
   &:active:not([type="radio"]):not([type="checkbox"]) {
-    border: 1px solid @default-border-color;
+    border: 1px solid @focus-border-color;
     outline: 1px solid @focus-border-color;
   }
 
-  &:active + svg path {
+  &:active + .configuration-group__icon {
     stroke: @default-primary-background;
   }
 
   // Стили для ошибки -------------------------------------------------------------------------------------------------------------------
-  &:focus:invalid {
+  &:invalid {
     border: 1px solid @error-border-color;
     outline: 1px solid @error-border-color;
   }
 
-  &:focus:invalid + svg path {
+  &:focus:invalid + .configuration-group__icon {
     stroke: @error-border-color;
-  }
-
-  &:active:invalid {
-    border: 1px solid @error-border-color;
-    outline: 1px solid @error-border-color;
   }
 
   &::placeholder {

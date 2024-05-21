@@ -183,13 +183,15 @@
 
   .promo__body {
     display: grid;
-    grid-template-rows: 30px min-content min-content min-content 30px;
+    grid-template-rows: 50px min-content min-content min-content 50px;
     grid-template-columns: 425px 350px 345px;
     width: 1120px;
+    justify-items: start;
+    align-items: start;
     background-color: transparent;
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 70px;
+    padding-left: 90px;
     z-index: 2;
   }
 
@@ -197,7 +199,6 @@
     grid-row: 2 / 3;
     grid-column: 1 / 3;
     margin: 0;
-    margin-top: 25px;
   }
 
   .promo__text {
@@ -217,6 +218,9 @@
 
   .promo__img {
     grid-row: 1 / 5;
-    grid-column: 2 / 4;
+    margin-left: 335px;
+    // grid-column: 2 / 4;
+    align-self: self-start;
+    justify-self: start;
   }
 }
