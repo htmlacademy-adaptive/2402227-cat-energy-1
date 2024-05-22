@@ -1,8 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <style>:root svg:not(:target) {
-    display: none;
-  }
-  </style>
+  <style>:root svg:not(:target) { display: none }</style>
 
   <!-- Index: Иконки - Блок Programme - Slim/Pro -->
   <svg id="slim" viewBox="0 0 36 50">
