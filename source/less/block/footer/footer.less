@@ -6,30 +6,27 @@
 .footer__container {
   .container;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
   place-items: center;
-  justify-self: center;
   align-items: center;
   row-gap: 20px;
   min-height: auto;
-  padding: 40px 20px 40px 20px;
+  padding: 40px 20px;
 }
 
 .footer__logo {
-  grid-row: 1 / 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
 .footer__social {
-  grid-row: 3 / 4;
   display: flex;
   min-width: 132px;
   min-height: 22px;
 }
 
 .footer__partner {
-  grid-row: 5 / -1;
   display: flex;
   min-height: 34px;
 }
@@ -43,11 +40,10 @@
   .footer__container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     min-height: 147px;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     box-sizing: border-box;
   }
 

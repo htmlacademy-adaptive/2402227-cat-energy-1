@@ -30,7 +30,7 @@
 .subproduct-item__annotation {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
 
 .subproduct-item__label {
@@ -55,7 +55,7 @@
     grid-template-columns: 187px 400px;
     grid-template-rows: repeat(2, auto);
     row-gap: 20px;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px;
     border: 1px solid rgb(230, 230, 230);
   }
 
@@ -69,6 +69,7 @@
   .subproduct-item__annotation {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    column-gap: 10px;
     justify-content: flex-end;
     align-items: center;
     margin: 0;
@@ -90,13 +91,13 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .subproduct-item {
-    grid-template-columns: 250px 300px 244px;
+    grid-template-columns: 250px 322px 244px;
     grid-template-rows: auto;
     column-gap: 40px;
     border-left: none;
     border-right: none;
     margin: 0;
-    padding: 15px 0 15px 0;
+    padding: 15px 0;
   }
 
   .subproduct-item__title {
@@ -108,6 +109,7 @@
 
   .subproduct-item__annotation {
     grid-column: 2 / 3;
+    justify-content: space-between;
   }
 
   .subproduct-item__label--start {

@@ -91,44 +91,36 @@
   padding-bottom: 40px;
 }
 
-.configuration-group__input--email {
+.configuration-group__input--email,
+.configuration-group__input--tel {
   width: 100%;
 }
 
-.configuration-group__input--tel {
-  width: 100%;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px #ffffff inset;
 }
 
 .configuration-group__icon {
   content: "";
   position: absolute;
-}
-
-.configuration-group__icon:hover path {
-  border-color: @icon-hover-fill;
-}
-
-.configuration-group__icon:focus path {
-  border-color: @icon-focus-fill;
-}
-
-.configuration-group__icon:active path {
-  border-color: @icon-active-fill;
-}
-
-.configuration-group__icon--tel,
-.configuration-group__icon--email {
-  top: 12px;
+  width: 20px;
+  height: 20px;
+  top: 14px;
   right: 12px;
+  fill: transparent;
+  stroke: rgb(34, 34, 34);
 }
 
 // Комментарии ---------------------------------------------------------------------------------------------------
 .configuration-group__comment {
   .input-field;
-  width: 280px;
+  width: 100%;
   height: 150px;
   text-align: left;
-  padding: 0;
+  padding: 10px;
 }
 
 // Дополнительно ----------------------------------------------------------------------------------------------------
@@ -156,15 +148,6 @@
   border: 1px solid rgb(205, 205, 205);
   z-index: 1;
 }
-
-// Hover Focus - границ чекбокса
-// .configuration-group__label--checkbox::before:hover {
-//   border: 1px solid rgb(186, 186, 186);
-// }
-
-// .configuration-group__label--checkbox::before:focus {
-//   border: 1px solid rgb(186, 186, 186);
-// }
 
 .configuration-group__label--checkbox::after {
   content: "";
@@ -227,9 +210,14 @@
     background-size: 18px 18px;
   }
 
+  .configuration-group__icon--tel,
+  .configuration-group__icon--email {
+    top: 18px;
+    right: 12px;
+  }
+
   // Комментарий
   .configuration-group__comment {
-    width: 628px;
     height: 175px;
   }
 
@@ -281,19 +269,9 @@
     justify-content: space-between;
   }
 
-  .configuration-group__icon--tel,
-  .configuration-group__icon--email {
-    top: 14px;
-    right: 12px;
-  }
-
   .configuration-group--additional {
     grid-template-rows: none;
     grid-template-columns: repeat(4, auto);
-  }
-
-  .configuration-group__comment {
-    width: 100%;
   }
 
   .configuration-group--button {

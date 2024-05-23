@@ -33,6 +33,12 @@
   margin: 0;
 }
 
+.example__info {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 30px;
+}
+
 .example__list {
   position: relative;
   display: grid;
@@ -100,10 +106,8 @@
 
 // Слайдер -----------------------------------------------------------------------------------------------------
 .example__slider {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -111,7 +115,7 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .example {
-    background-image: linear-gradient(#ffffff 570px, #eaeaea 25%);
+    background-image: linear-gradient(#ffffff 565px, #eaeaea 25%);
   }
 
   .example__container {
@@ -139,6 +143,12 @@
     font-size: 16px;
     line-height: 24px;
     margin: 0 33px 0 0;
+  }
+
+  .example__info {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
   }
 
   .example__list {
@@ -170,10 +180,6 @@
   .example__expenses--dsc {
     margin-right: 0;
   }
-
-  .example__slider {
-    position: relative;
-  }
 }
 
 // Desktop
@@ -182,13 +188,14 @@
     position: static;
     min-height: 462px;
     padding: 40px 0 60px 0;
-    background-image: linear-gradient(#ffffff 30%, #eaeaea 30%);
+    background-image: linear-gradient(#ffffff 25%, #eaeaea 25%);
   }
 
   .example__container {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 450px 150px 560px;
     grid-template-rows: repeat(5, auto);
+    column-gap: 10px;
   }
 
   .example__header {
@@ -203,10 +210,14 @@
     margin: 0;
   }
 
+  .example__info {
+    grid-template-rows: repeat(2, auto);
+    row-gap: 40px;
+  }
+
   .example__list {
     grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    column-gap: 0;
+    justify-content: space-between;
   }
 
   .example__subtext {
@@ -217,9 +228,8 @@
 
   .example__expenses {
     grid-column: 1 / 2;
-    grid-row: 5 / -1;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: start;
     padding: 0;
     margin: 0;
   }
@@ -229,11 +239,11 @@
   }
 
   .example__expenses--dsc {
-    margin-right: 5px;
+    margin-right: 25px;
   }
 
   .example__slider {
-    grid-column: 2 / -1;
+    grid-column: 3 / -1;
     grid-row: 1 / -1;
   }
 }

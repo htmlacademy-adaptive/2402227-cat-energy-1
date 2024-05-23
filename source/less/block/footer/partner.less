@@ -37,23 +37,24 @@
   color: @active-third-color;
 }
 
-.partner__link--icon {
+.partner__icon {
   display: block;
   width: 27px;
   height: 34px;
   border: none;
+  fill: rgb(102, 102, 102);
 }
 
-.partner__link--icon:hover path {
-  fill: @hover-primary-background;
+.partner__icon:hover {
+  fill: @icon-hover-fill;
 }
 
-.partner__link--icon:focus path {
-  fill: @hover-primary-background;
+.partner__icon:focus {
+  fill: @icon-focus-fill;
 }
 
-.partner__link--icon:active path {
-  fill: @focus-primary-background;
+.partner__icon:active {
+  fill: @icon-active-fill;
 }
 
 // Tablet

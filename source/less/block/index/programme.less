@@ -18,6 +18,7 @@
 .programme__item {
   background-color: @default-third-background;
   padding: 20px;
+  position: relative;
 }
 
 .programme__subtitle {
@@ -35,11 +36,10 @@
   text-transform: uppercase;
 }
 
-.programme__subtitle--slim::before,
-.programme__subtitle--fat::before {
+.programme__subtitle::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -5px;
   left: -85px;
   width: 50px;
   height: 50px;
@@ -50,23 +50,29 @@
 .programme__subtitle--slim::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -77px;
+  mask: url("../img/steck.svg#slim") 50% 50%;
+  mask-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
   width: 36px;
   height: 50px;
-  background-image: url("../img/icons/cat-slim.svg");
-  background-repeat: no-repeat;
+  top: -8px;
+  left: -80px;
+  z-index: 2;
 }
 
-.programme__subtitle--fat::after {
+.programme__subtitle--pro::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: -94px;
+  mask: url("../img/steck.svg#pro") 50% 50%;
+  mask-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
   width: 67px;
   height: 29px;
-  background-image: url("../img/icons/cat-fat.svg");
-  background-repeat: no-repeat;
+  top: 5px;
+  left: -93px;
+  z-index: 2;
 }
 
 .programme__text {
@@ -92,16 +98,24 @@
 .programme__link {
   display: flex;
   align-items: center;
-  width: 134px;
+  width: 150px;
   min-height: 34px;
   margin: 5px 0 5px 0;
   text-decoration: none;
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.programme__link--text {
+.programme__label {
   position: relative;
   font-family: @font-main;
   font-size: 16px;
@@ -112,28 +126,32 @@
   text-transform: uppercase;
 }
 
-.programme__link--text::after {
+.programme__label::after {
   content: "";
   position: absolute;
-  top: 11px;
+  top: 2px;
   left: 100px;
-  width: 32px;
+  width: 24px;
   height: 12px;
-  background-image: url("../img/icons/icon_arrow.svg");
+  mask: url("../img/steck.svg#arrow") 50% 50%;
+  mask-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
+  stroke: rgb(0, 0, 0);
   cursor: pointer;
   z-index: 1;
+}
 
-  &:hover {
-    color: @hover-secondary-color-dark;
-  }
+.programme__link:hover .programme__label::after {
+  width: 32px;
+}
 
-  &:focus {
-    color: @focus-secondary-color-dark;
-  }
+.programme__link:focus .programme__label::after {
+  width: 32px;
+}
 
-  &:active {
-    color: @active-secondary-color-dark;
-  }
+.programme__link:active .programme__label::after {
+  width: 32px;
 }
 
 // Tablet
@@ -159,8 +177,7 @@
     margin-left: 0;
   }
 
-  .programme__subtitle--slim::before,
-  .programme__subtitle--fat::before {
+  .programme__subtitle::before {
     top: 0;
     left: 370px;
     width: 200px;
@@ -168,19 +185,17 @@
   }
 
   .programme__subtitle--slim::after {
-    top: -10px;
-    left: 400px;
     width: 140px;
     height: 194px;
-    background-size: cover;
+    top: 0;
+    left: 405px;
   }
 
-  .programme__subtitle--fat::after {
-    top: 40px;
-    left: 338px;
+  .programme__subtitle--pro::after {
     width: 268px;
     height: 112px;
-    background-size: cover;
+    top: 45px;
+    left: 340px;
   }
 
   .programme__text {
@@ -193,13 +208,13 @@
     min-height: 38px;
   }
 
-  .programme__link--text {
+  .programme__label {
     font-size: 20px;
     line-height: 20px;
   }
 
-  .programme__link--text::after {
-    top: 13px;
+  .programme__label::after {
+    top: 5px;
     left: 125px;
   }
 
@@ -221,42 +236,41 @@
   }
 
   .programme__subtitle {
-    margin: 20px 0 20px 85px;
+    margin: 20px 0 20px 150px;
   }
 
-  .programme__subtitle--slim::before,
-  .programme__subtitle--fat::before {
+  .programme__subtitle::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -85px;
-    width: 50px;
-    height: 50px;
+    top: -45px;
+    left: -150px;
+    width: 100px;
+    height: 106px;
+  }
+
+  .programme__text {
+    padding-top: 35px;
   }
 
   .programme__subtitle--slim::after {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -75px;
-    width: 36px;
-    height: 50px;
+    width: 70px;
+    height: 97px;
+    top: -45px;
+    left: -135px;
   }
 
-  .programme__subtitle--fat::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: -95px;
-    width: 67px;
-    height: 29px;
+  .programme__subtitle--pro::after {
+    width: 134px;
+    height: 56px;
+    top: -20px;
+    left: -165px;
   }
 
   .programme__line {
     display: none;
   }
 
-  .programme__link--text::after {
+  .programme__label::after {
     left: 140px;
   }
 }
