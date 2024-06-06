@@ -87,8 +87,32 @@
 
 .configuration-group__subtitle {
   .heading-h3;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  position: relative;
+  display: block;
+  padding: 40px 20px 20px 0;
+  margin: 10px 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.configuration-group__subtitle--decoration::before,
+.configuration-group__subtitle--decoration::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 900%;
+  height: 2px;
+  background-color: @default-primary-background;
+  z-index: -1;
+}
+
+.configuration-group__subtitle--decoration::before {
+  display: none;
+}
+
+.configuration-group__subtitle--decoration::after {
+  top: 53px;
+  left: 0;
 }
 
 .configuration-group__input--email,
@@ -182,6 +206,19 @@ input:-webkit-autofill:active {
     width: 628px;
   }
 
+  .configuration-group__subtitle--decoration::before {
+    display: block;
+    top: 60px;
+    left: -800px;
+    width: 500%;
+    z-index: -1;
+  }
+
+  .configuration-group__subtitle--decoration::after {
+    top: 60px;
+    left: 0;
+  }
+
   // Радиокнопки
   .configuration-group--type {
     border: 1px solid @default-border-color;
@@ -244,6 +281,7 @@ input:-webkit-autofill:active {
   .configuration-group--button {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    padding-top: 40px;
   }
 
   .configuration__footnote {
@@ -263,6 +301,11 @@ input:-webkit-autofill:active {
     justify-content: space-between;
   }
 
+  .configuration-group__subtitle {
+    padding-left: 40px;
+    margin-left: -40px;
+  }
+
   .configuration-group--contact {
     display: grid;
     grid-template-columns: repeat(2, 570px);
@@ -276,6 +319,7 @@ input:-webkit-autofill:active {
 
   .configuration-group--button {
     justify-content: start;
+    padding-top: 60px;
   }
 
   .configuration__footnote {
