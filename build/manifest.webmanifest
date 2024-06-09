@@ -1,5 +1,8 @@
 {
+
   "icons": [
+    { "srcset": "./img/favicons/32.webp", "type": "image/webp", "sizes": "32x32" },
+    { "srcset": "./img/favicons/152.webp", "type": "image/webp", "sizes": "192x192" },
     { "src": "./img/favicons/32.png", "type": "image/png", "sizes": "32x32" },
     { "src": "./img/favicons/152.png", "type": "image/png", "sizes": "192x192" }
   ]

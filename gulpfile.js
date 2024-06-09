@@ -27,8 +27,8 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-export const headerFooterStyles = () => {
-  return gulp.src(['source/less/header.less', 'source/less/footer.less'], { sourcemaps: true })
+export const catalogFormStyles = () => {
+  return gulp.src(['source/less/product-catalog-style.less', 'source/less/product-form-style.less'], { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -36,10 +36,10 @@ export const headerFooterStyles = () => {
       csso()
     ]))
     .pipe(rename((path) => {
-      if (path.basename === 'header') {
-        path.basename = 'header.min';
-      } else if (path.basename === 'footer') {
-        path.basename = 'footer.min';
+      if (path.basename === 'product-catalog-style') {
+        path.basename = 'product-catalog-style.min';
+      } else if (path.basename === 'product-form-style') {
+        path.basename = 'product-form-style.min';
       }
     }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
@@ -47,7 +47,6 @@ export const headerFooterStyles = () => {
 }
 
 // HTML
-
 export const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -78,30 +77,33 @@ export const createWebp = () => {
 
 // SVG
 export const svg = () => {
-  return gulp.src(['source/img/description-items/*.svg', 'source/img/form/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['source/img/description-items/*.svg'])
   .pipe(svgo())
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('build/img/description-items'));
 }
 
-// Sprite
-export const sprite = () => {
-  return gulp.src(['source/img/icons/*.svg'])
-  .pipe(svgo())
-  .pipe(svgstore( {
-    inlineSvg: true
-  }))
-  .pipe(rename('autosprite.svg'))
-  .pipe(gulp.dest('build/img'));
-}
+// // Sprite не получилось подключить - забила
+// export const sprite = () => {
+//   return gulp.src(['source/img/icons/*.svg'])
+//   .pipe(svgo())
+//   .pipe(svgstore( {
+//     inlineSvg: true
+//   }))
+//   .pipe(rename('autosprite.svg'))
+//   .pipe(gulp.dest('build/img/icons'));
+// }
 
-// Fonts Webmanifest Favicons
+// Fonts Webmanifest Favicons Icons
 export const copy = (done) => {
   gulp.src([
     'source/fonts/lato/*.{woff2,woff}',
     'source/fonts/oswald/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
-    'source/img/sprite/*.{svg}'
+    'source/img/sprite.svg',
+    'source/img/steck.svg',
+    'source/img/logo/*.svg',
+    'source/img/icons/*.svg'
   ], {
     base: 'source'
   })
@@ -137,7 +139,8 @@ export const server = (done) => {
 // Watcher
 export const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html));
+  // gulp.watch('source/*.html').on('change', browser.reload); - эта строка не сработала
 }
 
 // Build
@@ -147,10 +150,9 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
-    headerFooterStyles,
+    catalogFormStyles,
     html,
     svg,
-    sprite,
     createWebp
   ),
 );
@@ -161,10 +163,9 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    headerFooterStyles,
+    catalogFormStyles,
     html,
     svg,
-    sprite,
     createWebp
   ),
   gulp.series(
