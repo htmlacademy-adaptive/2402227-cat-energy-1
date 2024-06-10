@@ -1,6 +1,31 @@
 .slider {
   width: 100%;
   min-height: 256px;
+  position: relative;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: #666666;
+  width: 4px;
+  height: 256px;
+  top: -10px;
+  left: 140px;
+  z-index: 2;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/slider/switcher.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .slider__item {
@@ -50,6 +75,19 @@
 @media (min-width: @tablet-width) {
   .slider {
     min-height: 512px;
+  }
+
+  .slider::after {
+    content: "";
+    position: absolute;
+    mask: url("../img/steck.svg#tablet_switcher") 50% 50%;
+    mask-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 512px;
+    top: -10px;
+    left: -63px;
+    z-index: 2;
   }
 
   .slider__box {
