@@ -69,10 +69,12 @@
   position: absolute;
   top: 0;
   left: 120px;
-  background-image: url("../img/icons/mobile-plus.svg");
   width: 30px;
   height: 30px;
   margin: 20px 0 10px 0;
+  mask: url("../img/steck.svg#plus");
+  mask-size: cover;
+  background-color: rgb(211, 211, 211);
   background-repeat: no-repeat;
   text-decoration: none;
 }
@@ -157,9 +159,12 @@
   .product__item--more::after {
     top: 0;
     left: 125px;
-    background-image: url("../img/icons/tablet-plus.svg");
     width: 60px;
     height: 60px;
+    mask: url("../img/steck.svg#plus_tablet");
+    mask-size: cover;
+    background-color: rgb(211, 211, 211);
+    background-repeat: no-repeat;
     margin: 65px 0 0 0;
   }
 

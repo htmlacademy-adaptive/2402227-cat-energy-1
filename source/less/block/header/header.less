@@ -1,5 +1,5 @@
 .header {
-  padding-top: 10px;
+  padding-top: 25px;
   padding-bottom: 10px;
   z-index: 50;
   position: relative;
@@ -18,7 +18,7 @@
   align-self: center;
   justify-content: space-between;
   min-height: 40px;
-  padding-bottom: 10px;
+  padding-top: 10px;
   position: relative;
 }
 
@@ -66,7 +66,7 @@
   display: none;
 }
 
-// Планшет / Десктоп --------------------------------------------------------
+// Планшет -----------------------------------------------------------------
 @media (min-width: @tablet-width) {
   .header {
     padding-top: 20px;
@@ -75,21 +75,26 @@
 
   .header__wrapper {
     min-height: 50px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: left;
-    align-items: center;
     padding-top: 15px;
-    padding-bottom: 0;
   }
 
   // Отображение навигации
   .header__burger {
     display: none;
   }
+
+  // Отображение навигации
+  .header__navigation--opened {
+    display: block;
+  }
+
+  .header__navigation--closed {
+    display: block;
+  }
 }
 
+// Десктоп --------------------------------------------------------------------
 @media (min-width: @desktop-width) {
   .header {
     padding-top: 45px;

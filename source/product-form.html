@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
-    <link rel="icon" type="image/png" sizes="152x152" href="img/favicons/152.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="img/icons/format-svg32.svg">
+    <link rel="apple-touch-icon" href="img/favicons/apple180.webp,img/favicons/apple180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/product-form-style.min.css">
+    <link rel="stylesheet" href="css/product-catalog-style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./img/promo/promo-mobile@1x.webp" as="image">
+    <link rel="preload" href="./img/promo/mobile-promo-background@1x.webp" as="image">
+    <meta name="description" content="Интернет-магазин товаров для котов и кошечек">
   </head>
-
   <body class="page">
-
-    <!-- Шапка сайта -->
+    <!-- Header -->
     <header class="header">
       <section class="header__container">
-        <!-- Блок Логотипы -->
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
-          <a class="logo logo--img" href="index.html">
+          <a class="header__logo logo logo--img" href="index.html">
             <span class="visually-hidden">Cat logotip</span>
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="./img/logo/logo-desktop@1x.svg 1x" width="70" height="60">
-              <source media="(min-width: 768px)"
-                srcset="./img/logo/logo-tablet@1x.svg 1x" width="60" height="50">
+              <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop@1x.svg" width="70" height="60">
+              <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet@1x.svg" width="60" height="50">
               <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
             </picture>
           </a>
@@ -32,11 +37,10 @@
             <span class="visually-hidden">Cat Energy</span>
             <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
           </a>
-
           <!-- Блок навигация: header__burger--opened / header__burger--closed
-          header__burger--opened + header__navigation--closed = меню не отображается
-          header__burger--closed + header__navigation--opened = меню отображается-->
-                <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
+            header__burger--opened + header__navigation--closed = меню не отображается
+            header__burger--closed + header__navigation--opened = меню отображается-->
+          <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
           <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -45,13 +49,13 @@
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
                 <li class="navigation__item">
-                  <a class="navigation__link navigation__link--form" href="index.html">Главная</a>
+                  <a class="navigation__link" href="index.html">Главная</a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link navigation__link--form" href="product-catalog.html">Каталог продукции</a>
+                  <a class="navigation__link" href="product-catalog.html">Каталог продукции</a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link navigation__link--form navigation__link--summary navigation__link--current" href="#">Подбор программы</a>
+                  <a class="navigation__link navigation__link--current" href="#">Подбор программы</a>
                 </li>
               </ul>
             </div>
@@ -59,27 +63,26 @@
         </div>
       </section>
     </header>
-
+    <!-- Main -->
     <main class="page__main">
       <!-- Блок Подбор программы -->
       <div class="configuration">
         <div class="configuration__container">
           <header class="configuration__header">
             <h1 class="configuration__heading">Подбор программы</h1>
-            <p class="configuration__paragraph">Заполните анкету, и мы подберем <br /> программу питания для вашего кота</p>
+            <p class="configuration__paragraph">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
           </header>
-
           <form class="configuration__list" action="https://echo.htmlacademy.ru/" method="get">
             <div class="configuration__wrapper">
               <!-- Параметры питомца -->
               <fieldset class="configuration-group configuration-group--introduction">
                 <legend class="visually-hidden">Параметры питомца</legend>
                 <label class="configuration-group__item" for="name">
-                  <span class="configuration-group__label">Имя:*</span>
+                  <span class="configuration-group__label">Имя:&nbsp;*</span>
                   <input class="configuration-group__input configuration-group__name" type="text" id="name" minlength="1" maxlength="50" name="name" placeholder="Барсик">
                 </label>
                 <label class="configuration-group__item" for="weight">
-                  <span class="configuration-group__label">Вес&nbsp;(КГ):*</span>
+                  <span class="configuration-group__label">Вес&nbsp;(КГ):&nbsp;*</span>
                   <input class="configuration-group__input configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
                 </label>
                 <label class="configuration-group__item" for="age">
@@ -87,59 +90,56 @@
                   <input class="configuration-group__input configuration-group__age" type="number" min="1" max="20" name="age" id="age" placeholder="5">
                 </label>
               </fieldset>
-
               <!-- Тип программы -->
               <fieldset class="configuration-group configuration-group--type">
                 <legend class="visually-hidden">Тип программы</legend>
                 <label class="configuration-group__item" for="slim">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="slim" checked>
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice1" id="slim" checked="checked">
                   <span class="configuration-group__label configuration-group__label--radio">Похудение</span>
                 </label>
                 <label class="configuration-group__item" for="fat">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice2" id="fat">
                   <span class="configuration-group__label configuration-group__label--radio">Набор массы</span>
                 </label>
                 <label class="configuration-group__item" for="ask">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice3" id="ask">
                   <span class="configuration-group__label configuration-group__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </fieldset>
             </div>
-
             <!-- Контактная информация -->
             <fieldset class="configuration-group configuration-group--contact">
-              <legend class="configuration-group__subtitle">Контактные данные <br/> (владельца кота)</legend>
+              <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Контактные данные<br>(владельца кота)</legend>
               <label class="configuration-group__item" for="email">
-                <span class="configuration-group__label">E&nbsp;-&nbsp;mail:*</span>
+                <span class="configuration-group__label">E-mail:&nbsp;*</span>
                 <input class="configuration-group__input configuration-group__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#email"></use>
                 </svg>
               </label>
               <label class="configuration-group__item" for="tel">
-                <span class="configuration-group__label">Телефон:*</span>
+                <span class="configuration-group__label">Телефон:&nbsp;*</span>
                 <input class="configuration-group__input configuration-group__input--tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#telephone"></use>
                 </svg>
               </label>
             </fieldset>
-
             <!-- Комментарии -->
             <fieldset class="configuration-group configuration-group--comment">
-              <legend class="configuration-group__subtitle">Комментарий</legend>
+              <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Комментарий</legend>
               <label class="configuration-group__item" for="comment">
                 <span class="visually-hidden configuration-group__label">Комментарий</span>
                 <textarea class="configuration-group__comment" name="comment" id="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
               </label>
             </fieldset>
-
             <!-- Дополнительная информация -->
             <fieldset class="configuration-group configuration-group--additional">
-              <legend class="configuration-group__subtitle">Дополнительно</legend>
-              <label class="configuration-group__item configuration-group__item--additional" for="sweetener">
-                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-                <span class="configuration-group__label configuration-group__label--checkbox">сахарозаменитель</span>
+              <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Дополнительно</legend>
+              <label
+                class="configuration-group__item configuration-group__item--additional" for="sweetener">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked="checked">
+                  <span class="configuration-group__label configuration-group__label--checkbox">сахарозаменитель</span>
               </label>
               <label class="configuration-group__item" for="water">
                 <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="water" id="water">
@@ -154,36 +154,54 @@
                 <span class="configuration-group__label configuration-group__label--checkbox">витамины</span>
               </label>
             </fieldset>
-
             <!-- Кнопка -->
             <section class="configuration-group configuration-group--button">
-              <button class="configuration__btn">Отправить заявку</button>
+              <h3 class="visually-hidden">Send the form</h3>
+              <button class="configuration__btn" type="submit" name="submit">Отправить заявку</button>
               <p class="configuration__footnote">* — Обязательные поля</p>
             </section>
           </form>
         </div>
       </div>
-
       <!-- Контакты и Карта -->
       <section class="connection">
+        <h2 class="visually-hidden">Contacts</h2>
         <section class="connection__contact contact contact--form">
           <div class="contact__container">
             <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
-            <p class="contact__title">Приглашаем<br/> к сотрудничеству<br/> дилеров!</p>
+            <p class="contact__title">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
             <p class="contact__text">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
           </div>
         </section>
         <section class="connection__map map">
           <h2 class="visually-hidden">Геолокация с картой</h2>
-          <iframe class="map__spb" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728603!2d30.320472477031682!3d59.93871647491512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1710060427790!5m2!1sru!2sge" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="map__spb" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728603!2d30.320472477031682!3d59.93871647491512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1710060427790!5m2!1sru!2sge"
+            allowfullscreen="" title="Карта города Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <noscript>
+            <picture>
+              <!-- image/webp -->
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="./img/map/desktop-location@1x.webp, ./img/map/desktop-location@2x.webp 2x" width="1440" height="400">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/map/tablet-location@1x.webp, ./img/map/tablet-location@2x.webp 2x" width="768" height="400">
+              <source type="image/webp" srcset="./img/map/location@1x.webp, ./img/map/location@2x.webp 2x" width="320" height="362">
+              <!-- Image -->
+              <source media="(min-width: 1440px)"
+                srcset="./img/map/desktop-location@1x.jpg, ./img/map/desktop-location@2x.jpg 2x" width="1440" height="400">
+              <source media="(min-width: 768px)"
+                srcset="./img/map/tablet-location@1x.jpg, ./img/map/tablet-location@2x.jpg 2x" width="768" height="400">
+              <img src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
+            </picture>
+          </noscript>
         </section>
       </section>
     </main>
-
+    <!-- Footer -->
     <footer class="page__footer footer">
       <section class="footer__container">
-        <!-- Блок Логотипы -->
-        <a class="footer__logo" href="index.html">
+        <h2 class="visually-hidden">Footer</h2>
+        <a class="footer__logo logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
           <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="128" height="24" alt="Cat Energy text logotip">
         </a>
@@ -211,7 +229,7 @@
             <li class="social__item">
               <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
                 <span class="visually-hidden">телеграм</span>
-                <svg class="social__icon">
+                  <svg class="social__icon">
                   <use xlink:href="./img/sprite.svg#telegram"></use>
                 </svg>
               </a>
@@ -224,13 +242,12 @@
           <h2 class="visually-hidden">Логотипы академии</h2>
           <ul class="partner__list clear-list">
             <li class="partner__item">
-              <a class="partner__link partner__link--text" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-                <span class="partner__link partner__link--text">HTML Academy</span>
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+                <span class="partner__text">HTML Academy</span>
               </a>
             </li>
             <li class="partner__item">
               <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-                <span class="visually-hidden">HTML Academy</span>
                 <svg class="partner__icon">
                   <use xlink:href="./img/sprite.svg#htmlacademy"></use>
                 </svg>
