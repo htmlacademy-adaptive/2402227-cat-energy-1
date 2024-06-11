@@ -1,6 +1,7 @@
 .slider {
   width: 100%;
   min-height: 256px;
+  margin-top: 15px;
   position: relative;
 }
 
@@ -10,7 +11,7 @@
   background-repeat: no-repeat;
   background-color: #666666;
   width: 4px;
-  height: 256px;
+  min-height: 256px;
   top: -10px;
   left: 140px;
   z-index: 2;
@@ -33,6 +34,14 @@
   grid-area: 1 / 1;
 }
 
+.slider__item img {
+  position: absolute;
+  bottom: 12px;
+  transform: translate(-50%, 0);
+}
+
+// Толстый кот
+
 .slider__item--before {
   position: absolute;
   left: 50%;
@@ -41,12 +50,26 @@
   width: 50%;
 }
 
+.slider__item--before img {
+  width: 280px;
+  min-height: 256px;
+  left: 100%;
+}
+
+// Тонкий кот
+
 .slider__item--after {
   position: absolute;
   left: 50%;
   transform: translate(0, 0);
   top: 1px;
   width: 50%;
+}
+
+.slider__item--after img {
+  width: 280px;
+  min-height: 256px;
+  left: 0;
 }
 
 .slider__box {
@@ -57,52 +80,49 @@
   margin: 0 auto;
 }
 
-.slider__item img {
-  position: absolute;
-  bottom: 12px;
-  transform: translate(-50%, 0);
-}
-
-.slider__item--before img {
-  left: 100%;
-}
-
-.slider__item--after img {
-  left: 0;
-}
-
 // Tablet
 @media (min-width: @tablet-width) {
   .slider {
     min-height: 512px;
   }
 
-  .slider::after {
-    content: "";
-    position: absolute;
-    mask: url("../img/steck.svg#tablet_switcher") 50% 50%;
-    mask-size: cover;
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 512px;
+  .slider::before {
+    min-height: 512px;
     top: -10px;
-    left: -63px;
-    z-index: 2;
+    left: 330px;
   }
 
-  .slider__box {
-    min-height: 512px;
+  .slider::after {
+    top: 0;
+    left: 0;
   }
 
   .slider__item--before img {
     left: 100%;
-    width: 100%;
+    width: 560px;
     min-height: 512px;
   }
 
   .slider__item--after img {
     left: 0;
-    width: 100%;
+    width: 560px;
     min-height: 512px;
+  }
+
+  .slider__box {
+    min-height: 512px;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .slider::before {
+    top: -10px;
+    left: 277px;
+  }
+
+  .slider::after {
+    top: 0;
+    left: 0;
   }
 }
