@@ -13,8 +13,7 @@
 
 .example__header {
   grid-column: 1 / -1;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin: 23px 2px 21px 9px;
 }
 
 .example__title {
@@ -31,6 +30,7 @@
   text-align: left;
   color: @default-third-color;
   margin: 0;
+  margin-left: 2px;
 }
 
 .example__info {
@@ -54,7 +54,7 @@
   box-sizing: border-box;
   align-items: center;
   width: 124px;
-  padding: 15px;
+  padding: 14px;
   margin: 0;
   border: 1px solid rgb(205, 205, 205);
   border-radius: 10px;
@@ -62,6 +62,8 @@
 
 .example__subtitle {
   .heading-h3;
+  text-transform: uppercase;
+  padding-left: 6px;
 }
 
 .example__subtext {
@@ -76,7 +78,7 @@
   max-width: 77px;
   margin: 0;
   margin-bottom: -25px;
-  padding: 15px 10px 0 15px;
+  padding: 8px 10px 0 15px;
 }
 
 .example__expenses {
@@ -85,7 +87,8 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding-top: 15px;
+  padding-top: 14px;
+  padding-left: 9px;
 }
 
 .example__expenses--text {
@@ -120,39 +123,44 @@
 
   .example__container {
     row-gap: 60px;
+    padding: 0;
   }
 
   .example__header {
-    margin: 0;
+    margin: -38px 0 0 0;
   }
 
   .example__subtitle {
     font-size: 30px;
     line-height: 37px;
+    padding: 0;
   }
 
   .example__subtext {
     font-size: 14px;
     line-height: 14px;
     max-width: 162px;
-    padding: 20px 20px 0 20px;
+    margin-bottom: -13px;
+    padding: 20px 0 6px 0;
     background-color: @default-all-color-light;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
-    margin: 0 30px 0 0;
+    margin: 0;
   }
 
   .example__info {
     grid-template-columns: repeat(2, auto);
+    grid-template-rows: none;
     justify-content: space-between;
     align-items: center;
   }
 
   .example__list {
     grid-column: 1 / 2;
+    column-gap: 43px;
   }
 
   .example__item {
@@ -160,6 +168,9 @@
     min-width: 162px;
     justify-items: start;
     align-items: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
   }
 
   .example__expenses {
@@ -168,6 +179,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-self: center;
+    padding: 0;
   }
 
   .example__expenses--text {
@@ -187,7 +199,7 @@
   .example {
     position: static;
     min-height: 462px;
-    padding: 40px 0 60px 0;
+    padding: 30px 0 60px 0;
     background-image: linear-gradient(#ffffff 190px, #eaeaea 25%);
   }
 
@@ -196,6 +208,7 @@
     grid-template-columns: 450px 150px 560px;
     grid-template-rows: repeat(5, auto);
     column-gap: 10px;
+    row-gap: 0;
   }
 
   .example__header {
@@ -207,14 +220,15 @@
   .example__text {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin: 0;
+    margin: 0 17px 70px 0;
   }
 
   .example__info {
     grid-column: 1 / 2;
     grid-row: 4 / 6;
     grid-template-rows: repeat(2, auto);
-    row-gap: 40px;
+    row-gap: 55px;
+    margin: 0;
   }
 
   .example__list {
@@ -241,7 +255,7 @@
   }
 
   .example__expenses--dsc {
-    margin-right: 25px;
+    margin-right: 66px;
   }
 
   .example__slider {

@@ -1,6 +1,5 @@
 .header {
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   z-index: 50;
   position: relative;
   overflow: hidden;
@@ -25,6 +24,9 @@
 // /* Бургер меню */-------------------------------------------------------------
 .header__burger--opened,
 .header__burger--closed {
+  position: absolute;
+  top: 20px;
+  right: -2px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -68,15 +70,14 @@
 
 // Планшет -----------------------------------------------------------------
 @media (min-width: @tablet-width) {
-  .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .header__container {
+    padding: 0;
   }
 
   .header__wrapper {
     min-height: 50px;
     justify-content: left;
-    padding-top: 15px;
+    padding-top: 24px;
   }
 
   // Отображение навигации
@@ -96,11 +97,8 @@
 
 // Десктоп --------------------------------------------------------------------
 @media (min-width: @desktop-width) {
-  .header {
-    padding-top: 45px;
-  }
-
   .header__wrapper {
     min-height: 60px;
+    padding-top: 50px;
   }
 }

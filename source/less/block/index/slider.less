@@ -1,7 +1,7 @@
 .slider {
   width: 100%;
   min-height: 256px;
-  margin-top: 15px;
+  margin-top: 10px;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   width: 4px;
   min-height: 256px;
   top: -10px;
-  left: 140px;
+  left: 142px;
   z-index: 2;
 }
 
@@ -32,10 +32,16 @@
 .slider__item {
   display: grid;
   grid-area: 1 / 1;
+  position: absolute;
+  left: 51%;
+  top: 1px;
+  width: 50%;
 }
 
 .slider__item img {
   position: absolute;
+  width: 280px;
+  min-height: 256px;
   bottom: 12px;
   transform: translate(-50%, 0);
 }
@@ -43,32 +49,20 @@
 // Толстый кот
 
 .slider__item--before {
-  position: absolute;
-  left: 50%;
-  top: 1px;
   transform: translate(-100%, 0);
-  width: 50%;
 }
 
 .slider__item--before img {
-  width: 280px;
-  min-height: 256px;
   left: 100%;
 }
 
 // Тонкий кот
 
 .slider__item--after {
-  position: absolute;
-  left: 50%;
   transform: translate(0, 0);
-  top: 1px;
-  width: 50%;
 }
 
 .slider__item--after img {
-  width: 280px;
-  min-height: 256px;
   left: 0;
 }
 
@@ -84,12 +78,13 @@
 @media (min-width: @tablet-width) {
   .slider {
     min-height: 512px;
+    margin-top: 56px;
   }
 
   .slider::before {
     min-height: 512px;
     top: -10px;
-    left: 330px;
+    left: 358px;
   }
 
   .slider::after {
@@ -116,9 +111,17 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
+  .slider {
+    margin-top: 10px;
+  }
+
+  .slider__item {
+    left: 57%;
+  }
+
   .slider::before {
     top: -10px;
-    left: 277px;
+    left: 318px;
   }
 
   .slider::after {
