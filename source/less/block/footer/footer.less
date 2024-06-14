@@ -21,6 +21,7 @@
 
 .footer__social {
   display: flex;
+  flex-wrap: wrap;
   min-width: 132px;
   min-height: 22px;
 }
@@ -37,7 +38,7 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .footer {
-    padding: 60px 0 20px 0;
+    padding: 16px 0 16px 0;
   }
 
   .footer__container {
@@ -50,8 +51,15 @@
     box-sizing: border-box;
   }
 
+  .footer__logo {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 128px;
+    // margin: 7px 0 10px 2px;
+  }
+
   .footer__partner {
-    width: 168px;
+    min-width: 168px;
   }
 
   .footer__line {
@@ -61,8 +69,19 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
+  .footer {
+    padding: 0;
+  }
+
   .footer__container {
-    min-height: 169px;
+    min-height: 0;
+    padding: 70px 0 56px 0;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer__logo {
+    min-width: 168px;
   }
 
   .footer__line {

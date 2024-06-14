@@ -133,7 +133,7 @@
   .example__subtitle {
     font-size: 30px;
     line-height: 37px;
-    padding: 0;
+    padding-top: 10px;
   }
 
   .example__subtext {
@@ -141,7 +141,7 @@
     line-height: 14px;
     max-width: 162px;
     margin-bottom: -13px;
-    padding: 20px 0 6px 0;
+    padding: 13px 0 6px 0;
     background-color: @default-all-color-light;
   }
 
@@ -206,29 +206,25 @@
   .example__container {
     display: grid;
     grid-template-columns: 450px 150px 560px;
-    grid-template-rows: repeat(5, auto);
     column-gap: 10px;
     row-gap: 0;
+    margin-top: 60px;
   }
 
   .example__header {
     grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    margin: 0;
+    margin-top: -61px;
   }
 
   .example__text {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    margin: 0 17px 70px 0;
+    margin: 145px 17px 24px 0;
   }
 
   .example__info {
     grid-column: 1 / 2;
-    grid-row: 4 / 6;
-    grid-template-rows: repeat(2, auto);
-    row-gap: 55px;
-    margin: 0;
+    row-gap: 54px;
+    margin-top: 50px;
   }
 
   .example__list {
@@ -240,6 +236,7 @@
     font-size: 14px;
     line-height: 14px;
     background-color: rgb(234, 234, 234);
+    padding: 12px 0 6px 0;
   }
 
   .example__expenses {
@@ -260,6 +257,5 @@
 
   .example__slider {
     grid-column: 3 / -1;
-    grid-row: 1 / -1;
   }
 }
