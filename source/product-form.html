@@ -43,7 +43,7 @@
           <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <nav class="header__navigation navigation header__navigation--opened">
+          <nav class="header__navigation navigation header__navigation--closed">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -93,15 +93,15 @@
               <fieldset class="configuration-group configuration-group--type">
                 <legend class="visually-hidden">Тип программы</legend>
                 <label class="configuration-group__item" for="slim">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice1" id="slim" checked="checked">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="slim" checked="checked">
                   <span class="configuration-group__label configuration-group__label--radio">Похудение</span>
                 </label>
                 <label class="configuration-group__item" for="fat">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice2" id="fat">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat">
                   <span class="configuration-group__label configuration-group__label--radio">Набор массы</span>
                 </label>
                 <label class="configuration-group__item" for="ask">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice3" id="ask">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask">
                   <span class="configuration-group__label configuration-group__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </fieldset>
@@ -110,7 +110,7 @@
             <fieldset class="configuration-group configuration-group--contact">
               <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Контактные данные<br>(владельца кота)</legend>
               <label class="configuration-group__item" for="email">
-                <span class="configuration-group__label">E-mail:&nbsp;*</span>
+                <span class="configuration-group__label">E‑mail:&nbsp;*</span>
                 <input class="configuration-group__input configuration-group__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#email"></use>
@@ -228,7 +228,7 @@
             <li class="social__item">
               <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
                 <span class="visually-hidden">телеграм</span>
-                  <svg class="social__icon">
+                <svg class="social__icon">
                   <use xlink:href="./img/sprite.svg#telegram"></use>
                 </svg>
               </a>
@@ -241,12 +241,12 @@
           <h2 class="visually-hidden">Логотипы академии</h2>
           <ul class="partner__list clear-list">
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по названию сайта партнера" target="_blank">
                 <span class="partner__text">HTML Academy</span>
               </a>
             </li>
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по логотипу сайта партнера" target="_blank">
                 <svg class="partner__icon">
                   <use xlink:href="./img/sprite.svg#htmlacademy"></use>
                 </svg>
@@ -255,6 +255,6 @@
           </ul>
         </section>
       </section>
-    </footer>
+    </footer >
   </body>
 </html>

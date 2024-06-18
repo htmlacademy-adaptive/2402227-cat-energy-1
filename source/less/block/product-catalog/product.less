@@ -4,14 +4,15 @@
 
 .product__list {
   display: grid;
+  row-gap: 35px;
 }
 
 .product__item {
   display: grid;
-  grid-template-columns: repeat(2, 130px);
+  grid-template-columns: 120px 140px;
   grid-template-rows: repeat(2, auto);
   column-gap: 20px;
-  row-gap: 20px;
+  row-gap: 7px;
   justify-self: center;
   align-items: center;
   margin: 0;
@@ -26,6 +27,7 @@
   justify-content: center;
   min-width: 85px;
   min-height: 100px;
+  padding: 1px 1px 1px 1px;
 }
 
 .product__annotation {
@@ -40,7 +42,7 @@
   color: rgb(34, 34, 34);
   text-transform: uppercase;
   text-align: left;
-  padding: 0 40px 0 0;
+  padding: 0 45px 0 0;
 }
 
 .product__table {
@@ -67,8 +69,8 @@
 .product__item--more::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 120px;
+  top: -5px;
+  left: 125px;
   width: 30px;
   height: 30px;
   margin: 20px 0 10px 0;
@@ -90,7 +92,7 @@
 
 .product__title--more {
   margin: 0;
-  padding: 0 10px 0 0;
+  padding: 0;
 }
 
 .product__text {
@@ -124,7 +126,7 @@
     padding: 40px;
     row-gap: 30px;
     box-sizing: border-box;
-    background-image: linear-gradient(#ffffff 20%, @default-third-background 12%);
+    background-image: linear-gradient(#ffffff 23%, @default-third-background 12%);
     position: relative;
   }
 
@@ -138,7 +140,9 @@
 
   .product__title {
     margin: 0;
-    padding: 0 65px 0 65px;
+    padding: 0 25px;
+    font-size: 20px;
+    line-height: 24px;
     text-align: center;
   }
 
@@ -192,36 +196,52 @@
     grid-row: 3 / -1;
     padding: 15px 30px;
     width: 100%;
+    margin-top: 40px;
   }
 }
 
 // Desktop --------------------------------------------------------------------------------------
 @media (min-width: @desktop-width) {
+  .product__item {
+    grid-template-rows: 240px 145px 95px;
+    grid-template-columns: 169px;
+    row-gap: 0;
+  }
+
   .product__list {
     grid-template-columns: repeat(4, 245px);
     grid-template-rows: auto;
-    column-gap: 67px;
-    row-gap: 60px;
-  }
-
-  .product__item {
-    grid-template-columns: 169px;
+    column-gap: 80px;
+    row-gap: 0;
   }
 
   .product__title {
-    padding: 0 25px 0 25px;
+    padding: 0 15px;
+  }
+
+  .product__annotation {
+    row-gap: 20px;
   }
 
   // Product More -----------------------------------------------------------------------------------
   .product__item--more {
-    padding-top: 0;
+    position: relative;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    align-self: center;
   }
 
   .product__item--more::after {
-    left: 90px;
+    top: 15px;
+    left: 95px;
   }
 
   .product__title--more {
     padding: 35px 10px 0 10px;
+  }
+
+  .product__content {
+    margin: 0;
+    padding: 0;
   }
 }

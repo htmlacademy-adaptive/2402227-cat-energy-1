@@ -1,5 +1,4 @@
 .header {
-  padding-bottom: 6px;
   z-index: 50;
   position: relative;
   overflow: hidden;
@@ -17,7 +16,8 @@
   align-self: center;
   justify-content: space-between;
   min-height: 40px;
-  padding-top: 10px;
+  padding-top: 13px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -26,7 +26,7 @@
 .header__burger--closed {
   position: absolute;
   top: 20px;
-  right: -2px;
+  right: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -70,10 +70,6 @@
 
 // Планшет -----------------------------------------------------------------
 @media (min-width: @tablet-width) {
-  .header {
-    padding-bottom: 8px;
-  }
-
   .header__container {
     padding: 0;
   }
@@ -81,7 +77,8 @@
   .header__wrapper {
     min-height: 50px;
     justify-content: left;
-    padding-top: 20px;
+    padding: 0;
+    padding-top: 25px;
   }
 
   // Отображение навигации
@@ -103,6 +100,6 @@
 @media (min-width: @desktop-width) {
   .header__wrapper {
     min-height: 60px;
-    padding-top: 50px;
+    padding-top: 55px;
   }
 }

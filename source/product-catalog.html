@@ -43,7 +43,7 @@
           <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <nav class="header__navigation navigation header__navigation--opened">
+          <nav class="header__navigation navigation header__navigation--closed">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -393,7 +393,7 @@
           <!-- Блок Подарок -->
           <section class="derivative__present present">
             <h2 class="visually-hidden">Подарок за заказ</h2>
-            <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="present__text">Закажите все и<br> получите чехол для кота в подарок!</p>
           </section>
         </div>
       </div>
@@ -433,7 +433,7 @@
     </main>
     <!-- Footer -->
     <footer class="page__footer footer">
-      <section class="footer__container">
+      <section class="footer__container footer__container--catalog">
         <h2 class="visually-hidden">Footer</h2>
         <a class="footer__logo logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
@@ -476,12 +476,12 @@
           <h2 class="visually-hidden">Логотипы академии</h2>
           <ul class="partner__list clear-list">
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по названию сайта партнера" target="_blank">
                 <span class="partner__text">HTML Academy</span>
               </a>
             </li>
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по логотипу сайта партнера" target="_blank">
                 <svg class="partner__icon">
                   <use xlink:href="./img/sprite.svg#htmlacademy"></use>
                 </svg>
@@ -490,6 +490,6 @@
           </ul>
         </section>
       </section>
-    </footer>
+    </footer >
   </body>
 </html>
