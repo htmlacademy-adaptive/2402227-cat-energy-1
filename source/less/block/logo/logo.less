@@ -9,6 +9,7 @@
 .logo--txt {
   width: 101px;
   height: 18px;
+  margin-right: 90px;
 }
 
 .logo__icon:hover {
@@ -25,13 +26,17 @@
 
 // Tablet
 @media (min-width: @tablet-width) {
+  .logo {
+    margin: 0;
+  }
+
   .logo--img {
     margin-right: 0;
   }
 
   .logo--txt {
     justify-content: flex-start;
-    margin-left: 16px;
+    margin: 0 0 5px 13px;
   }
 }
 

@@ -1,6 +1,6 @@
 .subproduct {
   position: relative;
-  padding: 20px 0 20px 0;
+  padding: 40px 0 20px 0;
 }
 
 .subproduct__list {
@@ -9,12 +9,16 @@
 
 // Tablet
 @media (min-width: @tablet-width) {
+  .subproduct {
+    padding: 70px 0 70px 0;
+  }
+
   .subproduct__title {
     padding-bottom: 60px;
   }
 
   .subproduct__list {
-    grid-template-columns: min-content;
+    grid-template-columns: 708px;
     row-gap: 0;
   }
 }
@@ -26,6 +30,7 @@
   }
 
   .subproduct__list {
+    grid-template-columns: 896px;
     padding: 0;
   }
 }

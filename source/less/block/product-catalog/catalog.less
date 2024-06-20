@@ -8,7 +8,7 @@
 
 .catalog__header {
   display: flex;
-  margin: 30px 0 30px 0;
+  margin: 28px 0 50px 0;
   color: @default-secondary-color-dark;
 }
 
@@ -19,4 +19,22 @@
 
 .catalog__line {
   .deviding-line;
+}
+
+// Tablet --------------------------------------------------------------------------------------
+@media (min-width: @tablet-width) {
+  .catalog__container {
+    padding: 0;
+  }
+
+  .catalog__header {
+    margin: 60px 0 35px 0;
+  }
+}
+
+// Desktop --------------------------------------------------------------------------------------
+@media (min-width: @desktop-width) {
+  .catalog__header {
+    margin: 70px 0 35px 0;
+  }
 }
