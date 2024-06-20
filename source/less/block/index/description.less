@@ -1,7 +1,6 @@
 .description {
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .description__container {
@@ -9,25 +8,28 @@
 }
 
 .description__list {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+  row-gap: 7px;
 }
 
 .description__title {
   .heading-h2;
+  text-align: left;
   color: @default-secondary-color-dark;
-  margin: -27px 0 0 8px;
 }
 
 .description__item {
   position: relative;
-  padding: 2px 0 24px 84px;
+  padding: 0 0 20px 80px;
 }
 
 .description__item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 4px;
+  left: 0;
   width: 60px;
   height: 60px;
   background-color: rgb(104, 183, 56);

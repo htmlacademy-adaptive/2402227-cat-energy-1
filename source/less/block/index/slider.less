@@ -9,8 +9,8 @@
   display: grid;
   grid-area: 1 / 1;
   position: absolute;
-  left: 51%;
-  top: 1px;
+  left: 50%;
+  top: 0;
   width: 50%;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .slider__button {
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
   top: 100px;
@@ -63,10 +63,7 @@
 }
 
 .slider__button svg {
-  position: absolute;
   display: block;
-  top: 0;
-  left: 10px;
   width: 40px;
   height: 40px;
   fill: #ffffff;
@@ -80,9 +77,25 @@
   width: 4px;
   min-height: 256px;
   top: -110px;
-  left: 27px;
+  left: 23px;
   z-index: -1;
   border-radius: 10px;
+}
+
+.slider__button::before:hover {
+  background-color: @icon-hover-fill;
+}
+
+.slider__button::before:active {
+  background-color: rgba(94, 170, 47, 1);
+}
+
+.slider__button:hover {
+  stroke: @icon-hover-fill;
+}
+
+.slider__button:active {
+  stroke: rgba(94, 170, 47, 1);
 }
 
 // Tablet
@@ -108,15 +121,15 @@
     min-height: 512px;
   }
 
-  .slider__button svg {
-    top: 123px;
-    left: 225px;
+  .slider__button {
+    top: 221px;
+    left: 328px;
   }
 
   .slider__button::before {
     min-height: 512px;
-    top: -113px;
-    left: 243px;
+    top: -235px;
+    left: 24px;
   }
 }
 
@@ -131,13 +144,14 @@
     left: 57%;
   }
 
-  .slider__button svg {
-    top: 124px;
-    left: 185px;
+  .slider__button {
+    top: 224px;
+    left: 294px;
   }
 
   .slider__button::before {
-    top: -112px;
-    left: 203px;
+    min-height: 512px;
+    top: -235px;
+    left: 24px;
   }
 }

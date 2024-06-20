@@ -48,7 +48,7 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .contact {
-    padding: 72px 0 0 0;
+    padding: 20px;
   }
 
   .contact__container {
@@ -74,6 +74,11 @@
   .contact__text > span {
     margin-top: 20px;
   }
+
+  // Form ---------------------------------------------------------------------------
+  .contact--form {
+    padding: 15px;
+  }
 }
 
 // Desktop
@@ -88,7 +93,7 @@
   .contact__container {
     content: "";
     position: absolute;
-    top: 95px;
+    top: 105px;
     left: 0;
     width: 565px;
     min-height: 199px;
@@ -98,13 +103,21 @@
     z-index: 2;
   }
 
+  .contact__container--catalog {
+    top: 95px;
+  }
+
+  .contact__container--form {
+    top: 130px;
+  }
+
   .contact__container > p {
-    padding: 71px 15px 15px 80px;
+    padding: 61px 15px 15px 80px;
     text-align: left;
   }
 
   .contact__container > p ~ .contact__text {
-    padding: 69px 10px 10px 10px;
+    padding: 59px 10px 10px 10px;
   }
 
   // Catalog ------------------------------------------------------------------

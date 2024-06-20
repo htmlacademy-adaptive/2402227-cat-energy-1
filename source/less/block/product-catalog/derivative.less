@@ -1,6 +1,6 @@
 .derivative {
   position: relative;
-  padding: 40px 0 48px 0;
+  padding: 40px 0 47px 0;
   overflow: hidden;
 }
 
@@ -42,15 +42,23 @@
 
 // Tablet
 @media (min-width: @tablet-width) {
+  .derivative {
+    padding: 58px 0;
+  }
+
+  .derivative__container {
+    padding: 0;
+  }
+
   .derivative__header {
-    padding-left: 20px;
+    padding-left: 40px;
   }
 
   .derivative__header--decoration::before {
     display: block;
     top: 20px;
     left: -800px;
-    width: 500%;
+    width: 266%;
     z-index: -1;
   }
 

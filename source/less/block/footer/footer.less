@@ -16,6 +16,10 @@
   padding: 50px 0 40px 0;
 }
 
+.footer__container--form {
+  margin-top: 20px;
+}
+
 .footer__logo {
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +46,15 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .footer {
-    padding: 16px 0 16px 0;
+    padding: 0;
+  }
+
+  .footer__container--catalog {
+    padding: 0;
+  }
+
+  .footer__container--form {
+    margin-top: 8px;
   }
 
   .footer__container {
@@ -50,7 +62,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 147px;
+    min-height: 140px;
     padding: 0;
     box-sizing: border-box;
   }
@@ -73,15 +85,19 @@
 
 // Desktop
 @media (min-width: @desktop-width) {
-  .footer {
-    padding: 0;
-  }
-
   .footer__container {
     min-height: 0;
     padding: 77px 0 65px 0;
     align-content: center;
     flex-wrap: wrap;
+  }
+
+  .footer__container--catalog {
+    padding: 68px 0 65px 0;
+  }
+
+  .footer__container--form {
+    padding: 95px 0 65px 0;
   }
 
   .footer__logo {

@@ -13,12 +13,13 @@
 
 .example__header {
   grid-column: 1 / -1;
-  margin: 23px 2px 21px 9px;
+  margin: 23px 0 20px 0;
 }
 
 .example__title {
   .heading-h2;
   color: @default-secondary-color-dark;
+  text-align: left;
 }
 
 .example__text {
@@ -119,6 +120,7 @@
 @media (min-width: @tablet-width) {
   .example {
     background-image: linear-gradient(#ffffff 595px, #eaeaea 55%);
+    padding: 36px 0 70px 0;
   }
 
   .example__container {
@@ -201,7 +203,7 @@
   .example {
     position: static;
     min-height: 462px;
-    padding: 30px 0 60px 0;
+    padding: 44px 0 60px 0;
     background-image: linear-gradient(#ffffff 190px, #eaeaea 25%);
   }
 
