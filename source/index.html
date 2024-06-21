@@ -36,10 +36,12 @@
               <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
             </picture>
           </a>
-          <!-- Блок навигация: header__burger--opened / header__burger--closed
-            header__burger--opened + header__navigation--closed = меню не отображается
-            header__burger--closed + header__navigation--opened = меню отображается-->
-          <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
+
+          <!-- Инструкция к блоку навигация без Javascript: при подключении JS необходимо удалить класс header__burger--no-js (см.тег button)
+              1. Меню перекрывает Промо + иконка закрыть: header__burger--closed (см.тег button) + header__navigation--opened (см.тег nav)
+              2. Меню в потоке без иконки закрыть: header__burger--no-js + header__burger--closed + header__navigation--opened
+              3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
+
           <button class="header__burger header__burger--closed" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>

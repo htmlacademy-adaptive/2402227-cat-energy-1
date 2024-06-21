@@ -1,7 +1,7 @@
 .header {
-  z-index: 50;
+  z-index: 5;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .header__container {
@@ -22,6 +22,10 @@
 }
 
 // /* Бургер меню */-------------------------------------------------------------
+.header__burger--no-js {
+  display: none;
+}
+
 .header__burger--opened,
 .header__burger--closed {
   position: absolute;
@@ -62,10 +66,20 @@
 // Отображение навигации
 .header__navigation--opened {
   display: block;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  z-index: 10;
 }
 
 .header__navigation--closed {
   display: none;
+}
+
+.header__burger--no-js + .header__navigation--opened {
+  position: relative;
+  top: 10px;
 }
 
 // Планшет -----------------------------------------------------------------
