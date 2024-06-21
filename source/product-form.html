@@ -30,9 +30,11 @@
               <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
             </picture>
           </a>
-          <a class="logo logo--txt" href="index.html">
-            <span class="visually-hidden">Cat Energy</span>
-            <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
+          <a class="logo logo--txt" href="index.html"><span class="visually-hidden">Cat Energy</span>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo/logo-text-desktop@1x.svg" width="118" height="21">
+              <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
+            </picture>
           </a>
           <!-- Блок навигация: header__burger--opened / header__burger--closed
             header__burger--opened + header__navigation--closed = меню не отображается
@@ -41,7 +43,7 @@
           <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <nav class="header__navigation navigation header__navigation--opened">
+          <nav class="header__navigation navigation header__navigation--closed">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -91,24 +93,24 @@
               <fieldset class="configuration-group configuration-group--type">
                 <legend class="visually-hidden">Тип программы</legend>
                 <label class="configuration-group__item" for="slim">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice1" id="slim" checked="checked">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="slim" checked="checked">
                   <span class="configuration-group__label configuration-group__label--radio">Похудение</span>
                 </label>
                 <label class="configuration-group__item" for="fat">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice2" id="fat">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat">
                   <span class="configuration-group__label configuration-group__label--radio">Набор массы</span>
                 </label>
                 <label class="configuration-group__item" for="ask">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice3" id="ask">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask">
                   <span class="configuration-group__label configuration-group__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </fieldset>
             </div>
             <!-- Контактная информация -->
             <fieldset class="configuration-group configuration-group--contact">
-              <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Контактные данные<br>(владельца кота)</legend>
+              <legend class="configuration-group__legend configuration-group__legend--contact configuration-group__legend--decoration">Контактные данные&nbsp;<br class="configuration-group__legend--break">(владельца кота)</legend>
               <label class="configuration-group__item" for="email">
-                <span class="configuration-group__label">E-mail:&nbsp;*</span>
+                <span class="configuration-group__label">E‑mail:&nbsp;*</span>
                 <input class="configuration-group__input configuration-group__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#email"></use>
@@ -124,7 +126,7 @@
             </fieldset>
             <!-- Комментарии -->
             <fieldset class="configuration-group configuration-group--comment">
-              <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Комментарий</legend>
+              <legend class="configuration-group__legend configuration-group__legend--comment configuration-group__legend--decoration">Комментарий</legend>
               <label class="configuration-group__item" for="comment">
                 <span class="visually-hidden configuration-group__label">Комментарий</span>
                 <textarea class="configuration-group__comment" name="comment" id="comment" placeholder="Расскажите обо всех повАдках кота" rows="5"></textarea>
@@ -132,7 +134,7 @@
             </fieldset>
             <!-- Дополнительная информация -->
             <fieldset class="configuration-group configuration-group--additional">
-              <legend class="configuration-group__subtitle configuration-group__subtitle--decoration">Дополнительно</legend>
+              <legend class="configuration-group__legend configuration-group__legend--additional configuration-group__legend--decoration">Дополнительно</legend>
               <label
                 class="configuration-group__item configuration-group__item--additional" for="sweetener">
                 <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked="checked">
@@ -163,13 +165,13 @@
       <!-- Контакты и Карта -->
       <section class="connection">
         <h2 class="visually-hidden">Contacts</h2>
-        <section class="connection__contact contact contact--form">
-          <div class="contact__container">
+        <div class="connection__contact contact contact--form">
+          <div class="contact__container contact__container--form">
             <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
             <p class="contact__title">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
-            <p class="contact__text">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
+            <p class="contact__text">ул. Большая<br>Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
           </div>
-        </section>
+        </div>
         <section class="connection__map map">
           <h2 class="visually-hidden">Геолокация с картой</h2>
           <iframe class="map__spb" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728603!2d30.320472477031682!3d59.93871647491512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1710060427790!5m2!1sru!2sge"
@@ -196,7 +198,7 @@
     </main>
     <!-- Footer -->
     <footer class="page__footer footer">
-      <section class="footer__container">
+      <section class="footer__container footer__container--form">
         <h2 class="visually-hidden">Footer</h2>
         <a class="footer__logo logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
@@ -226,7 +228,7 @@
             <li class="social__item">
               <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
                 <span class="visually-hidden">телеграм</span>
-                  <svg class="social__icon">
+                <svg class="social__icon">
                   <use xlink:href="./img/sprite.svg#telegram"></use>
                 </svg>
               </a>
@@ -239,12 +241,12 @@
           <h2 class="visually-hidden">Логотипы академии</h2>
           <ul class="partner__list clear-list">
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по названию сайта партнера" target="_blank">
                 <span class="partner__text">HTML Academy</span>
               </a>
             </li>
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по логотипу сайта партнера" target="_blank">
                 <svg class="partner__icon">
                   <use xlink:href="./img/sprite.svg#htmlacademy"></use>
                 </svg>
@@ -253,6 +255,6 @@
           </ul>
         </section>
       </section>
-    </footer>
+    </footer >
   </body>
 </html>

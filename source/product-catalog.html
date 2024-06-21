@@ -30,9 +30,11 @@
               <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
             </picture>
           </a>
-          <a class="logo logo--txt" href="index.html">
-            <span class="visually-hidden">Cat Energy</span>
-            <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
+          <a class="logo logo--txt" href="index.html"><span class="visually-hidden">Cat Energy</span>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo/logo-text-desktop@1x.svg" width="118" height="21">
+              <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
+            </picture>
           </a>
           <!-- Блок навигация: header__burger--opened / header__burger--closed
             header__burger--opened + header__navigation--closed = меню не отображается
@@ -41,7 +43,7 @@
           <button class="header__burger header__burger--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <nav class="header__navigation navigation header__navigation--opened">
+          <nav class="header__navigation navigation header__navigation--closed">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -92,15 +94,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">500 г</td>
+                        <td class="table__value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Курица</td>
+                        <td class="table__value">Курица</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">700 ₽</td>
+                        <td class="table__value">700 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -132,15 +134,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">1000 г</td>
+                        <td class="table__value">1000 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Курица</td>
+                        <td class="table__value">Курица</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">1000 ₽</td>
+                        <td class="table__value">1000 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -168,15 +170,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">500 г</td>
+                        <td class="table__value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Рыба</td>
+                        <td class="table__value">Рыба</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">700 ₽</td>
+                        <td class="table__value">700 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -208,15 +210,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">1000 г</td>
+                        <td class="table__value">1000 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Рыба</td>
+                        <td class="table__value">Рыба</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">1000 ₽</td>
+                        <td class="table__value">1000 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -244,15 +246,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">500 г</td>
+                        <td class="table__value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Гречка</td>
+                        <td class="table__value">Гречка</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">400 ₽</td>
+                        <td class="table__value">400 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -284,15 +286,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">1000 г</td>
+                        <td class="table__value">1000 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Гречка</td>
+                        <td class="table__value">Гречка</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">700 ₽</td>
+                        <td class="table__value">700 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -320,15 +322,15 @@
                     <tbody class="table__content">
                       <tr class="table__name">
                         <td class="table__item">Масса</td>
-                        <td class="table__item table__item--value">500 г</td>
+                        <td class="table__value">500 г</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Вкус</td>
-                        <td class="table__item table__item--value">Рис</td>
+                        <td class="table__value">Рис</td>
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__item table__item--value">500 ₽</td>
+                        <td class="table__value">500 ₽</td>
                       </tr>
                     </tbody>
                   </table>
@@ -391,20 +393,20 @@
           <!-- Блок Подарок -->
           <section class="derivative__present present">
             <h2 class="visually-hidden">Подарок за заказ</h2>
-            <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="present__text">Закажите все и<br> получите чехол для кота в подарок!</p>
           </section>
         </div>
       </div>
       <!-- Контакты и Карта -->
-      <section class="connection">
+      <section class="connection connection--catalog">
         <h2 class="visually-hidden">Contacts</h2>
-        <section class="connection__contact contact contact--catalog">
-          <div class="contact__container">
+        <div class="connection__contact contact contact--catalog">
+          <div class="contact__container contact__container--catalog">
             <h2 class="visually-hidden">Приглашение к сотрудничеству</h2>
             <p class="contact__title">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
-            <p class="contact__text">ул. Большая Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
+            <p class="contact__text">ул. Большая<br>Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
           </div>
-        </section>
+        </div>
         <section class="connection__map map">
           <h2 class="visually-hidden">Геолокация с картой</h2>
           <iframe class="map__spb" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728603!2d30.320472477031682!3d59.93871647491512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1710060427790!5m2!1sru!2sge"
@@ -431,7 +433,7 @@
     </main>
     <!-- Footer -->
     <footer class="page__footer footer">
-      <section class="footer__container">
+      <section class="footer__container footer__container--catalog">
         <h2 class="visually-hidden">Footer</h2>
         <a class="footer__logo logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
@@ -474,12 +476,12 @@
           <h2 class="visually-hidden">Логотипы академии</h2>
           <ul class="partner__list clear-list">
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по названию сайта партнера" target="_blank">
                 <span class="partner__text">HTML Academy</span>
               </a>
             </li>
             <li class="partner__item">
-              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка перехода по логотипу сайта партнера" target="_blank">
                 <svg class="partner__icon">
                   <use xlink:href="./img/sprite.svg#htmlacademy"></use>
                 </svg>
@@ -488,6 +490,6 @@
           </ul>
         </section>
       </section>
-    </footer>
+    </footer >
   </body>
 </html>

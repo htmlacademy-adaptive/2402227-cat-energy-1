@@ -82,7 +82,7 @@ export const svg = () => {
   .pipe(gulp.dest('build/img/description-items'));
 }
 
-// // Sprite не получилось подключить - забила
+// В учебных целях сделала спрайт в разделе 7. Векторная графика и оптимизация, если бы делала через функцию - код ниже
 // export const sprite = () => {
 //   return gulp.src(['source/img/icons/*.svg'])
 //   .pipe(svgo())
