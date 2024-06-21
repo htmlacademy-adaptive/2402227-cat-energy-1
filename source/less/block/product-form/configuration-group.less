@@ -219,6 +219,7 @@
   }
 }
 
+// Imput стилизован через миксин
 .configuration-group__input {
   .input-field;
   width: 100%;
@@ -239,8 +240,7 @@
 }
 
 // Радиокнопки -----------------------------------------------------------------------------------------------
-.configuration-group__radio,
-.configuration-group__checkbox {
+.configuration-group__radio {
   appearance: none;
   position: absolute;
   margin: 0;
@@ -311,11 +311,31 @@
   }
 }
 
+.configuration-group__radio:hover + .configuration-group__label--radio::before {
+  outline: 1px solid rgb(186, 186, 186);
+}
+
+.configuration-group__radio:focus + .configuration-group__label--radio::before {
+  outline: 1px solid rgb(186, 186, 186);
+}
+
 .configuration-group__radio:checked + .configuration-group__label--radio::after {
   opacity: 1;
 }
 
 // Чекбоксы-----------------------------------------------------------------------------------------------------
+.configuration-group__checkbox {
+  appearance: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 0 10px 45px;
+  }
+}
+
 .configuration-group__label--checkbox {
   padding: 5px 0 5px 45px;
   cursor: pointer;
@@ -336,6 +356,14 @@
   background-color: #ffffff;
   border: 1px solid rgb(205, 205, 205);
   z-index: 1;
+
+  &:hover {
+    border-color: rgb(186, 186, 186);
+  }
+
+  &:focus {
+    border-color: rgb(186, 186, 186);
+  }
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -365,6 +393,14 @@
     width: 24px;
     height: 19px;
   }
+}
+
+.configuration-group__checkbox:hover + .configuration-group__label--checkbox::before {
+  outline: 1px solid rgb(186, 186, 186);
+}
+
+.configuration-group__checkbox:focus + .configuration-group__label--checkbox::before {
+  outline: 1px solid rgb(186, 186, 186);
 }
 
 .configuration-group__checkbox:checked + .configuration-group__label::after {

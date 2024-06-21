@@ -1,15 +1,43 @@
 .navigation {
   position: relative;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 15px;
   background-color: rgb(255, 255, 255);
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-left: auto;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 3px 0;
+    background-color: transparent;
+  }
 }
 
 .navigation__wrapper {
   position: relative;
 }
 
-// Полосочки меню через псевдоэлемент
+.navigation__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    gap: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    gap: 34px;
+  }
+}
+
+// Полоски в мобильном меню - псевдоэлемент
 .navigation__item {
   position: relative;
 }
@@ -23,8 +51,13 @@
   width: 600%;
   height: 1px;
   background-color: rgb(230, 230, 230);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
+// Элементы навигации
 .navigation__link {
   display: block;
   font-family: @font-main;
@@ -35,12 +68,24 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @default-secondary-color-dark;
-  padding: 20px;
+  padding: 20px 0 25px 0;
   outline: none;
   border: none;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
+// Мобильное меню -> Состояния------------------------------------------------------
 .navigation__link:hover {
   color: @hover-secondary-color-dark;
 }
@@ -53,38 +98,15 @@
   color: @active-secondary-color-dark;
 }
 
-@media (min-width: @tablet-width) {
-  .navigation {
-    width: auto;
-    margin-left: auto;
-    padding-top: 0;
-  }
-
-  .navigation__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    justify-self: center;
-    align-items: center;
-    gap: 36px;
-  }
-
-  .navigation__item::before {
-    display: none;
-  }
-
-  .navigation__link {
-    font-size: 18px;
-    line-height: 24px;
-    padding: 0;
-  }
-
-  .navigation__link--current {
+// Планшет/Десктоп меню -> Подчеркивание-------------------------------------------
+.navigation__link--current {
+  @media (min-width: @tablet-width) {
     position: relative;
   }
+}
 
-  .navigation__link--current::after {
+.navigation__link--current::after {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
     bottom: -8px;
@@ -94,45 +116,113 @@
     background-color: @default-primary-background;
     z-index: 2;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .navigation {
-    padding: 0 0 3px 0;
-    background-color: transparent;
-  }
-
-  .navigation__list {
-    margin-left: auto;
-    gap: 34px;
-  }
-
-  .navigation__link {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .navigation__link--current::after {
+  @media (min-width: @desktop-width) {
     bottom: -13px;
   }
+}
 
+// Планшет/Десктоп меню Index -> Состояние
+@media (min-width: @desktop-width) {
   .navigation__link--current-main {
     color: @default-all-color-light;
   }
+
+  .navigation__link--current-main:hover {
+    color: @hover-all-color-light;
+  }
+
+  .navigation__link--current-main:focus {
+    color: @focus-all-color-light;
+  }
+
+  .navigation__link--current-main:active {
+    color: @active-all-color-light;
+  }
+
+  // Подчеркивание
 
   .navigation__link--current-main::after {
     background-color: @default-all-color-light;
   }
 
   .navigation__link--current-main:hover::after {
-    background-color: @hover-secondary-color-dark;
+    background-color: @hover-all-color-light;
   }
 
   .navigation__link--current-main:focus::after {
-    background-color: @focus-secondary-color-dark;
+    background-color: @focus-all-color-light;
   }
 
   .navigation__link--current-main:active::after {
-    background-color: @active-secondary-color-dark;
+    background-color: @active-all-color-light;
   }
 }
+
+// ------------------------------------------------------------------------
+//   .navigation {
+//     width: auto;
+//     margin-left: auto;
+//     padding-top: 0;
+//   }
+
+//   .navigation__list {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     justify-self: center;
+//     align-items: center;
+//     gap: 36px;
+//   }
+
+//   .navigation__item::before {
+//     display: none;
+//   }
+
+//   .navigation__link {
+//     font-size: 18px;
+//     line-height: 24px;
+//     padding: 0;
+//   }
+
+// @media (min-width: @desktop-width) {
+//   .navigation {
+//     padding: 0 0 3px 0;
+//     background-color: transparent;
+//   }
+
+//   .navigation__list {
+//     margin-left: auto;
+//     gap: 34px;
+//   }
+
+//   .navigation__link {
+//     font-size: 20px;
+//     line-height: 20px;
+//   }
+
+//   .navigation__link--current::after {
+//     bottom: -13px;
+//   }
+
+//   .navigation__link--current-main {
+//     color: @default-all-color-light;
+//   }
+
+//   .navigation__link--current-main::after {
+//     background-color: @default-all-color-light;
+//   }
+
+//   .navigation__link--current-main:hover::after {
+//     background-color: @hover-secondary-color-dark;
+//   }
+
+//   .navigation__link--current-main:focus::after {
+//     background-color: @focus-secondary-color-dark;
+//   }
+
+//   .navigation__link--current-main:active::after {
+//     background-color: @active-secondary-color-dark;
+//   }
+// }
