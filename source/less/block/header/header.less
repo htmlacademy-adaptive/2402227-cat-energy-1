@@ -1,11 +1,5 @@
 .header {
-  z-index: 5;
   position: relative;
-  // overflow: hidden;
-}
-
-.header__container {
-  .container;
 }
 
 .header__wrapper {
@@ -21,70 +15,89 @@
   position: relative;
 }
 
-// /* Бургер меню */-------------------------------------------------------------
-.header__burger--no-js {
-  display: none;
-}
-
-.header__burger--opened,
-.header__burger--closed {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-
-  &:hover {
-    opacity: @logo-hover-opacity;
+@media (max-width: @mobile-width-only) {
+  .header {
+    position: relative;
+    // overflow: hidden;
+    z-index: 5;
   }
 
-  &:focus {
-    opacity: @logo-focus-opacity;
+  .header__section--mobile {
+    .container;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    min-height: 40px;
   }
 
-  &:active {
-    opacity: @logo-active-opacity;
+  .header__burger--no-js {
+    display: none;
   }
-}
 
-.header__burger--opened {
-  background-image: url("../img/logo/burger_open.svg");
-  width: 24px;
-  height: 24px;
-}
+  .header__burger--opened,
+  .header__burger--closed {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 
-.header__burger--closed {
-  background-image: url("../img/logo/burger_close.svg");
-  width: 18px;
-  height: 18px;
-}
+    &:hover {
+      opacity: @logo-hover-opacity;
+    }
 
-// Отображение навигации
-.header__navigation--opened {
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 50px;
-  left: 0;
-  z-index: 10;
-}
+    &:focus {
+      opacity: @logo-focus-opacity;
+    }
 
-.header__navigation--closed {
-  display: none;
-}
+    &:active {
+      opacity: @logo-active-opacity;
+    }
+  }
 
-.header__burger--no-js + .header__navigation--opened {
-  position: relative;
-  top: 10px;
+  .header__burger--opened {
+    background-image: url("../img/logo/burger_open.svg");
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__burger--closed {
+    background-image: url("../img/logo/burger_close.svg");
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__navigation--opened {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+  }
+
+  .header__navigation--closed {
+    display: none;
+  }
+
+  .header__burger--no-js + .header__navigation--opened {
+    position: relative;
+    top: 10px;
+  }
 }
 
 // Планшет -----------------------------------------------------------------
 @media (min-width: @tablet-width) {
   .header__container {
+    .container;
     padding: 0;
   }
 
@@ -95,18 +108,14 @@
     padding-top: 25px;
   }
 
-  // Отображение навигации
-  .header__burger {
+  .header__section--mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__burger--opened,
+  .header__burger--closed {
     display: none;
-  }
-
-  // Отображение навигации
-  .header__navigation--opened {
-    display: block;
-  }
-
-  .header__navigation--closed {
-    display: block;
   }
 }
 
