@@ -22,27 +22,31 @@
       <section class="header__container">
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
-          <a class="header__logo logo logo--img" href="index.html">
-            <span class="visually-hidden">Cat logotip</span>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop@1x.svg" width="70" height="60">
-              <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet@1x.svg" width="60" height="50">
-              <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
-            </picture>
-          </a>
-          <a class="logo logo--txt" href="index.html"><span class="visually-hidden">Cat Energy</span>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="./img/logo/logo-text-desktop@1x.svg" width="118" height="21">
-              <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
-            </picture>
-          </a>
-          <!-- Блок навигация: header__burger--opened / header__burger--closed
-            header__burger--opened + header__navigation--closed = меню не отображается
-            header__burger--closed + header__navigation--opened = меню отображается-->
-          <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
-          <button class="header__burger header__burger--opened" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <div class="header__section--mobile">
+            <a class="header__logo logo logo--img" href="index.html">
+              <span class="visually-hidden">Cat logotip</span>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop@1x.svg" width="70" height="60">
+                <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet@1x.svg" width="60" height="50">
+                <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
+              </picture>
+            </a>
+            <a class="logo logo--txt" href="index.html"><span class="visually-hidden">Cat Energy</span>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="./img/logo/logo-text-desktop@1x.svg" width="118" height="21">
+                <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
+              </picture>
+            </a>
+
+            <!-- Инструкция к блоку навигация без Javascript: при подключении JS необходимо удалить класс header__burger--no-js (находится в .тег button)
+                1. Меню в потоке без иконки закрыть: header__burger--no-js + header__navigation--no-js + header__burger--closed + header__navigation--opened
+                2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
+                3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
+
+            <button class="header__burger header__burger--opened" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
           <nav class="header__navigation navigation header__navigation--closed">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
@@ -62,6 +66,7 @@
         </div>
       </section>
     </header>
+
     <!-- Main -->
     <main class="page__main">
       <!-- Блок Каталог продукции -->
@@ -74,7 +79,7 @@
           <section class="catalog__product product">
             <ul class="product__list clear-list">
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 768px)"
@@ -87,9 +92,9 @@
                     <img class="product__img product__img--500" src="./img/catalog-items/mobile-chicken-500@1x.png"
                       srcset="./img/catalog-items/mobile-chicken-500@2x.png 2x" width="68" height="86" alt="Energy Pro chicken 500 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy PRO 500 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy<br class="product__title--break">PRO 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -110,7 +115,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -127,9 +132,9 @@
                     <img class="product__img product__img--1000" src="./img/catalog-items/mobile-chicken-1000@1x.png"
                       srcset="./img/catalog-items/mobile-chicken-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro chicken 1000 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy PRO 1000 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">PRO 1000 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -150,7 +155,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 768px)"
@@ -163,9 +168,9 @@
                     <img class="product__img product__img--500" src="./img/catalog-items/mobile-fish-500@1x.png"
                       srcset="./img/catalog-items/mobile-fish-500@2x.png 2x" width="68" height="86" alt="Energy Pro Fish 500 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy PRO 500 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">PRO 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -186,7 +191,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -203,9 +208,9 @@
                     <img class="product__img product__img--1000" src="./img/catalog-items/mobile-fish-1000@1x.png"
                       srcset="./img/catalog-items/mobile-fish-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro Fish 1000 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy PRO 1000 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">PRO 1000 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -226,7 +231,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 768px)"
@@ -239,9 +244,9 @@
                     <img class="product__img product__img--500" src="./img/catalog-items/mobile-buckwheat-500@1x.png"
                       srcset="./img/catalog-items/mobile-buckwheat-500@2x.png 2x" width="68" height="86" alt="Energy Pro Buckwheat 500 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy Slim 500 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">Slim 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -262,7 +267,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -279,9 +284,9 @@
                     <img class="product__img product__img--1000" src="./img/catalog-items/mobile-buckwheat-1000@1x.png"
                       srcset="./img/catalog-items/mobile-buckwheat-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro Buckwheat 1000 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy Slim 1000 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">Slim 1000 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -302,7 +307,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
-                <div class="product__picture">
+                <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
                     <source type="image/webp" media="(min-width: 768px)"
@@ -315,9 +320,9 @@
                     <img class="product__img product__img--500" src="./img/catalog-items/mobile-rice-500@1x.png"
                       srcset="./img/catalog-items/mobile-rice-500@2x.png 2x" width="68" height="86" alt="Energy Pro Rice 500 gramm">
                   </picture>
-                </div>
+                </a>
                 <div class="product__annotation">
-                  <h2 class="product__title">Cat Energy Slim 500 г</h2>
+                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">Slim 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -362,7 +367,7 @@
                   <p class="subproduct-item__label subproduct-item__label--start">1 упаковка (100 г)</p>
                   <p class="subproduct-item__label subproduct-item__label--end">200 ₽</p>
                 </div>
-                <button class="subproduct-item__btn">Заказать</button>
+                <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Питьевая вода</h3>
@@ -370,7 +375,7 @@
                   <p class="subproduct-item__label subproduct-item__label--start">5 литров</p>
                   <p class="subproduct-item__label subproduct-item__label--end">50 ₽</p>
                 </div>
-                <button class="subproduct-item__btn">Заказать</button>
+                <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Молоко</h3>
@@ -378,7 +383,7 @@
                   <p class="subproduct-item__label subproduct-item__label--start">1 литр</p>
                   <p class="subproduct-item__label subproduct-item__label--end">100 ₽</p>
                 </div>
-                <button class="subproduct-item__btn">Заказать</button>
+                <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Витамины</h3>
@@ -386,7 +391,7 @@
                   <p class="subproduct-item__label subproduct-item__label--start">1 упаковка (30 г)</p>
                   <p class="subproduct-item__label subproduct-item__label--end">300 ₽</p>
                 </div>
-                <button class="subproduct-item__btn">Заказать</button>
+                <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
             </ul>
           </section>

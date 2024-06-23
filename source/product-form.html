@@ -22,27 +22,31 @@
       <section class="header__container">
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
-          <a class="header__logo logo logo--img" href="index.html">
-            <span class="visually-hidden">Cat logotip</span>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop@1x.svg" width="70" height="60">
-              <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet@1x.svg" width="60" height="50">
-              <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
-            </picture>
-          </a>
-          <a class="logo logo--txt" href="index.html"><span class="visually-hidden">Cat Energy</span>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="./img/logo/logo-text-desktop@1x.svg" width="118" height="21">
-              <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
-            </picture>
-          </a>
-          <!-- Блок навигация: header__burger--opened / header__burger--closed
-            header__burger--opened + header__navigation--closed = меню не отображается
-            header__burger--closed + header__navigation--opened = меню отображается-->
-          <!-- Блок навигация: header__navigation--opened / header__navigation--closed -->
-          <button class="header__burger header__burger--opened" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <div class="header__section--mobile">
+            <a class="header__logo logo logo--img" href="index.html">
+              <span class="visually-hidden">Cat logotip</span>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop@1x.svg" width="70" height="60">
+                <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet@1x.svg" width="60" height="50">
+                <img class="logo__icon logo__icon--img" src="./img/logo/logo-mobile@1x.svg" width="33" height="38" alt="Cat Energy icon logotip">
+              </picture>
+            </a>
+            <a class="logo logo--txt" href="index.html"><span class="visually-hidden">Cat Energy</span>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="./img/logo/logo-text-desktop@1x.svg" width="118" height="21">
+                <img class="logo__icon logo__icon--txt" src="./img/logo/logo-text-mobile@1x.svg" width="101" height="18" alt="Cat Energy text logotip">
+              </picture>
+            </a>
+
+            <!-- Инструкция к блоку навигация без Javascript: при подключении JS необходимо удалить класс header__burger--no-js (находится в .тег button)
+                1. Меню в потоке без иконки закрыть: header__burger--no-js + header__navigation--no-js + header__burger--closed + header__navigation--opened
+                2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
+                3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
+
+            <button class="header__burger header__burger--opened" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
           <nav class="header__navigation navigation header__navigation--closed">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
