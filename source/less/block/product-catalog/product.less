@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 120px 160px;
   grid-template-rows: repeat(2, auto);
-  row-gap: 7px;
+  row-gap: 14px;
   justify-content: space-between;
   justify-self: center;
   align-items: center;
@@ -25,13 +25,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0 0 20px;
+  padding: 15px 0 0 20px;
 }
 
 .product__annotation {
+  display: grid;
   grid-column: 2 / 3;
+  row-gap: 10px;
   width: 140px;
-  padding-left: 20px;
+  padding: 10px 0 0 20px;
 }
 
 .product__title {
@@ -42,6 +44,10 @@
   color: rgb(34, 34, 34);
   text-transform: uppercase;
   text-align: left;
+  text-decoration: none;
+}
+
+.product__title a {
   padding: 0 45px 0 0;
 }
 
@@ -86,7 +92,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  padding: 70px 0 0 0;
+  padding: 65px 0 0 0;
   box-sizing: border-box;
 }
 
@@ -108,7 +114,7 @@
 
 .product__redirect {
   .third-btn;
-  margin: 7px 0 0 0;
+  margin: 0;
 }
 
 // Tablet --------------------------------------------------------------------------------------
@@ -144,17 +150,21 @@
     justify-content: center;
     width: 100%;
     min-height: 157px;
-    row-gap: 15px;
+    row-gap: 0;
     margin-bottom: 0;
     padding: 0;
   }
 
   .product__title {
     margin: 0;
-    padding: 5px 50px;
+    padding: 5px 60px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+  }
+
+  .product__title--break {
+    display: none;
   }
 
   // Больше товаров --------------------------------------------------------------------------------
@@ -258,6 +268,7 @@
     grid-column: 1 / 2;
     margin: 0;
     padding: 0;
+    row-gap: 25px;
   }
 
   .product__text {
