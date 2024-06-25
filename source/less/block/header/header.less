@@ -2,6 +2,13 @@
   position: relative;
 }
 
+.header__container {
+  @media (min-width: @tablet-width) {
+    .container;
+    padding: 0;
+  }
+}
+
 .header__wrapper {
   display: flex;
   flex-direction: row;
@@ -13,16 +20,27 @@
   padding-top: 13px;
   padding-bottom: 10px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+    justify-content: left;
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 60px;
+    padding-top: 55px;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
   .header {
     position: relative;
-    // overflow: hidden;
     z-index: 5;
   }
 
-  .header__section--mobile {
+  .header__mobile {
     .container;
     width: 100%;
     display: flex;
@@ -97,19 +115,7 @@
 
 // Планшет -----------------------------------------------------------------
 @media (min-width: @tablet-width) {
-  .header__container {
-    .container;
-    padding: 0;
-  }
-
-  .header__wrapper {
-    min-height: 50px;
-    justify-content: left;
-    padding: 0;
-    padding-top: 25px;
-  }
-
-  .header__section--mobile {
+  .header__mobile {
     display: flex;
     align-items: center;
   }
@@ -117,13 +123,5 @@
   .header__burger--opened,
   .header__burger--closed {
     display: none;
-  }
-}
-
-// Десктоп --------------------------------------------------------------------
-@media (min-width: @desktop-width) {
-  .header__wrapper {
-    min-height: 60px;
-    padding-top: 55px;
   }
 }

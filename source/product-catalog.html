@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="img/icons/format-svg32.svg">
     <link rel="apple-touch-icon" href="img/favicons/apple180.webp,img/favicons/apple180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/product-catalog-style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -22,7 +22,7 @@
       <section class="header__container">
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
-          <div class="header__section--mobile">
+          <div class="header__mobile">
             <a class="header__logo logo logo--img" href="index.html">
               <span class="visually-hidden">Cat logotip</span>
               <picture>
@@ -43,11 +43,11 @@
                 2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
                 3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
 
-            <button class="header__burger header__burger--opened" type="button">
+            <button class="header__burger header__burger--no-js header__burger--closed" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
-          <nav class="header__navigation navigation header__navigation--closed">
+          <nav class="header__navigation header__navigation--no-js header__navigation--opened navigation">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -88,9 +88,9 @@
                       srcset="./img/catalog-items/mobile-chicken-500@1x.webp, ./img/catalog-items/mobile-chicken-500@2x.webp 2x" width="68" height="86">
                     <!-- image -->
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-chicken-500@1x.png, ./img/catalog-items/tablet-chicken-500@2x.png 2x" width="161" height="172">
-                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-chicken-500@1x.png"
-                      srcset="./img/catalog-items/mobile-chicken-500@2x.png 2x" width="68" height="86" alt="Energy Pro chicken 500 gramm">
+                      srcset="./img/catalog-items/tablet-chicken-500@1x.jpg, ./img/catalog-items/tablet-chicken-500@2x.jpg 2x" width="161" height="172">
+                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-chicken-500@1x.jpg"
+                      srcset="./img/catalog-items/mobile-chicken-500@2x.jpg 2x" width="68" height="86" alt="Energy Pro chicken 500 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -107,7 +107,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">700 ₽</td>
+                        <td class="table__value">700&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -126,11 +126,11 @@
                       srcset="./img/catalog-items/mobile-chicken-1000@1x.webp, ./img/catalog-items/mobile-chicken-1000@2x.webp 2x" width="84" height="100">
                     <!-- image -->
                     <source media="(min-width: 1440px)"
-                      srcset="./img/catalog-items/desktop-chicken-1000@1x.png, ./img/catalog-items/desktop-chicken-1000@2x.png 2x" width="172" height="196">
+                      srcset="./img/catalog-items/desktop-chicken-1000@1x.jpg, ./img/catalog-items/desktop-chicken-1000@2x.jpg 2x" width="172" height="196">
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-chicken-1000@1x.png, ./img/catalog-items/tablet-chicken-1000@2x.png 2x" width="168" height="206">
-                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-chicken-1000@1x.png"
-                      srcset="./img/catalog-items/mobile-chicken-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro chicken 1000 gramm">
+                      srcset="./img/catalog-items/tablet-chicken-1000@1x.jpg, ./img/catalog-items/tablet-chicken-1000@2x.jpg 2x" width="168" height="206">
+                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-chicken-1000@1x.jpg"
+                      srcset="./img/catalog-items/mobile-chicken-1000@2x.jpg 2x" width="84" height="100" alt="Cat energy Pro chicken 1000 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -147,7 +147,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">1000 ₽</td>
+                        <td class="table__value">1000&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -164,9 +164,9 @@
                       srcset="./img/catalog-items/mobile-fish-500@1x.webp, ./img/catalog-items/mobile-fish-500@2x.webp 2x" width="68" height="86">
                     <!-- image -->
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-fish-500@1x.png, ./img/catalog-items/tablet-fish-500@2x.png 2x" width="161" height="172">
-                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-fish-500@1x.png"
-                      srcset="./img/catalog-items/mobile-fish-500@2x.png 2x" width="68" height="86" alt="Energy Pro Fish 500 gramm">
+                      srcset="./img/catalog-items/tablet-fish-500@1x.jpg, ./img/catalog-items/tablet-fish-500@2x.jpg 2x" width="161" height="172">
+                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-fish-500@1x.jpg"
+                      srcset="./img/catalog-items/mobile-fish-500@2x.jpg 2x" width="68" height="86" alt="Energy Pro Fish 500 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -183,7 +183,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">700 ₽</td>
+                        <td class="table__value">700&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -202,11 +202,11 @@
                       srcset="./img/catalog-items/mobile-fish-1000@1x.webp, ./img/catalog-items/mobile-fish-1000@2x.webp 2x" width="84" height="100">
                     <!-- image -->
                     <source media="(min-width: 1440px)"
-                      srcset="./img/catalog-items/desktop-fish-1000@1x.png, ./img/catalog-items/desktop-fish-1000@2x.png 2x" width="172" height="196">
+                      srcset="./img/catalog-items/desktop-fish-1000@1x.jpg, ./img/catalog-items/desktop-fish-1000@2x.jpg 2x" width="172" height="196">
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-fish-1000@1x.png, ./img/catalog-items/tablet-fish-1000@2x.png 2x" width="168" height="206">
-                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-fish-1000@1x.png"
-                      srcset="./img/catalog-items/mobile-fish-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro Fish 1000 gramm">
+                      srcset="./img/catalog-items/tablet-fish-1000@1x.jpg, ./img/catalog-items/tablet-fish-1000@2x.jpg 2x" width="168" height="206">
+                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-fish-1000@1x.jpg"
+                      srcset="./img/catalog-items/mobile-fish-1000@2x.jpg 2x" width="84" height="100" alt="Cat energy Pro Fish 1000 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -223,7 +223,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">1000 ₽</td>
+                        <td class="table__value">1000&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -240,9 +240,9 @@
                       srcset="./img/catalog-items/mobile-buckwheat-500@1x.webp, ./img/catalog-items/mobile-buckwheat-500@2x.webp 2x" width="68" height="86">
                     <!-- image -->
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-buckwheat-500@1x.png, ./img/catalog-items/tablet-buckwheat-500@2x.png 2x" width="161" height="172">
-                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-buckwheat-500@1x.png"
-                      srcset="./img/catalog-items/mobile-buckwheat-500@2x.png 2x" width="68" height="86" alt="Energy Pro Buckwheat 500 gramm">
+                      srcset="./img/catalog-items/tablet-buckwheat-500@1x.jpg, ./img/catalog-items/tablet-buckwheat-500@2x.jpg 2x" width="161" height="172">
+                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-buckwheat-500@1x.jpg"
+                      srcset="./img/catalog-items/mobile-buckwheat-500@2x.jpg 2x" width="68" height="86" alt="Energy Pro Buckwheat 500 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -259,7 +259,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">400 ₽</td>
+                        <td class="table__value">400&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -278,11 +278,11 @@
                       srcset="./img/catalog-items/mobile-buckwheat-1000@1x.webp, ./img/catalog-items/mobile-buckwheat-1000@2x.webp 2x" width="84" height="100">
                     <!-- image -->
                     <source media="(min-width: 1440px)"
-                      srcset="./img/catalog-items/desktop-buckwheat-1000@1x.png, ./img/catalog-items/desktop-buckwheat-1000@2x.png 2x" width="172" height="196">
+                      srcset="./img/catalog-items/desktop-buckwheat-1000@1x.jpg, ./img/catalog-items/desktop-buckwheat-1000@2x.jpg 2x" width="172" height="196">
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-buckwheat-1000@1x.png, ./img/catalog-items/tablet-buckwheat-1000@2x.png 2x" width="168" height="206">
-                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-buckwheat-1000@1x.png"
-                      srcset="./img/catalog-items/mobile-buckwheat-1000@2x.png 2x" width="84" height="100" alt="Cat energy Pro Buckwheat 1000 gramm">
+                      srcset="./img/catalog-items/tablet-buckwheat-1000@1x.jpg, ./img/catalog-items/tablet-buckwheat-1000@2x.jpg 2x" width="168" height="206">
+                    <img class="product__img product__img--1000" src="./img/catalog-items/mobile-buckwheat-1000@1x.jpg"
+                      srcset="./img/catalog-items/mobile-buckwheat-1000@2x.jpg 2x" width="84" height="100" alt="Cat energy Pro Buckwheat 1000 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -299,7 +299,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">700 ₽</td>
+                        <td class="table__value">700&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -316,9 +316,9 @@
                       srcset="./img/catalog-items/mobile-rice-500@1x.webp, ./img/catalog-items/mobile-rice-500@2x.webp 2x" width="68" height="86">
                     <!-- image -->
                     <source media="(min-width: 768px)"
-                      srcset="./img/catalog-items/tablet-rice-500@1x.png, ./img/catalog-items/tablet-rice-500@2x.png 2x" width="161" height="172">
-                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-rice-500@1x.png"
-                      srcset="./img/catalog-items/mobile-rice-500@2x.png 2x" width="68" height="86" alt="Energy Pro Rice 500 gramm">
+                      srcset="./img/catalog-items/tablet-rice-500@1x.jpg, ./img/catalog-items/tablet-rice-500@2x.jpg 2x" width="161" height="172">
+                    <img class="product__img product__img--500" src="./img/catalog-items/mobile-rice-500@1x.jpg"
+                      srcset="./img/catalog-items/mobile-rice-500@2x.jpg 2x" width="68" height="86" alt="Energy Pro Rice 500 gramm">
                   </picture>
                 </a>
                 <div class="product__annotation">
@@ -335,7 +335,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">500 ₽</td>
+                        <td class="table__value">500&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -430,7 +430,7 @@
                 srcset="./img/map/desktop-location@1x.jpg, ./img/map/desktop-location@2x.jpg 2x" width="1440" height="400">
               <source media="(min-width: 768px)"
                 srcset="./img/map/tablet-location@1x.jpg, ./img/map/tablet-location@2x.jpg 2x" width="768" height="400">
-              <img src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
+              <img class="map__picture" src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
             </picture>
           </noscript>
         </section>

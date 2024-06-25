@@ -225,6 +225,12 @@
   width: 100%;
 }
 
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 // Раздел - Комментарии
 .configuration-group__comment {
   .input-field;
@@ -411,13 +417,6 @@
 .configuration-group__input--email,
 .configuration-group__input--tel {
   width: 100%;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px #ffffff inset;
 }
 
 .configuration-group__icon {
