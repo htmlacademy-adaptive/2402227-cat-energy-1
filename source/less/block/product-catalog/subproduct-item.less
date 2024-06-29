@@ -17,7 +17,7 @@
     grid-template-rows: repeat(2, auto);
     row-gap: 26px;
     padding: 30px 35px 20px 35px;
-    border: 1px solid rgb(205, 205, 205);;
+    border: 1px solid rgb(205, 205, 205);
   }
 
   @media (min-width: @desktop-width) {
@@ -106,13 +106,6 @@
   }
 }
 
-.subproduct-item__label--start {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
 .subproduct-item__btn {
   .primary-btn;
   width: 100%;
@@ -129,14 +122,19 @@
   }
 }
 
-.subproduct-item__label--end {
+.subproduct-item__label--start {
   @media (min-width: @tablet-width) {
-    padding-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }
 
-.subproduct-item__label--start {
-  @media (min-width: @desktop-width) {
-    text-align: left;
+.subproduct-item__label--end {
+  @media (min-width: @tablet-width) {
+    padding-right: 5px;
   }
 }
