@@ -88,10 +88,10 @@
                   srcset="./img/promo/promo-mobile@1x.webp, ./img/promo/promo-mobile@2x.webp 2x" width="280" height="270">
                 <!-- image -->
                 <source media="(min-width: 1440px)"
-                  srcset="./img/promo/promo-desktop@1x.jpg, ./img/promo/promo-desktop@2x.jpg 2x" width="552" height="499">
+                  srcset="./img/promo/promo-desktop@1x.png, ./img/promo/promo-desktop@2x.png 2x" width="552" height="499">
                 <source media="(min-width: 768px)"
-                  srcset="./img/promo/promo-tablet@1x.jpg, ./img/promo/promo-tablet@2x.jpg 2x" width="708" height="608">
-                <img src="./img/promo/promo-mobile@1x.jpg" srcset="./img/promo/promo-mobile@2x.jpg 2x" width="280"
+                  srcset="./img/promo/promo-tablet@1x.png, ./img/promo/promo-tablet@2x.png 2x" width="708" height="608">
+                <img src="./img/promo/promo-mobile@1x.png" srcset="./img/promo/promo-mobile@2x.png 2x" width="280"
                   height="270" alt="Банка с кормом со вкусом курицы">
               </picture>
             </div>
@@ -186,9 +186,9 @@
                     srcset="./img/slider/fat-mobile-before@1x.webp, ./img/slider/fat-mobile-before@2x.webp 2x" width="140" height="256">
                   <!-- Image -->
                   <source media="(min-width: 768px)"
-                    srcset="./img/slider/fat-tablet-before@1x.jpg 1x, ./img/slider/fat-tablet-before@2x.jpg 2x" width="280" height="512">
-                  <img loading="lazy" src="./img/slider/fat-mobile-before@1x.jpg"
-                    srcset="./img/slider/fat-mobile-before@2x.jpg 2x" width="140" height="256" alt="Толстый кот">
+                    srcset="./img/slider/fat-tablet-before@1x.png 1x, ./img/slider/fat-tablet-before@2x.png 2x" width="280" height="512">
+                  <img loading="lazy" src="./img/slider/fat-mobile-before@1x.png"
+                    srcset="./img/slider/fat-mobile-before@2x.png 2x" width="140" height="256" alt="Толстый кот">
                 </picture>
               </div>
             </section>
@@ -203,13 +203,13 @@
                     srcset="./img/slider/slim-mobile-after@1x.webp, ./img/slider/slim-mobile-after@2x.webp 2x" width="140" height="256">
                   <!-- Image -->
                   <source media="(min-width: 768px)"
-                    srcset="./img/slider/slim-tablet-after@1x.jpg 1x, ./img/slider/slim-tablet-after@2x.jpg 2x" width="280" height="512">
-                  <img loading="lazy" src="./img/slider/slim-mobile-after@1x.jpg"
-                    srcset="./img/slider/slim-mobile-after@2x.jpg 2x" height="256" alt="Тонкий кот">
+                    srcset="./img/slider/slim-tablet-after@1x.png 1x, ./img/slider/slim-tablet-after@2x.png 2x" width="280" height="512">
+                  <img loading="lazy" src="./img/slider/slim-mobile-after@1x.png"
+                    srcset="./img/slider/slim-mobile-after@2x.png 2x" height="256" alt="Тонкий кот">
                 </picture>
               </div>
             </section>
-            <button class="slider__button" aria-label="Переключить слайдер вправо или влево по клику">
+            <button class="slider__button" aria-label="Переключить слайдер вправо или влево по клику. В результате будет толстый или тонкий кот">
               <svg>
                 <use xlink:href="./img/sprite.svg#slider_button"></use>
               </svg>
@@ -233,21 +233,23 @@
             allowfullscreen="" title="Карта города Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
           <noscript>
-            <picture>
-              <!-- image/webp -->
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/map/desktop-location@1x.webp, ./img/map/desktop-location@2x.webp 2x" width="1440" height="400">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/map/tablet-location@1x.webp, ./img/map/tablet-location@2x.webp 2x" width="768" height="400">
-              <source type="image/webp"
-                srcset="./img/map/location@1x.webp, ./img/map/location@2x.webp 2x" width="320" height="362">
-              <!-- Image -->
-              <source media="(min-width: 1440px)"
-                srcset="./img/map/desktop-location@1x.jpg, ./img/map/desktop-location@2x.jpg 2x" width="1440" height="400">
-              <source media="(min-width: 768px)"
-                srcset="./img/map/tablet-location@1x.jpg, ./img/map/tablet-location@2x.jpg 2x" width="768" height="400">
-              <img class="map__picture" src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
-            </picture>
+            <div class="map__noscript">
+              <picture>
+                <!-- image/webp -->
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/map/desktop-location@1x.webp, ./img/map/desktop-location@2x.webp 2x" width="1440" height="400">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/map/tablet-location@1x.webp, ./img/map/tablet-location@2x.webp 2x" width="768" height="400">
+                <source type="image/webp"
+                  srcset="./img/map/location@1x.webp, ./img/map/location@2x.webp 2x" width="320" height="362">
+                <!-- Image -->
+                <source media="(min-width: 1440px)"
+                  srcset="./img/map/desktop-location@1x.jpg, ./img/map/desktop-location@2x.jpg 2x" width="1440" height="400">
+                <source media="(min-width: 768px)"
+                  srcset="./img/map/tablet-location@1x.jpg, ./img/map/tablet-location@2x.jpg 2x" width="768" height="400">
+                <img class="map__picture" src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
+              </picture>
+            </div>
           </noscript>
         </div>
       </section>
