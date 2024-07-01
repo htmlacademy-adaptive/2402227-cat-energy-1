@@ -7,17 +7,50 @@
   .container;
   display: grid;
   place-items: center;
-  row-gap: 18px;
+  row-gap: 19px;
   min-height: auto;
   padding: 40px 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 155px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 0;
+    padding: 68px 0 65px 0;
+    align-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .footer__container--catalog {
-  padding: 40px 0 40px 0;
+  padding: 40px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 68px 0 65px 0;
+  }
 }
 
 .footer__container--form {
-  margin-top: 20px;
+  padding: 40px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 95px 0 65px 0;
+  }
 }
 
 .footer__logo {
@@ -25,6 +58,17 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 168px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 168px;
+  }
 }
 
 .footer__social {
@@ -37,78 +81,16 @@
 .footer__partner {
   display: flex;
   min-height: 34px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 168px;
+  }
 }
 
 .footer__line {
   .deviding-line;
-}
 
-// Tablet
-@media (min-width: @tablet-width) {
-  .footer {
-    padding: 0;
-  }
-
-  .footer__container--catalog {
-    padding: 0;
-  }
-
-  .footer__container--form {
-    margin-top: 8px;
-  }
-
-  .footer__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 155px;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .footer__logo {
-    display: flex;
-    justify-content: flex-start;
-    min-width: 168px;
-    margin: 0;
-  }
-
-  .footer__partner {
-    min-width: 168px;
-  }
-
-  .footer__line {
-    display: none;
-  }
-}
-
-// Desktop
-@media (min-width: @desktop-width) {
-  .footer {
-    padding: 0;
-  }
-
-  .footer__container {
-    min-height: 0;
-    padding: 68px 0 65px 0;
-    align-content: center;
-    flex-wrap: wrap;
-  }
-
-  .footer__container--catalog {
-    padding: 68px 0 65px 0;
-  }
-
-  .footer__container--form {
-    padding: 95px 0 65px 0;
-  }
-
-  .footer__logo {
-    min-width: 168px;
-  }
-
-  .footer__line {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }

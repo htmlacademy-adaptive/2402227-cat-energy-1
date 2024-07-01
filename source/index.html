@@ -43,15 +43,15 @@
                 2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
                 3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
 
-            <button class="header__burger header__burger--opened" type="button">
+            <button class="header__burger header__burger--no-js header__burger--closed" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
           <!-- Навигация -->
-          <nav class="header__navigation header__navigation--closed navigation">
+          <nav class="header__navigation header__navigation--no-js header__navigation--opened navigation">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
-              <ul class="navigation__list clear-list">
+              <ul class="navigation__list navigation__list--main clear-list">
                 <li class="navigation__item">
                   <a class="navigation__link navigation__link--current navigation__link--current-main" href="#">Главная</a>
                 </li>
@@ -210,7 +210,7 @@
               </div>
             </section>
             <button class="slider__button" aria-label="Переключить слайдер вправо или влево по клику. В результате будет толстый или тонкий кот">
-              <svg>
+              <svg class="slider__click">
                 <use xlink:href="./img/sprite.svg#slider_button"></use>
               </svg>
             </button>

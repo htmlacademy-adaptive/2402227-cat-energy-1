@@ -11,9 +11,9 @@ xmlns="http://www.w3.org/2000/svg">
 
   <!-- Index: Переключатель слайдера Блок Example - Slider -->
   <symbol id="slider_button" viewBox="0 0 40 40">
-    <rect width="38" height="38" x="1" y="1" fill="#666" rx="19"/>
-    <rect width="38" height="38" x="1" y="1" stroke="#666" stroke-width="2" rx="19"/>
-    <path fill="#666" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z"/>
+    <rect width="38" height="38" x="1" y="1" fill="#666666" rx="19"/>
+    <rect width="38" height="38" x="1" y="1" fill="#666666" stroke="#666666" stroke-width="2" rx="19"/>
+    <path fill="ffffff" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z"/>
   </symbol>
 
   <!-- Footer: Иконки - Социальные сети  -->

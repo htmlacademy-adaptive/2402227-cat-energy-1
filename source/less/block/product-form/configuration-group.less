@@ -18,10 +18,10 @@
 
 // Общие блоки----------------------------------------------------------------------------------------
 .configuration-group--introduction {
-  margin-bottom: 45px;
+  margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 80px;
+    margin-bottom: 73px;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,16 +31,16 @@
 
 .configuration-group--type {
   row-gap: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    border: 1px solid @default-border-color;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    margin-bottom: 50px;
-    padding: 20px;
+    margin-bottom: 47px;
+    padding: 24px 20px;
     box-sizing: border-box;
+    border: 1px solid @default-border-color;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,7 +52,7 @@
 
 .configuration-group--contact {
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 47px;
@@ -67,7 +67,7 @@
 }
 
 .configuration-group--comment {
-  margin-bottom: 7px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
@@ -138,6 +138,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 87px;
+    padding: 0 43px 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -150,6 +151,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 77px;
+    padding: 0 40px 0 0;
   }
 }
 
@@ -160,10 +162,11 @@
 }
 
 .configuration-group__legend--additional {
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+    padding: 0 41px 0 0;
   }
 }
 
@@ -183,9 +186,9 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    top: 23px;
-    left: -800px;
-    width: 500%;
+    top: 21px;
+    left: -500px;
+    width: 83%;
     z-index: -1;
   }
 }
@@ -195,7 +198,7 @@
   left: 0;
 
   @media (min-width: @tablet-width) {
-    top: 23px;
+    top: 21px;
     left: 0;
   }
 }
@@ -212,7 +215,7 @@
 
 .configuration-group__label {
   .label-field;
-  padding-right: 10px;
+  padding-right: 15px;
 
   @media (min-width: @tablet-width) {
     padding-right: 15px;
@@ -223,6 +226,11 @@
 .configuration-group__input {
   .input-field;
   width: 100%;
+  padding: 10px 5px 12px 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 5px 10px 19px;
+  }
 }
 
 .configuration-group__input[type="number"] {
@@ -235,7 +243,7 @@
   width: 100%;
   min-height: 125px;
   text-align: left;
-  padding: 10px;
+  padding: 13px;
 
   @media (min-width: @tablet-width) {
     height: 155px;
@@ -252,7 +260,7 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    padding: 30px 0 10px 45px;
+    padding: 40px 0 5px 0;
   }
 }
 
@@ -261,7 +269,7 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    padding: 7px 0 10px 66px;
+    padding: 9px 0 9px 67px;
   }
 
   @media (min-width: @desktop-width) {
@@ -355,8 +363,8 @@
   top: 0;
   left: 0;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
   background-color: #ffffff;
   border: 1px solid rgb(205, 205, 205);
   z-index: 1;
@@ -370,16 +378,16 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 37px;
   }
 }
 
 .configuration-group__label--checkbox::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 8px;
+  top: 7px;
+  left: 7px;
   display: block;
   width: 18px;
   height: 14px;
@@ -392,10 +400,8 @@
   z-index: 2;
 
   @media (min-width: @tablet-width) {
-    top: 13px;
-    left: 10px;
-    width: 24px;
-    height: 19px;
+    width: 26px;
+    height: 26px;
   }
 }
 

@@ -61,13 +61,6 @@
   background-color: transparent;
 }
 
-.slider__button svg {
-  display: block;
-  width: 40px;
-  height: 40px;
-  fill: #ffffff;
-}
-
 .slider__button::before {
   content: "";
   position: absolute;
@@ -82,19 +75,14 @@
 }
 
 .slider__button::before:hover {
-  background-color: @icon-hover-fill;
+  background-color: rgb(104, 183, 56);
 }
 
-.slider__button::before:active {
-  background-color: rgba(94, 170, 47, 1);
-}
-
-.slider__button:hover {
-  stroke: @icon-hover-fill;
-}
-
-.slider__button:active {
-  stroke: rgba(94, 170, 47, 1);
+.slider__click {
+  display: block;
+  width: 40px;
+  height: 40px;
+  // fill: #ffffff;
 }
 
 // Tablet
@@ -135,7 +123,7 @@
 // Desktop
 @media (min-width: @desktop-width) {
   .slider {
-    margin-top: -314px;
+    margin-top: -515px;
     min-height: 0;
   }
 

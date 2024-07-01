@@ -18,7 +18,7 @@
   </head>
   <body class="page">
     <!-- Header -->
-    <header class="header">
+    <header class="page__header header">
       <section class="header__container">
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
@@ -43,11 +43,11 @@
                 2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
                 3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
 
-            <button class="header__burger header__burger--no-js header__burger--closed" type="button">
+            <button class="header__burger header__burger--opened" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
-          <nav class="header__navigation header__navigation--no-js header__navigation--opened navigation">
+          <nav class="header__navigation header__navigation--closed navigation">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -81,11 +81,11 @@
               <fieldset class="configuration-group configuration-group--introduction">
                 <legend class="visually-hidden">Параметры питомца</legend>
                 <label class="configuration-group__item" for="name">
-                  <span class="configuration-group__label">Имя:&nbsp;*</span>
+                  <span class="configuration-group__label">Имя:*</span>
                   <input class="configuration-group__input configuration-group__name" type="text" id="name" minlength="1" maxlength="50" name="name" placeholder="Барсик">
                 </label>
                 <label class="configuration-group__item" for="weight">
-                  <span class="configuration-group__label">Вес&nbsp;(КГ):&nbsp;*</span>
+                  <span class="configuration-group__label">Вес&nbsp;(КГ):*</span>
                   <input class="configuration-group__input configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
                 </label>
                 <label class="configuration-group__item" for="age">
@@ -114,14 +114,14 @@
             <fieldset class="configuration-group configuration-group--contact">
               <legend class="configuration-group__legend configuration-group__legend--contact configuration-group__legend--decoration">Контактные данные&nbsp;<br class="configuration-group__legend--break">(владельца кота)</legend>
               <label class="configuration-group__item" for="email">
-                <span class="configuration-group__label">E‑mail:&nbsp;*</span>
+                <span class="configuration-group__label">E‑mail:*</span>
                 <input class="configuration-group__input configuration-group__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#email"></use>
                 </svg>
               </label>
               <label class="configuration-group__item" for="tel">
-                <span class="configuration-group__label">Телефон:&nbsp;*</span>
+                <span class="configuration-group__label">Телефон:*</span>
                 <input class="configuration-group__input configuration-group__input--tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#telephone"></use>
