@@ -51,38 +51,27 @@
 
 .slider__button {
   position: absolute;
+  top: 0;
+  left: 120px;
   width: 40px;
-  height: 40px;
-  top: 110px;
-  left: 115px;
-  z-index: 2;
+  height: 258px;
   border: none;
   outline: none;
-  background-color: transparent;
-}
-
-.slider__button::before {
-  content: "";
-  position: absolute;
+  background-image: url("../img/icons/slider__button.svg");
   background-repeat: no-repeat;
-  background-color: #666666;
-  width: 4px;
-  min-height: 256px;
-  top: -110px;
-  left: 23px;
-  z-index: -1;
-  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.slider__button::before:hover {
-  background-color: rgb(104, 183, 56);
+.slider__button:hover svg {
+  fill: rgb(104, 183, 56);
+  stroke: rgb(104, 183, 56);
 }
 
-.slider__click {
-  display: block;
-  width: 40px;
-  height: 40px;
-  // fill: #ffffff;
+.slider__button:active svg {
+  fill: rgb(94, 170, 47);
+  stroke: rgb(94, 170, 47);
 }
 
 // Tablet
@@ -109,14 +98,10 @@
   }
 
   .slider__button {
-    top: 233px;
-    left: 328px;
-  }
-
-  .slider__button::before {
-    min-height: 512px;
-    top: -235px;
-    left: 24px;
+    background-image: url("../img/icons/slider__button-512.svg");
+    top: 0;
+    left: 333px;
+    height: 512px;
   }
 }
 
@@ -133,13 +118,7 @@
   }
 
   .slider__button {
-    top: 224px;
-    left: 294px;
-  }
-
-  .slider__button::before {
-    min-height: 512px;
-    top: -235px;
-    left: 24px;
+    top: 0;
+    left: 300px;
   }
 }

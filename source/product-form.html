@@ -94,6 +94,7 @@
                 </label>
               </fieldset>
               <!-- Тип программы -->
+              <hr class="configuration__line">
               <fieldset class="configuration-group configuration-group--type">
                 <legend class="visually-hidden">Тип программы</legend>
                 <label class="configuration-group__item" for="slim">
@@ -101,14 +102,15 @@
                   <span class="configuration-group__label configuration-group__label--radio">Похудение</span>
                 </label>
                 <label class="configuration-group__item" for="fat">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat" disabled="disabled">
                   <span class="configuration-group__label configuration-group__label--radio">Набор массы</span>
                 </label>
                 <label class="configuration-group__item" for="ask">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask" checked="checked" disabled="disabled">
                   <span class="configuration-group__label configuration-group__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </fieldset>
+              <hr class="configuration__line">
             </div>
             <!-- Контактная информация -->
             <fieldset class="configuration-group configuration-group--contact">
@@ -139,21 +141,20 @@
             <!-- Дополнительная информация -->
             <fieldset class="configuration-group configuration-group--additional">
               <legend class="configuration-group__legend configuration-group__legend--additional configuration-group__legend--decoration">Дополнительно</legend>
-              <label
-                class="configuration-group__item configuration-group__item--additional" for="sweetener">
+              <label class="configuration-group__item configuration-group__item--additional" for="sweetener">
                 <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked="checked">
                   <span class="configuration-group__label configuration-group__label--checkbox">сахарозаменитель</span>
               </label>
               <label class="configuration-group__item" for="water">
-                <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="water" id="water">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="water" id="water" disabled="disabled">
                 <span class="configuration-group__label configuration-group__label--checkbox">питьевая&nbsp;вода</span>
               </label>
               <label class="configuration-group__item" for="milk">
-                <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="milk" id="milk">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="milk" id="milk" checked="checked" disabled="disabled">
                 <span class="configuration-group__label configuration-group__label--checkbox">молоко</span>
               </label>
               <label class="configuration-group__item" for="vitamins">
-                <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="vitamins" id="vitamins">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="vitamins" id="vitamins">
                 <span class="configuration-group__label configuration-group__label--checkbox">витамины</span>
               </label>
             </fieldset>
@@ -202,7 +203,7 @@
     </main>
     <!-- Footer -->
     <footer class="page__footer footer">
-      <section class="footer__container footer__container--form">
+      <section class="footer__container">
         <h2 class="visually-hidden">Footer</h2>
         <a class="footer__logo logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
