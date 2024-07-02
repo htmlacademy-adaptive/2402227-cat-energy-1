@@ -9,7 +9,7 @@ import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+// import svgstore from 'gulp-svgstore';
 import { deleteAsync } from 'del';
 
 // Styles
@@ -27,24 +27,25 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-export const catalogFormStyles = () => {
-  return gulp.src(['source/less/product-catalog-style.less', 'source/less/product-form-style.less'], { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename((path) => {
-      if (path.basename === 'product-catalog-style') {
-        path.basename = 'product-catalog-style.min';
-      } else if (path.basename === 'product-form-style') {
-        path.basename = 'product-form-style.min';
-      }
-    }))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
+// Оставлю для себя в коде данную автоматизацию - делала для оптимизаии загрузки
+// export const catalogFormStyles = () => {
+//   return gulp.src(['source/less/product-catalog-style.less', 'source/less/product-form-style.less'], { sourcemaps: true })
+//     .pipe(plumber())
+//     .pipe(less())
+//     .pipe(postcss([
+//       autoprefixer(),
+//       csso()
+//     ]))
+//     .pipe(rename((path) => {
+//       if (path.basename === 'product-catalog-style') {
+//         path.basename = 'product-catalog-style.min';
+//       } else if (path.basename === 'product-form-style') {
+//         path.basename = 'product-form-style.min';
+//       }
+//     }))
+//     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+//     .pipe(browser.stream());
+// }
 
 // HTML
 export const html = () => {
@@ -150,7 +151,6 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
-    catalogFormStyles,
     html,
     svg,
     createWebp
@@ -163,7 +163,6 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    catalogFormStyles,
     html,
     svg,
     createWebp

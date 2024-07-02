@@ -1,6 +1,6 @@
 // Mobile --------------------------------------------
 .contact {
-  padding: 20px 0;
+  padding: 0;
   position: relative;
 }
 
@@ -8,7 +8,7 @@
   .container;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  column-gap: 19px;
+  column-gap: 10px;
   min-height: 60px;
 }
 
@@ -19,6 +19,7 @@
   line-height: 20px;
   color: rgb(17, 17, 17);
   text-transform: uppercase;
+  margin: 28px 0 25px 0;
 }
 
 .contact__text {
@@ -27,6 +28,7 @@
   font-weight: 400;
   line-height: 20px;
   color: @default-third-color;
+  margin: 28px 0 25px 0;
 }
 
 .contact__text > span {
@@ -48,7 +50,7 @@
 // Tablet
 @media (min-width: @tablet-width) {
   .contact {
-    padding: 20px;
+    padding: 15px 0;
   }
 
   .contact__container {
@@ -56,7 +58,7 @@
   }
 
   .contact__container > p {
-    padding: 60px 20px 40px 20px;
+    padding: 45px 20px 40px 20px;
     margin: 0;
   }
 
@@ -93,7 +95,7 @@
   .contact__container {
     content: "";
     position: absolute;
-    top: 105px;
+    top: 95px;
     left: 0;
     width: 565px;
     min-height: 199px;
@@ -103,21 +105,13 @@
     z-index: 2;
   }
 
-  .contact__container--catalog {
-    top: 95px;
-  }
-
-  .contact__container--form {
-    top: 130px;
-  }
-
   .contact__container > p {
-    padding: 61px 15px 15px 80px;
+    padding: 62px 15px 15px 80px;
     text-align: left;
   }
 
   .contact__container > p ~ .contact__text {
-    padding: 59px 10px 10px 10px;
+    padding: 60px 10px 10px 10px;
   }
 
   // Catalog ------------------------------------------------------------------

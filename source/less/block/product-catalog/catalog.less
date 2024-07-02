@@ -4,12 +4,26 @@
 
 .catalog__container {
   .container;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .catalog__header {
   display: flex;
-  margin: 28px 0 50px 0;
+  padding: 27px 0 40px 20px;
+  margin: 0;
   color: @default-secondary-color-dark;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 0 35px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 68px 0 20px 0;
+  }
 }
 
 .catalog__heading {
@@ -19,22 +33,9 @@
 
 .catalog__line {
   .deviding-line;
-}
+  background-color: rgb(235, 235, 235);
 
-// Tablet --------------------------------------------------------------------------------------
-@media (min-width: @tablet-width) {
-  .catalog__container {
-    padding: 0;
-  }
-
-  .catalog__header {
-    margin: 60px 0 35px 0;
-  }
-}
-
-// Desktop --------------------------------------------------------------------------------------
-@media (min-width: @desktop-width) {
-  .catalog__header {
-    margin: 70px 0 35px 0;
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
