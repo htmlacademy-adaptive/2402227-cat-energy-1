@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="img/icons/format-svg32.svg">
     <link rel="apple-touch-icon" href="img/favicons/apple180.webp,img/favicons/apple180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/product-catalog-style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -22,7 +22,7 @@
       <section class="header__container">
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
-          <div class="header__section--mobile">
+          <div class="header__mobile">
             <a class="header__logo logo logo--img" href="index.html">
               <span class="visually-hidden">Cat logotip</span>
               <picture>
@@ -43,11 +43,11 @@
                 2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
                 3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
 
-            <button class="header__burger header__burger--opened" type="button">
+            <button class="header__burger header__burger--no-js header__burger--closed" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
-          <nav class="header__navigation navigation header__navigation--closed">
+          <nav class="header__navigation header__navigation--no-js header__navigation--opened navigation">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -72,6 +72,7 @@
       <!-- Блок Каталог продукции -->
       <div class="catalog">
         <div class="catalog__container">
+          <hr class="catalog__line">
           <header class="catalog__header">
             <h1 class="catalog__heading">Каталог продукции</h1>
           </header>
@@ -79,6 +80,7 @@
           <section class="catalog__product product">
             <ul class="product__list clear-list">
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -94,7 +96,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy<br class="product__title--break">PRO 500 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">PRO 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -107,7 +109,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">700 ₽</td>
+                        <td class="table__value">700&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -115,6 +117,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -134,7 +137,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">PRO 1000 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">PRO 1000 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -147,7 +150,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">1000 ₽</td>
+                        <td class="table__value">1000&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -155,6 +158,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -170,7 +174,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">PRO 500 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">PRO 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -183,7 +187,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">700 ₽</td>
+                        <td class="table__value">700&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -191,6 +195,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -210,7 +215,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">PRO 1000 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">PRO 1000 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -223,7 +228,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">1000 ₽</td>
+                        <td class="table__value">1000&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -231,6 +236,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -246,7 +252,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">Slim 500 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">Slim 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -259,7 +265,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">400 ₽</td>
+                        <td class="table__value">400&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -267,6 +273,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -286,7 +293,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">Slim 1000 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">Slim 1000 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -299,7 +306,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">700 ₽</td>
+                        <td class="table__value">700&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -307,6 +314,7 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item">
+                <hr class="product__line">
                 <a class="product__picture" href="" target="_blank">
                   <picture>
                     <!-- image/webp -->
@@ -322,7 +330,7 @@
                   </picture>
                 </a>
                 <div class="product__annotation">
-                  <a class="product__title" href="" target="_blank">Cat Energy <br class="product__title--break">Slim 500 г</a>
+                  <a class="product__title" href="" target="_blank">Cat Energy&nbsp;<br class="product__title--break">Slim 500 г</a>
                   <table class="product__table table">
                     <tbody class="table__content">
                       <tr class="table__name">
@@ -335,7 +343,7 @@
                       </tr>
                       <tr class="table__name">
                         <td class="table__item">Цена</td>
-                        <td class="table__value">500 ₽</td>
+                        <td class="table__value">500&nbsp;<span class="table__ruble">&#8381;</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -343,11 +351,13 @@
                 <a class="product__btn" href="product-form.html" target="_blank">Заказать</a>
               </li>
               <li class="product__item product__item--more">
+                <hr class="product__line">
                 <div class="product__content">
                   <h2 class="product__title product__title--more">Показать еще 100500 товаров</h2>
                   <p class="product__text">На самом деле вкусов гораздо больше!</p>
                 </div>
                 <a class="product__redirect" href="product-catalog.html" target="_blank">Показать все</a>
+                <hr class="product__line">
               </li>
             </ul>
           </section>
@@ -364,32 +374,32 @@
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Сахарозаменитель</h3>
                 <div class="subproduct-item__annotation">
-                  <p class="subproduct-item__label subproduct-item__label--start">1 упаковка (100 г)</p>
-                  <p class="subproduct-item__label subproduct-item__label--end">200 ₽</p>
+                  <p class="subproduct-item__label">1 упаковка (100 г)</p>
+                  <p class="subproduct-item__price">200 ₽</p>
                 </div>
                 <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Питьевая вода</h3>
                 <div class="subproduct-item__annotation">
-                  <p class="subproduct-item__label subproduct-item__label--start">5 литров</p>
-                  <p class="subproduct-item__label subproduct-item__label--end">50 ₽</p>
+                  <p class="subproduct-item__label">5 литров</p>
+                  <p class="subproduct-item__price">50 ₽</p>
                 </div>
                 <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Молоко</h3>
                 <div class="subproduct-item__annotation">
-                  <p class="subproduct-item__label subproduct-item__label--start">1 литр</p>
-                  <p class="subproduct-item__label subproduct-item__label--end">100 ₽</p>
+                  <p class="subproduct-item__label">1 литр</p>
+                  <p class="subproduct-item__price">100 ₽</p>
                 </div>
                 <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
               <li class="subproduct-item">
                 <h3 class="subproduct-item__title">Витамины</h3>
                 <div class="subproduct-item__annotation">
-                  <p class="subproduct-item__label subproduct-item__label--start">1 упаковка (30 г)</p>
-                  <p class="subproduct-item__label subproduct-item__label--end">300 ₽</p>
+                  <p class="subproduct-item__label">1 упаковка (30 г)</p>
+                  <p class="subproduct-item__price">300 ₽</p>
                 </div>
                 <a class="subproduct-item__btn" href="product-catalog.html" target="_blank">Заказать</a>
               </li>
@@ -398,7 +408,7 @@
           <!-- Блок Подарок -->
           <section class="derivative__present present">
             <h2 class="visually-hidden">Подарок за заказ</h2>
-            <p class="present__text">Закажите все и<br> получите чехол для кота в подарок!</p>
+            <p class="present__text">Закажите все<br> и получите чехол для кота в подарок!</p>
           </section>
         </div>
       </div>
@@ -430,7 +440,7 @@
                 srcset="./img/map/desktop-location@1x.jpg, ./img/map/desktop-location@2x.jpg 2x" width="1440" height="400">
               <source media="(min-width: 768px)"
                 srcset="./img/map/tablet-location@1x.jpg, ./img/map/tablet-location@2x.jpg 2x" width="768" height="400">
-              <img src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
+              <img class="map__picture" src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
             </picture>
           </noscript>
         </section>

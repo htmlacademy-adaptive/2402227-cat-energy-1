@@ -1,8 +1,17 @@
 .slider {
   width: 100%;
   min-height: 256px;
-  margin-top: 10px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-height: 525px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -515px;
+    min-height: 0;
+  }
 }
 
 .slider__item {
@@ -12,6 +21,11 @@
   left: 50%;
   top: 0;
   width: 50%;
+
+  @media (min-width: @desktop-width) {
+    left: 57%;
+    top: -12px;
+  }
 }
 
 .slider__item img {
@@ -30,6 +44,12 @@
 
 .slider__item--before img {
   left: 100%;
+
+  @media (min-width: @tablet-width) {
+    left: 100%;
+    width: 560px;
+    min-height: 512px;
+  }
 }
 
 // Тонкий кот
@@ -40,118 +60,98 @@
 
 .slider__item--after img {
   left: 0;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+    width: 560px;
+    min-height: 512px;
+  }
 }
 
 .slider__box {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 256px;
+  min-height: 265px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-height: 525px;
+  }
 }
 
 .slider__button {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 100px;
-  left: 115px;
-  z-index: 2;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-.slider__button svg {
-  display: block;
-  width: 40px;
-  height: 40px;
-  fill: #ffffff;
-}
-
-.slider__button::before {
   content: "";
   position: absolute;
-  background-repeat: no-repeat;
-  background-color: #666666;
+  top: 0;
+  left: 138px;
   width: 4px;
-  min-height: 256px;
-  top: -110px;
-  left: 23px;
-  z-index: -1;
+  height: 258px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: #666666;
   border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 352px;
+    height: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -11px;
+    left: 318px;
+  }
 }
 
-.slider__button::before:hover {
-  background-color: @icon-hover-fill;
-}
+.slider__icon {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 108px;
+  left: -17px;
+  width: 40px;
+  height: 40px;
 
-.slider__button::before:active {
-  background-color: rgba(94, 170, 47, 1);
+  @media (min-width: @tablet-width) {
+    top: 232px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 235px;
+  }
 }
 
 .slider__button:hover {
-  stroke: @icon-hover-fill;
+  background-color: rgb(104, 183, 56);
+  stroke: rgb(104, 183, 56);
+  fill: rgb(104, 183, 56);
 }
 
 .slider__button:active {
-  stroke: rgba(94, 170, 47, 1);
+  background-color: rgb(94, 170, 47);
+  stroke: rgb(94, 170, 47);
+  fill: rgb(94, 170, 47);
 }
 
-// Tablet
-@media (min-width: @tablet-width) {
-  .slider {
-    min-height: 512px;
-    margin-top: 56px;
-  }
-
-  .slider__item--before img {
-    left: 100%;
-    width: 560px;
-    min-height: 512px;
-  }
-
-  .slider__item--after img {
-    left: 0;
-    width: 560px;
-    min-height: 512px;
-  }
-
-  .slider__box {
-    min-height: 512px;
-  }
-
-  .slider__button {
-    top: 221px;
-    left: 328px;
-  }
-
-  .slider__button::before {
-    min-height: 512px;
-    top: -235px;
-    left: 24px;
-  }
+.slider__button:hover path {
+  fill: rgb(104, 183, 56);
+  stroke: rgb(104, 183, 56);
 }
 
-// Desktop
-@media (min-width: @desktop-width) {
-  .slider {
-    margin-top: -314px;
-    min-height: 0;
-  }
+.slider__button:active path {
+  fill: rgb(94, 170, 47);
+  stroke: rgb(94, 170, 47);
+}
 
-  .slider__item {
-    left: 57%;
-  }
+.slider__button:hover rect {
+  stroke: rgb(104, 183, 56);
+}
 
-  .slider__button {
-    top: 224px;
-    left: 294px;
-  }
-
-  .slider__button::before {
-    min-height: 512px;
-    top: -235px;
-    left: 24px;
-  }
+.slider__button:active rect {
+  stroke: rgb(94, 170, 47);
 }

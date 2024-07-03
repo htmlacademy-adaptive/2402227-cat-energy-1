@@ -1,11 +1,40 @@
 // Таблица -------------------------------------------------------------------------------------------------------------------------------
 .table() {
   width: 100%;
-  min-height: 48px;
   border: none;
   outline: none;
+  border-collapse: collapse;
 
   td {
+    font-family: @font-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: @default-third-color;
+    background-color: #ffffff;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 20px;
+      border: 1px solid rgb(205, 205, 205, 1);
+      border-left: none;
+      border-right: none;
+      background-color: transparent;
+    }
+  }
+
+  .table__item,
+  .table__value {
+    @media (min-width: @tablet-width) {
+      border-top: none;
+    }
+  }
+
+  .table__value {
+    text-align: right;
+  }
+
+  .table__ruble {
     font-family: @font-secondary;
     font-size: 12px;
     font-weight: 400;
@@ -15,23 +44,6 @@
     @media (min-width: @tablet-width) {
       font-size: 16px;
       line-height: 20px;
-    }
-  }
-
-  .table__value {
-    text-align: right;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  table {
-    border: 1px solid rgb(205, 205, 205, 1);
-    border-left: none;
-    border-right: none;
-    border-collapse: collapse;
-
-    &:not(:last-child) {
-      border-bottom: none;
     }
   }
 }

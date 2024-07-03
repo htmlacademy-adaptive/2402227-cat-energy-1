@@ -2,6 +2,13 @@
   position: relative;
 }
 
+.header__container {
+  @media (min-width: @tablet-width) {
+    .container;
+    padding: 0;
+  }
+}
+
 .header__wrapper {
   display: flex;
   flex-direction: row;
@@ -10,19 +17,30 @@
   align-self: center;
   justify-content: space-between;
   min-height: 40px;
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 10px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+    justify-content: left;
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 60px;
+    padding-top: 55px;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
   .header {
     position: relative;
-    // overflow: hidden;
     z-index: 5;
   }
 
-  .header__section--mobile {
+  .header__mobile {
     .container;
     width: 100%;
     display: flex;
@@ -32,6 +50,7 @@
     align-self: center;
     justify-content: space-between;
     min-height: 40px;
+    position: relative;
   }
 
   .header__burger--no-js {
@@ -41,8 +60,8 @@
   .header__burger--opened,
   .header__burger--closed {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 8px;
+    right: 20px;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -97,19 +116,7 @@
 
 // Планшет -----------------------------------------------------------------
 @media (min-width: @tablet-width) {
-  .header__container {
-    .container;
-    padding: 0;
-  }
-
-  .header__wrapper {
-    min-height: 50px;
-    justify-content: left;
-    padding: 0;
-    padding-top: 25px;
-  }
-
-  .header__section--mobile {
+  .header__mobile {
     display: flex;
     align-items: center;
   }
@@ -117,13 +124,5 @@
   .header__burger--opened,
   .header__burger--closed {
     display: none;
-  }
-}
-
-// Десктоп --------------------------------------------------------------------
-@media (min-width: @desktop-width) {
-  .header__wrapper {
-    min-height: 60px;
-    padding-top: 55px;
   }
 }

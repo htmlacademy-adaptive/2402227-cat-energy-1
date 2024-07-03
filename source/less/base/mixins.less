@@ -181,6 +181,7 @@
 
 // Поля ввода ----------------------------------------------------------------------------------------------------------------------
 .input-field {
+  min-height: 44px;
   font-family: @font-main;
   font-size: 16px;
   line-height: 18px;
@@ -191,7 +192,6 @@
   background-color: transparent;
   border: 1px solid @default-border-color;
   outline: none;
-  padding: 10px 5px 10px 15px;
 
   &:hover:not([type="radio"]):not([type="checkbox"]) {
     border: 1px solid @hover-border-color;
@@ -214,6 +214,13 @@
 
   &:active + .configuration-group__icon {
     stroke: @default-primary-background;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px #ffffff inset;
   }
 
   @media (min-width: @tablet-width) {

@@ -1,14 +1,15 @@
 // Общий стиль <fieldset>------------------------------------------------------------------------------------
 .configuration-group {
   display: grid;
-  row-gap: 18px;
+  row-gap: 12px;
   border: none;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     width: 628px;
     row-gap: 20px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -18,10 +19,10 @@
 
 // Общие блоки----------------------------------------------------------------------------------------
 .configuration-group--introduction {
-  margin-bottom: 45px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,43 +32,44 @@
 
 .configuration-group--type {
   row-gap: 5px;
-  margin-bottom: 25px;
+  margin-top: 17px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    border: 1px solid @default-border-color;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    margin-bottom: 50px;
-    padding: 20px;
+    margin-bottom: 39px;
+    padding: 24px 20px;
     box-sizing: border-box;
+    border: 1px solid @default-border-color;
   }
 
   @media (min-width: @desktop-width) {
-    row-gap: 16px;
-    margin-bottom: 0;
-    padding: 27px 0 25px 21px;
+    margin: 0;
+    padding: 27px 0 0 21px;
   }
 }
 
 .configuration-group--contact {
   position: relative;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 570px);
     column-gap: 80px;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
 .configuration-group--comment {
-  margin-bottom: 7px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
@@ -86,6 +88,7 @@
   flex-wrap: wrap;
   width: 100%;
   row-gap: 14px;
+  margin-top: 3px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -93,29 +96,30 @@
     grid-template-columns: repeat(2, auto);
     row-gap: 44px;
     column-gap: 25px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-rows: none;
     grid-template-columns: repeat(4, 300px);
-    margin-bottom: 0;
   }
 }
 
 .configuration-group--button {
-  width: 100%;
+  .container;
   padding-top: 16px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    min-height: 54px;
-    padding-top: 42px;
+    padding: 0;
+    padding-top: 40px;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: start;
     padding: 0;
+    margin: 0;
   }
 }
 
@@ -127,7 +131,7 @@
   padding: 0 20px 0 0;
   background-color: #ffffff;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     padding-left: 40px;
     margin-left: -40px;
   }
@@ -138,18 +142,25 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 87px;
+    padding: 0 43px 0 40px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 68px;
+    padding: 0 40px 0 40px;
   }
 }
 
 .configuration-group__legend--contact {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 77px;
+    padding: 0 40px 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px 0 40px;
   }
 }
 
@@ -160,13 +171,19 @@
 }
 
 .configuration-group__legend--additional {
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+    padding: 0 41px 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px 0 40px;
   }
 }
 
+// Полоски ------------------------------------------------------------------------------------------------------------------
 .configuration-group__legend--decoration::before,
 .configuration-group__legend--decoration::after {
   content: "";
@@ -183,10 +200,16 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    top: 23px;
-    left: -800px;
-    width: 500%;
+    top: 21px;
+    left: -300%;
+    width: 1500%;
     z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 23px;
+    left: -200px;
+    width: 900%;
   }
 }
 
@@ -195,8 +218,15 @@
   left: 0;
 
   @media (min-width: @tablet-width) {
-    top: 23px;
+    display: none;
+    top: 21px;
     left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    top: 23px;
+    width: 900%;
   }
 }
 
@@ -212,7 +242,7 @@
 
 .configuration-group__label {
   .label-field;
-  padding-right: 10px;
+  padding-right: 15px;
 
   @media (min-width: @tablet-width) {
     padding-right: 15px;
@@ -223,15 +253,24 @@
 .configuration-group__input {
   .input-field;
   width: 100%;
+  padding: 0 5px 0 13px;
+
+  @media (min-width: @tablet-width) {
+    padding: 3px 5px 3px 19px;
+  }
 }
 
-// Раздел - Комментарии
+.configuration-group__input[type="number"] {
+  appearance: textfield;
+}
+
+// Раздел - Комментарии -------------------------------------------------------------------------------------------------------
 .configuration-group__comment {
   .input-field;
   width: 100%;
-  min-height: 125px;
+  min-height: 122px;
   text-align: left;
-  padding: 10px;
+  padding: 13px;
 
   @media (min-width: @tablet-width) {
     height: 155px;
@@ -239,7 +278,7 @@
   }
 }
 
-// Радиокнопки -----------------------------------------------------------------------------------------------
+// Радиокнопки --------------------------------------------------------------------------------------------------------------
 .configuration-group__radio {
   appearance: none;
   position: absolute;
@@ -248,16 +287,16 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    padding: 30px 0 10px 45px;
+    padding: 40px 0 5px 0;
   }
 }
 
 .configuration-group__label--radio {
-  padding: 10px 0 10px 45px;
+  padding: 11px 0 10px 45px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    padding: 7px 0 10px 66px;
+    padding: 9px 0 9px 67px;
   }
 
   @media (min-width: @desktop-width) {
@@ -323,7 +362,15 @@
   opacity: 1;
 }
 
-// Чекбоксы-----------------------------------------------------------------------------------------------------
+.configuration-group__radio:disabled + .configuration-group__label--radio::before {
+  opacity: 0.6;
+}
+
+.configuration-group__radio:disabled + .configuration-group__label--radio {
+  opacity: 0.6;
+}
+
+// Чекбоксы-----------------------------------------------------------------------------------------------------------------------
 .configuration-group__checkbox {
   appearance: none;
   position: absolute;
@@ -351,8 +398,8 @@
   top: 0;
   left: 0;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
   background-color: #ffffff;
   border: 1px solid rgb(205, 205, 205);
   z-index: 1;
@@ -365,17 +412,21 @@
     border-color: rgb(186, 186, 186);
   }
 
+  &:disabled {
+    border-color: rgb(186, 186, 186);
+  }
+
   @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 37px;
   }
 }
 
 .configuration-group__label--checkbox::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 8px;
+  top: 7px;
+  left: 7px;
   display: block;
   width: 18px;
   height: 14px;
@@ -388,10 +439,8 @@
   z-index: 2;
 
   @media (min-width: @tablet-width) {
-    top: 13px;
-    left: 10px;
-    width: 24px;
-    height: 19px;
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -407,17 +456,18 @@
   opacity: 1;
 }
 
+.configuration-group__checkbox:disabled + .configuration-group__label--checkbox::before {
+  opacity: 0.6;
+}
+
+.configuration-group__checkbox:disabled + .configuration-group__label--checkbox {
+  opacity: 0.6;
+}
+
 // Почта и Телефон----------------------------------------------------------------------------------------------
 .configuration-group__input--email,
 .configuration-group__input--tel {
   width: 100%;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px #ffffff inset;
 }
 
 .configuration-group__icon {

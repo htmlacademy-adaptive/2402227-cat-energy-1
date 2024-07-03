@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="img/icons/format-svg32.svg">
     <link rel="apple-touch-icon" href="img/favicons/apple180.webp,img/favicons/apple180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/product-form-style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -18,11 +18,11 @@
   </head>
   <body class="page">
     <!-- Header -->
-    <header class="header">
+    <header class="page__header header">
       <section class="header__container">
         <div class="header__wrapper">
           <h2 class="visually-hidden">Логотипы шапки сайта</h2>
-          <div class="header__section--mobile">
+          <div class="header__mobile">
             <a class="header__logo logo logo--img" href="index.html">
               <span class="visually-hidden">Cat logotip</span>
               <picture>
@@ -43,11 +43,11 @@
                 2. Меню перекрывает Промо + иконка закрыть: header__burger--closed (находится в тег button) + header__navigation--opened (находится в тег nav)
                 3. Меню спрятано + иконка бургер: header__burger--opened + header__navigation--closed -->
 
-            <button class="header__burger header__burger--opened" type="button">
+            <button class="header__burger header__burger--no-js header__burger--closed" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
-          <nav class="header__navigation navigation header__navigation--closed">
+          <nav class="header__navigation header__navigation--no-js header__navigation--opened navigation">
             <div class="navigation__wrapper">
               <h2 class="visually-hidden">Навигация сайта</h2>
               <ul class="navigation__list clear-list">
@@ -81,11 +81,11 @@
               <fieldset class="configuration-group configuration-group--introduction">
                 <legend class="visually-hidden">Параметры питомца</legend>
                 <label class="configuration-group__item" for="name">
-                  <span class="configuration-group__label">Имя:&nbsp;*</span>
+                  <span class="configuration-group__label">Имя:*</span>
                   <input class="configuration-group__input configuration-group__name" type="text" id="name" minlength="1" maxlength="50" name="name" placeholder="Барсик">
                 </label>
                 <label class="configuration-group__item" for="weight">
-                  <span class="configuration-group__label">Вес&nbsp;(КГ):&nbsp;*</span>
+                  <span class="configuration-group__label">Вес&nbsp;(КГ):*</span>
                   <input class="configuration-group__input configuration-group__weight" type="number" min="1" max="50" name="weight" id="weight" placeholder="5">
                 </label>
                 <label class="configuration-group__item" for="age">
@@ -94,6 +94,7 @@
                 </label>
               </fieldset>
               <!-- Тип программы -->
+              <hr class="configuration__line">
               <fieldset class="configuration-group configuration-group--type">
                 <legend class="visually-hidden">Тип программы</legend>
                 <label class="configuration-group__item" for="slim">
@@ -101,27 +102,28 @@
                   <span class="configuration-group__label configuration-group__label--radio">Похудение</span>
                 </label>
                 <label class="configuration-group__item" for="fat">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="fat" disabled="disabled">
                   <span class="configuration-group__label configuration-group__label--radio">Набор массы</span>
                 </label>
                 <label class="configuration-group__item" for="ask">
-                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask">
+                  <input class="configuration-group__input configuration-group__radio" type="radio" name="choice" id="ask" checked="checked" disabled="disabled">
                   <span class="configuration-group__label configuration-group__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </fieldset>
+              <hr class="configuration__line">
             </div>
             <!-- Контактная информация -->
             <fieldset class="configuration-group configuration-group--contact">
               <legend class="configuration-group__legend configuration-group__legend--contact configuration-group__legend--decoration">Контактные данные&nbsp;<br class="configuration-group__legend--break">(владельца кота)</legend>
               <label class="configuration-group__item" for="email">
-                <span class="configuration-group__label">E‑mail:&nbsp;*</span>
+                <span class="configuration-group__label">E‑mail:*</span>
                 <input class="configuration-group__input configuration-group__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#email"></use>
                 </svg>
               </label>
               <label class="configuration-group__item" for="tel">
-                <span class="configuration-group__label">Телефон:&nbsp;*</span>
+                <span class="configuration-group__label">Телефон:*</span>
                 <input class="configuration-group__input configuration-group__input--tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" required>
                 <svg class="configuration-group__icon">
                   <use xlink:href="./img/sprite.svg#telephone"></use>
@@ -139,21 +141,20 @@
             <!-- Дополнительная информация -->
             <fieldset class="configuration-group configuration-group--additional">
               <legend class="configuration-group__legend configuration-group__legend--additional configuration-group__legend--decoration">Дополнительно</legend>
-              <label
-                class="configuration-group__item configuration-group__item--additional" for="sweetener">
+              <label class="configuration-group__item configuration-group__item--additional" for="sweetener">
                 <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked="checked">
                   <span class="configuration-group__label configuration-group__label--checkbox">сахарозаменитель</span>
               </label>
               <label class="configuration-group__item" for="water">
-                <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="water" id="water">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="water" id="water" disabled="disabled">
                 <span class="configuration-group__label configuration-group__label--checkbox">питьевая&nbsp;вода</span>
               </label>
               <label class="configuration-group__item" for="milk">
-                <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="milk" id="milk">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="milk" id="milk" checked="checked" disabled="disabled">
                 <span class="configuration-group__label configuration-group__label--checkbox">молоко</span>
               </label>
               <label class="configuration-group__item" for="vitamins">
-                <input class="configuration-group__input configuration-group__checkbox checkbox" type="checkbox" name="vitamins" id="vitamins">
+                <input class="configuration-group__input configuration-group__checkbox" type="checkbox" name="vitamins" id="vitamins">
                 <span class="configuration-group__label configuration-group__label--checkbox">витамины</span>
               </label>
             </fieldset>
@@ -194,7 +195,7 @@
                 srcset="./img/map/desktop-location@1x.jpg, ./img/map/desktop-location@2x.jpg 2x" width="1440" height="400">
               <source media="(min-width: 768px)"
                 srcset="./img/map/tablet-location@1x.jpg, ./img/map/tablet-location@2x.jpg 2x" width="768" height="400">
-              <img src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
+              <img class="map__picture" src="./img/map/location@1x.jpg" srcset="./img/map/location@2x.jpg 2x" width="320" height="362" alt="Карта города санкт-Петербург">
             </picture>
           </noscript>
         </section>
@@ -202,7 +203,7 @@
     </main>
     <!-- Footer -->
     <footer class="page__footer footer">
-      <section class="footer__container footer__container--form">
+      <section class="footer__container">
         <h2 class="visually-hidden">Footer</h2>
         <a class="footer__logo logo" href="index.html">
           <span class="visually-hidden">Cat Energy</span>
