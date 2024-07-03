@@ -15,6 +15,7 @@
     row-gap: 20px;
     padding: 28px 37px 30px 37px;
     border: 1px solid rgb(205, 205, 205);
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -25,20 +26,27 @@
     padding: 15px 0;
     align-items: center;
     justify-self: center;
+    border-bottom: none;
     border-left: none;
     border-right: none;
   }
 }
 
 .subproduct-item:last-child {
+  border: 1px solid rgb(205, 205, 205);
   padding-bottom: 20px;
+  border-left: none;
+  border-right: none;
 
   @media (min-width: @tablet-width) {
+    border: 1px solid rgb(205, 205, 205);
     padding-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 18px;
+    border-left: none;
+    border-right: none;
   }
 }
 
