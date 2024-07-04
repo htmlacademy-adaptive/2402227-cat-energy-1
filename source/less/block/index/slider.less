@@ -19,8 +19,12 @@
   grid-area: 1 / 1;
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 3px;
   width: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
 
   @media (min-width: @desktop-width) {
     left: 57%;
