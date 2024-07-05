@@ -4,8 +4,8 @@
   background-color: rgb(234, 234, 234);
 
   @media (min-width: @tablet-width) {
-    background-image: linear-gradient(#ffffff 575px, #eaeaea 50%);
-    padding: 0 0 85px 0;
+    background-image: linear-gradient(#ffffff 573px, #eaeaea 50%);
+    padding: 0 0 87px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,7 +23,7 @@
   row-gap: 20px;
 
   @media (min-width: @tablet-width) {
-    row-gap: 57px;
+    row-gap: 56px;
     padding: 0;
   }
 
@@ -68,11 +68,12 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin: 2px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / 2;
-    margin: 145px 17px 24px 0;
+    margin: 146px 17px 24px 0;
   }
 }
 
@@ -92,7 +93,7 @@
   @media (min-width: @desktop-width) {
     grid-column: 1 / 2;
     row-gap: 54px;
-    margin-top: 45px;
+    margin-top: 46px;
   }
 }
 
@@ -109,6 +110,7 @@
 
   @media (min-width: @desktop-width) {
     justify-content: space-between;
+    column-gap: 42px;
   }
 }
 
@@ -120,10 +122,10 @@
   box-sizing: border-box;
   align-items: center;
   width: 124px;
-  padding: 14px;
+  padding: 14px 12px 9px 12px;
   margin: 0;
   border: 1px solid rgb(205, 205, 205);
-  border-radius: 10px;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -131,6 +133,10 @@
     justify-items: start;
     padding: 0;
     border-radius: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 3px;
   }
 }
 
@@ -142,7 +148,7 @@
     font-size: 30px;
     line-height: 37px;
     padding: 0;
-    padding-top: 17px;
+    padding-top: 14px;
   }
 }
 
@@ -158,14 +164,14 @@
   max-width: 77px;
   margin: 0;
   margin-bottom: -25px;
-  padding: 8px 7px 0 7px;
+  padding: 8px 5px 0 5px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
     max-width: 162px;
     margin-bottom: -13px;
-    padding: 10px 10px 6px 10px;
+    padding: 11px 10px 6px 10px;
     background-color: @default-all-color-light;
   }
 
@@ -173,7 +179,6 @@
     font-size: 14px;
     line-height: 14px;
     background-color: rgb(234, 234, 234);
-    padding: 12px 10px 6px 10px;
   }
 }
 
@@ -183,7 +188,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding-top: 14px;
+  padding-top: 19px;
 
   @media (min-width: @tablet-width) {
     grid-column: 2 / -1;
@@ -197,7 +202,7 @@
     grid-column: 1 / 2;
     flex-direction: row;
     justify-content: start;
-    padding: 0;
+    padding: 2px 0 0 0;
     margin: 0;
   }
 }
